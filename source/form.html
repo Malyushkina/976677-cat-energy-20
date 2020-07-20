@@ -30,7 +30,83 @@
   <main class="page-main">
     <h1 class="visually-hidden">CAT ENERGY - Функциональное питание для котов</h1>
     <h2 class="page-title">Подбор программы</h2>
-
+    <form action="https://echo.htmlacademy.ru" class="search-program">
+      <p class="search-program__title">Заполните анкету, и мы подберем
+        программу питания для вашего кота</p>
+      <fieldset class="search-program__cat-data-fieldset">
+        <label>
+          <input type="text" class="searh-program__input--cat-name" placeholder="барсик" required>
+          ИМЯ:*
+        </label>
+        <label>
+          <input type="number" class="searh-program__input--weight" placeholder="7" required>
+          Вес (кг):*
+        </label>
+        <label>
+          <input type="number" class="searh-program__input--age" placeholder="7">
+          Возраст (лет):
+        </label>
+      </fieldset>
+      <fieldset class="search-program__check-program-radio-fieldset">
+        <label>
+          <input type="radio" class="check-program__radio" name="slimming" value="program-slim" checked>
+          похудение
+        </label>
+        <label>
+          <input type="radio" class="check-program__radio" name="pro" value="program-pro">
+          Набор массы
+        </label>
+        <label>
+          <input type="radio" class="check-program__radio" name="advice" value="program-advice">
+          Не знаю (Нужен ваш совет)
+        </label>
+      </fieldset>
+      <fieldset class="search-program__owner-contact-fieldset">
+        <h3 class="search-program__fieldset-title">Контактные данные
+          (владельца кота)</h3>
+        <label>
+          <input type="email" class="owner-contact--email" placeholder="kuklachev@gmail.com" required>
+          E-mail:*
+        </label>
+        <label>
+          <input type="tel" class="owner-contact--tel" placeholder="8 (960) 900-60-90" required>
+          Телефон:*
+        </label>
+      </fieldset>
+      <fieldset class="search-program__comments-fieldset">
+        <h3 class="search-program__fieldset-title">Комментарий</h3>
+        <textarea class="search-program__comments-textarea" name="comments" id="" cols="30" rows="10"
+          placeholder="Расскажите обо всех повАдках кота"></textarea>
+      </fieldset>
+      <fieldset class="search-program__additional">
+        <h3 class="search-program__fieldset-title">Дополнительно</h3>
+        <label>
+          <input type="checkbox" class="search-program__additional--sweetener" value="sweetener" checked />
+          сахарозаменитель
+        </label>
+        <label>
+          <input type="checkbox" class="search-program__additional--water" value="water" />
+          питьевая вода
+        </label>
+        <label>
+          <input type="checkbox" class="search-program__additional--milk" value="milk" />
+          молоко
+        </label>
+        <label>
+          <input type="checkbox" class="search-program__additional--vitamins" value="vitamins" />
+          витамины
+        </label>
+      </fieldset>
+    </form>
+    <section class="contacts">
+      <h2 class="visually-hidden">Контакты</h2>
+      <h3 class="contacts__title">приглашаем
+        к сотрудничеству дилеров!</h3>
+      <p class="contacts__adress">ул. Большая
+        Конюшенная, д. 19/8
+        Санкт-Петербург</p>
+      <div class="contacts__map"></div>
+    </section>
   </main>
   <footer class="page-footer">
     <span class="page-footer__title logo-title"><b>cat</b> energy</span>
