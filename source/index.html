@@ -3,15 +3,18 @@
 
 <head>
   <meta charset="utf-8" />
+  <link rel="stylesheet" href="./css/style.css">
+
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 
-<body class="page__body">
+<body class="page-body">
   <header class="page-header">
-    <a class="page-header__logo" href="#" >
-      <img src="#" alt="Функциональное питание для котов CAT ENERGY" width="33" height="37" />
+    <a class="page-header__logo" href="#">
+      <img class="page-header__logo-img" src=".././img/logo-mobile.svg"
+        alt="Функциональное питание для котов CAT ENERGY" width="190" height="37" />
     </a>
-    <span class="page-header__title logo-title"><b>cat</b> energy</span>
+
     <button class="main-nav__toggle" type="button">
       <span class="visually-hidden">
         Открыть меню
@@ -41,7 +44,7 @@
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
       </header>
       <div class="promo__img">
-        <img src="" alt="CAT ENERGY курица" />
+        <img src="./img/index-can-mobile@1x.png" alt="CAT ENERGY курица" />
       </div>
       <button class="button" type="button">подобрать программу</button>
     </section>
@@ -50,7 +53,7 @@
       <div class="program-item">
         <header class="program-item__header">
           <div class="program__img">
-            <img src="" alt="Программа для похудения" />
+            <img src="./img/icon-cat-slim.svg" width="70" height="97" alt="Программа для похудения" />
           </div>
           <h3 class="program__title">похудение</h3>
         </header>
@@ -66,7 +69,7 @@
       <div class="program-item">
         <header>
           <div class="program__img">
-            <img src="" alt="Программа для набора массы" />
+            <img src="./img/icon-cat-pro.svg" width="134" height="56" alt="Программа для набора массы" />
           </div>
           <h3 class="program__title">Набор массы</h3>
         </header>
@@ -83,18 +86,30 @@
       <h2 class="special__title section-title">Как это работает</h2>
       <ul class="special__list">
         <li class="special__item">
-          Функциональное питание содержит только полезные питательные
-          вещества.
+          <div class="special__item-img-wrapper">
+            <img src="./img/advantage-leaf@1x.png" alt="" class="special__item-img">
+          </div>
+          <span class="special__item-text">Функциональное питание содержит только полезные питательные
+            вещества.</span>
         </li>
         <li class="special__item">
-          Выпускается в виде порошка, который нужно лишь залить кипятком и
-          готово.
+          <div class="special__item-img-wrapper">
+            <img src="./img/advantage-powder@1x.png" alt="" class="special__item-img">
+          </div>
+          <span class="special__item-text">Выпускается в виде порошка, который нужно лишь залить кипятком и
+            готово.</span>
         </li>
         <li class="special__item">
-          Замените один-два приема обычной еды на наше функциональное питание.
+          <div class="special__item-img-wrapper">
+            <img src="./img/advantage-dining@1x.png" alt="" class="special__item-img">
+          </div>
+          <span class="special__item-text">Замените один-два приема обычной еды на наше функциональное питание.</span>
         </li>
         <li class="special__item">
-          Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+          <div class="special__item-img-wrapper">
+            <img src="./img/advantage-clock@1x.png" alt="" class="special__item-img">
+          </div>
+          <span class="special__item-text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</span>
         </li>
       </ul>
     </section>
@@ -120,8 +135,8 @@
       </div>
       <div class="example__img slider">
         <div class="example__wrapper slider--list">
-          <img class="example__img--before slider--item" src="https://via.placeholder.com/150x150" alt="было" >
-          <img class="example__img--before slider--item" src="https://via.placeholder.com/150x150" alt="стало">
+          <img class="example__img--before slider--item" src="./img/before-mobile@1x.png" alt="было">
+          <img class="example__img--before slider--item" src="./img/after-mobile@1x.png" alt="стало">
           <p class="example__toggles slider__toggles">
             <span class="slider__designation--prev">было</span>
             <span class="slider__designation--next">стало</span>
@@ -143,23 +158,35 @@
     </section>
   </main>
   <footer class="page-footer">
-    <span class="page-footer__title logo-title"><b>cat</b> energy</span>
+    <div class="page-footer__logo"><img src="./img/logo-footer.svg" alt="CAT ENERGY"></div>
     <div class="page-footer__social social">
-      <ul class="cosial__list">
+      <ul class="social__list">
         <li class="social__item">
-          <a  class="social__link social__link--vkontakte" href="#">Мы Вконтакте</a>
+          <a class="social__link social__link--vkontakte" href="#">
+            <div class="social__link-img-wrapper">
+              <img src="./img/icon-vk.svg" width="23" height="16" alt="Мы Вконтакте">
+            </div> Мы Вконтакте
+          </a>
         </li>
         <li class="social__item">
-          <a  class="social__link social__link--instagramm" href="#">Мы в Инстаграмме</a>
+          <a class="social__link social__link--instagramm" href="#">
+            <div class="social__link-img-wrapper">
+              <img src="./img/icon-insta.svg" width="16" height="16" alt="Мы Вконтакте">
+            </div> Мы в Инстаграмме
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook"href="#">Мы в Фейсбуке</a>
+          <a class="social__link social__link--facebook" href="#">
+            <div class="social__link-img-wrapper">
+              <img src="./img/icon-fb.svg" width="22" height="22" alt="Мы Вконтакте">
+            </div> Мы в Фейсбуке
+          </a>
         </li>
       </ul>
     </div>
     <div class="page-footer__copyright copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" >HTML Academy</a>
-      <img class="copyright__logo" src="" alt="HTML Academy logo"  />
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <img class="copyright__logo" src="" alt="HTML Academy logo" />
     </div>
   </footer>
 </body>
