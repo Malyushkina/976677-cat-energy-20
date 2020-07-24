@@ -9,24 +9,26 @@
 
 <body class="page-body">
   <header class="page-header">
-    <a class="page-header__logo" href="#">
-      <img class="page-header__logo-img" src=".././img/logo-mobile.svg"
-        alt="Функциональное питание для котов CAT ENERGY" width="190" height="37" />
-    </a>
+    <div class="logo-wrapper container">
+      <a class="page-header__logo" href="./index.html">
+        <img class="page-header__logo-img" src=".././img/logo-mobile.svg"
+          alt="Функциональное питание для котов CAT ENERGY" width="190" height="37" />
+      </a>
 
-    <button class="main-nav__toggle" type="button">
-      <span class="visually-hidden">
-        Открыть меню
-      </span>
-    </button>
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">
+          Открыть меню
+        </span>
+      </button>
+    </div>
     <nav class="main-nav">
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
-            <a href="#">главная</a>
+            <a class="site-list__item-link" href="./index.html">главная</a>
           </li>
-          <li class="site-list__item"><a href="#">каталог продукции</a></li>
-          <li class="site-list__item"><a href="#">подбор программы</a></li>
+          <li class="site-list__item"><a class="site-list__item-link" href="./catalog.html">каталог продукции</a></li>
+          <li class="site-list__item"><a class="site-list__item-link" href="./form.html">подбор программы</a></li>
         </ul>
       </div>
     </nav>
@@ -35,78 +37,84 @@
     <h1 class="visually-hidden">
       CAT ENERGY - Функциональное питание для котов
     </h1>
-    <h2 class="page-title">Подбор программы</h2>
+    <h2 class="section-title">Подбор программы</h2>
     <form class="search-program" action="https://echo.htmlacademy.ru">
-      <p class="search-program__title">
+      <p class="search-program__subtitle">
         Заполните анкету, и мы подберем программу питания для вашего кота
       </p>
-      <fieldset class="search-program__cat-data-fieldset">
-        <label>
-          <input class="searh-program__input--cat-name" type="text" name="cat-name" placeholder="барсик" required />
-          ИМЯ:*
+      <fieldset class="search-program__fieldset search-program__cat-data-fieldset">
+        <label class="search-program__label flex-label">ИМЯ:*
+          <input class="searh-program__input searh-program__input--cat-name" type="text" name="cat-name"
+            placeholder="барсик" required />
+
         </label>
-        <label>
-          <input class="searh-program__input--weight" type="number" name="cat-weight" placeholder="7" required />
-          Вес (кг):*
+
+        <label class="search-program__label flex-label"> Вес (кг):*
+          <input class="searh-program__input searh-program__input--weight" type="number" name="cat-weight"
+            placeholder="7" required />
+
         </label>
-        <label>
-          <input class="searh-program__input--age" type="number" name="cat-age" placeholder="7" />
-          Возраст (лет):
+
+        <label class="search-program__label flex-label">Возраст (лет):
+          <input class="searh-program__input searh-program__input--age" type="number" name="cat-age" placeholder="7" />
+
         </label>
       </fieldset>
-      <fieldset class="search-program__check-program-radio-fieldset">
-        <label>
+      <fieldset class="search-program__fieldset search-program__check-program-radio-fieldset fieldset-flex">
+        <label class="search-program__label">
           <input class="check-program__radio" type="radio" name="check-program" value="program-slim" checked />
           похудение
         </label>
-        <label>
+        <label class="search-program__label">
           <input class="check-program__radio" type="radio" name="check-program" value="program-pro" />
           Набор массы
         </label>
-        <label>
+        <label class="search-program__label">
           <input class="check-program__radio" type="radio" name="check-program" value="program-advice" />
           Не знаю (Нужен ваш совет)
         </label>
       </fieldset>
-      <fieldset class="search-program__owner-contact-fieldset">
+      <fieldset class="search-program__fieldset search-program__owner-contact-fieldset">
         <h3 class="search-program__fieldset-title">
           Контактные данные (владельца кота)
         </h3>
-        <label>
-          <input class="owner-contact--email" type="email" name="email" placeholder="kuklachev@gmail.com" required />
-          E-mail:*
+        <label class="search-program__label flex-label"> E-mail:*
+          <input class="searh-program__input owner-contact--email" type="email" name="email"
+            placeholder="kuklachev@gmail.com" required />
+
         </label>
-        <label>
-          <input class="owner-contact--tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required />
-          Телефон:*
+        <label class="search-program__label flex-label"> Телефон:*
+          <input class="searh-program__input owner-contact--tel" type="tel" name="tel" placeholder="8 (960) 900-60-90"
+            required />
+
         </label>
       </fieldset>
-      <fieldset class="search-program__comments-fieldset">
+      <fieldset class="search-program__fieldset search-program__comments-fieldset">
         <h3 class="search-program__fieldset-title">Комментарий</h3>
         <textarea class="search-program__comments-textarea" name="comments" id="" cols="30" rows="10"
           placeholder="Расскажите обо всех повАдках кота"></textarea>
       </fieldset>
-      <fieldset class="search-program__additional">
+      <fieldset class="search-program__fieldset search-program__additional fieldset-flex">
         <h3 class="search-program__fieldset-title">Дополнительно</h3>
-        <label>
+        <label class="search-program__label">
           <input class="search-program__additional--sweetener" name="sweetener" type="checkbox" value="sweetener"
             checked />
           сахарозаменитель
         </label>
-        <label>
+        <label class="search-program__label">
           <input class="search-program__additional--water" name="water" type="checkbox" value="water" />
           питьевая вода
         </label>
-        <label>
+        <label class="search-program__label">
           <input class="search-program__additional--milk" name="milk" type="checkbox" value="milk" />
           молоко
         </label>
-        <label>
+        <label class="search-program__label">
           <input class="search-program__additional--vitamins" name="vitamins" type="checkbox" value="vitamins" />
           витамины
         </label>
       </fieldset>
-      <input class="button" type="submit" value="отправить заявку" />
+      <input class="button button-text" type="submit" value="отправить заявку" />
       <p class="search-program__clarification">* — Обязательные поля</p>
     </form>
     <section class="contacts">
@@ -119,23 +127,39 @@
     </section>
   </main>
   <footer class="page-footer">
-    <span class="page-footer__title logo-title"><b>cat</b> energy</span>
-    <div class="page-footer__social social">
-      <ul class="cosial__list">
-        <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="#">Мы Вконтакте</a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--instagramm" href="#">Мы в Инстаграмме</a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
-        </li>
-      </ul>
-    </div>
-    <div class="page-footer__copyright copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-      <img class="copyright__logo" src="" alt="HTML Academy logo" />
+    <div class="container">
+      <div class="page-footer__logo"><img src="./img/logo-footer.svg" width="128" height="24" alt="CAT ENERGY"></div>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="#">
+              <div class="social__link-img-wrapper">
+                <img src="./img/icon-vk.svg" width="23" height="16" alt="Мы Вконтакте">
+              </div>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagramm" href="#">
+              <div class="social__link-img-wrapper">
+                <img src="./img/icon-insta.svg" width="16" height="16" alt="Мы в Инстаграмме">
+              </div>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#">
+              <div class="social__link-img-wrapper">
+                <img src="./img/icon-fb.svg" width="22" height="22" alt="Мы в Фейсбуке">
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="page-footer__copyright copyright">
+
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <img class="copyright__logo" src="./img/htmlacademy.svg" width="27" height="34" alt="HTML Academy logo" />
+      </div>
     </div>
   </footer>
 </body>
