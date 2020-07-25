@@ -1,7 +1,7 @@
 .example {
 
   padding-bottom: 35px;
-  background-color: #eaeaea;
+  background-color: @color-gray3;
 }
 
 .example__title {
@@ -30,7 +30,7 @@
   height: 56px;
   margin-bottom: 34px;
 
-  border: 1px solid #cdcdcd;
+  border: 1px solid @color-special_gray;
   border-radius: 5px;
 
 }
@@ -40,7 +40,7 @@
   font-size: 24px;
   font-weight: 400;
   line-height: 1;
-  color: #000000;
+  color: @color-black;
   text-align: center;
 }
 
@@ -57,7 +57,7 @@
 
   font-size: 12px;
   line-height: 1;
-  background-color: #eaeaea;
+  background-color: @color-gray3;
 }
 
 .example__expenses {
@@ -66,7 +66,7 @@
   font-family: @font;
   font-size: 14px;
   line-height: 1.43;
-  color: #000000;
+  color: @color-black;
   text-transform: uppercase;
   text-align: center;
 }
@@ -78,7 +78,7 @@
   font-size: 16px;
   text-transform: uppercase;
   line-height: 1.25;
-  color: #000000;
+  color: @color-black;
 }
 
 .example__toggles {
@@ -94,16 +94,17 @@
   width: 84px;
   padding: 4px;
 
-  background-color: #ffffff;
-  border: 1px solid #cdcdcd;
+  background-color: @color-white;
+  border: 1px solid @color-special_gray;
   border-radius: 7px;
 
 }
-.slider__toggler{
-width: 36px;
-height: 6px;
 
-background-color: @color-green;
-border-radius: 6px;
+.slider__toggler {
+  width: 36px;
+  height: 6px;
+
+  background-color: @color-basic-green;
+  border-radius: 6px;
 
 }
