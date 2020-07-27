@@ -1,9 +1,20 @@
 .program-item {
 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "img title title title"
+    "text text text text"
+    " link link link link";
+  grid-row-gap: 22px;
+  grid-column-gap: 20px;
+  align-items: center;
+
   background-color: @color-basic-gray;
   padding-top: 19px;
   padding-left: 20px;
-  padding-right: 33px;
+  padding-right: 20px;
   margin-bottom: 20px;
 
   &:last-child {
@@ -11,48 +22,52 @@
   }
 }
 
-.program-item__header {
-  position: relative;
-
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-
 .program__title {
-
-  font-family: @font;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 1.54;
-  text-transform: uppercase;
-  text-align: center;
-  color: @color-black;
+  grid-area: title;
 }
 
-.program__img {
-
+.program__img-wrapper {
+  grid-area: img;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 
   width: 50px;
   height: 50px;
-  margin-right: 19px;
 
   border-radius: 50%;
   background-color: @color-basic-green;
 }
 
+.program__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.program__img--slim {
+  width: 36px;
+  height: 50px;
+}
+
+.program__img--pro {
+  width: 67px;
+  height: 28px;
+}
+
 .program__description {
-  margin-bottom: 23px;
+  margin: 0;
+  grid-area: text;
 }
 
 .program-item__footer {
+  grid-area: link;
   display: flex;
   justify-content: start;
   align-items: center;
-
+  width: 100%;
   padding-top: 15px;
   padding-bottom: 19px;
 
@@ -70,4 +85,42 @@
   text-decoration: none;
   color: @color-black;
   line-height: 1;
+}
+
+@media (min-width:@tablet-width) {
+  .program-item {
+    grid-template-columns: 1fr 1fr 268px;
+    grid-template-areas:
+      "title title img"
+      "text text img"
+      " link link img";
+    grid-row-gap: 24px;
+    grid-column-gap: 35px; ;
+
+    padding-left: 52px;
+    padding-top: 77px;
+    padding-bottom: 40px;
+  }
+  .program__description {
+    padding-bottom: 15px;
+  }
+  .program__img-wrapper{
+    width: 200px;
+    height: 200px;
+  }
+  .program__img--slim {
+    width: 140px;
+    height: 192px;
+  }
+
+  .program__img--pro {
+    width: 268px;
+    height: 112px;
+  }
+  .program__link{
+    font-size: 20px;
+  }
+  .program-item__footer {
+    border: none;
+  }
 }

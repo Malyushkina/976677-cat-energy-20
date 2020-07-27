@@ -1,5 +1,6 @@
 .button {
-  width: 100%;
+  display: block;
+  // width: 100%;
   background-color: @color-basic-green;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -15,4 +16,13 @@
   text-transform: uppercase;
   color: @color-white;
   text-align: center;
+}
+.button--promo{
+  width: 100%;
+  font-size: 14px;
+}
+@media (min-width: @tablet-width) {
+  .button--promo {
+    width: 244px;
+  }
 }

@@ -5,7 +5,6 @@
 @import url("./blocks/page-header.less");
 @import url("./blocks/page-main.less");
 @import url("./blocks/page-footer.less");
-@import url("./blocks/logo-wrapper.less");
 @import url("./blocks/main-nav.less");
 @import url("./blocks/promo.less");
 @import url("./blocks/program.less");
@@ -13,6 +12,7 @@
 @import url("./blocks/button.less");
 @import url("./blocks/special.less");
 @import url("./blocks/example.less");
+@import url("./blocks/example-result.less");
 @import url("./blocks/contacts.less");
 @import url("./blocks/section-title.less");
 
@@ -27,6 +27,11 @@
 @import url("./blocks/search-program.less");
 //Переменные
 @import url("./blocks/var.less");
+
+//viewports
+@tablet-width: 768px;
+@desktop-width: 1200px;
+@mobile-width-only: 767px;
 
 @font-face {
   font-family: "Oswald";
@@ -43,4 +48,23 @@
     url("../fonts/oswaldmedium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
+}
+
+
+
+.page {
+  height: 100%;
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.285;
+}
+.display-none
+{display: none;}
+@media (min-width:@tablet-width)
+{
+  .page{
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
