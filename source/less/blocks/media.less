@@ -306,6 +306,24 @@
     border: none;
   }
 
+  .card-product--more-products {
+    align-self: flex-end;
+    background-image: none;
+    background-color: @color-white;
+    border: 2px solid @color-basic-gray;
+  }
+
+  .card-product--mini {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    padding-left: 38px;
+    padding-right: 38px;
+
+    border: 1px solid @color-special_gray;
+    background-color: @color-white;
+    background: none;
+  }
+
   .card-product__wrapper {
     grid-template-columns: auto;
     grid-template-rows: 162px auto auto auto;
@@ -374,11 +392,13 @@
     align-items: center;
   }
 
-  .card-product--more-products {
-    align-self: flex-end;
-    background-image: none;
-    background-color: @color-white;
-    border: 2px solid @color-basic-gray;
+  .card-product__wrapper--mini {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "title description"
+      "button button";
+    width: 100%;
   }
 
   .more-products__img {
@@ -386,15 +406,50 @@
     height: 60px;
   }
 
+  // *********************************
+  //           additional-goods
+  // *********************************
+
   .additional-goods__header {
     padding-top: 70px;
     padding-bottom: 70px;
   }
-  .additional-goods__title{
 
+  .additional-goods__title {
+    font-size: @font-size*3.6;
   }
 
+  .additional__title {
+    width: 100%;
+    align-self: center;
+    text-align: left;
+  }
+
+  .additional__description {
+    margin: 0;
+  }
+
+  .additional-row {
+    border: none;
+  }
+
+  .gift {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .gift__wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: url(.././img/gift-photo-tablet@1x.jpg) no-repeat top center;
+    background-size: cover;
+  }
+  .gift__promo{
+    width: 160px;
+    text-align: left;
+  }
 }
+
 
 @media (min-width:@desktop-width) {
   .page-header__logo {

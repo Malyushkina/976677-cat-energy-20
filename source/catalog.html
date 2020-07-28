@@ -280,79 +280,81 @@
         </div>
       </div>
     </section>
+
+    <!-- Дополнительные товары -->
+
     <section class="additional-goods">
       <div class="container">
-
-        <!-- Дополнительные товары -->
-
         <header class="additional-goods__header">
-          <span class="section-title decor-title additional-goods__title">Дополнительные товары</span>
+          <div class="decor-wrapper">
+            <span class="section-title decor-title additional-goods__title">Дополнительные товары</span>
+          </div>
         </header>
 
         <div class="additional-goods__catalog">
 
           <div class="card-product card-product--mini">
             <div class="card-product__wrapper card-product__wrapper--mini">
-              <h3 class="section-title card-product__title">Сахарозаменитель
+              <h3 class="section-title card-product__title additional__title">Сахарозаменитель
               </h3>
-              <table class="card-product__description">
-                <tr class="description-row">
+              <table class="card-product__description additional__description">
+                <tr class="description-row additional-row">
                   <td>1 упаковка (100 г)</td>
                   <td class="col2">200 Р</td>
                 </tr>
               </table>
-              <button class="button button-text" type="button">заказать</button>
+              <button class="button button-text button-grid" type="button">заказать</button>
             </div>
           </div>
 
           <div class="card-product card-product--mini">
             <div class="card-product__wrapper card-product__wrapper--mini">
-              <h3 class="section-title card-product__title">питьевая вода
+              <h3 class="section-title card-product__title additional__title">питьевая вода
               </h3>
               <table class="card-product__description">
-                <tr class="description-row">
+                <tr class="description-row additional-row">
                   <td>5 литров</td>
                   <td class="col2">50 Р</td>
                 </tr>
               </table>
-              <button class="button button-text" type="button">заказать</button>
+              <button class="button button-text button-grid" type="button">заказать</button>
             </div>
           </div>
           <div class="card-product card-product--mini">
             <div class="card-product__wrapper card-product__wrapper--mini">
-              <h3 class="section-title card-product__title">молоко</h3>
-              <table class="card-product__description">
-                <tr class="description-row">
+              <h3 class="section-title card-product__title additional__title">молоко</h3>
+              <table class="card-product__description additional__description">
+                <tr class="description-row additional-row">
                   <td>1 литр</td>
                   <td class="col2">100 Р</td>
                 </tr>
               </table>
-              <button class="button button-text" type="button">заказать</button>
+              <button class="button button-text button-grid" type="button">заказать</button>
             </div>
           </div>
           <div class="card-product card-product--mini">
             <div class="card-product__wrapper card-product__wrapper--mini">
-              <h3 class="section-title card-product__title">витамины</h3>
-              <table class="card-product__description">
-                <tr class="description-row">
+              <h3 class="section-title card-product__title additional__title">витамины</h3>
+              <table class="card-product__description additional__description">
+                <tr class="description-row additional-row">
                   <td>1 упаковка (30 г)</td>
                   <td class="col2">300 Р</td>
                 </tr>
               </table>
-              <button class="button button-text" type="button">заказать</button>
+              <button class="button button-text button-grid" type="button">заказать</button>
             </div>
           </div>
         </div>
-        <footer class="additional-goods-footer">
-          <div class="additional-goods-wrapper">
-            <div class="additional-goods-footer__img">
-              <img src="./img/icon-gift.svg" width="55.5" height="60" alt="Подарок" />
+        <div class="gift">
+          <div class="gift__wrapper">
+            <div class="gift__img-wrapper">
+              <img class="gift__icon" src="./img/icon-gift.svg" width="55.5" height="60" alt="Подарок" />
             </div>
-            <p class="additional-goods-footer__promo">
+            <p class="gift__promo">
               Закажите все и получите чехол для кота в подарок!
             </p>
           </div>
-        </footer>
+        </div>
 
       </div>
     </section>
@@ -360,7 +362,7 @@
       <div class="container">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts-wrapper">
-          <h3 class="section-title section-title--16">приглашаем
+          <h3 class="contacts__title section-title">приглашаем
             к сотрудничеству дилеров!</h3>
           <p class="contacts__adress">ул. Большая
             Конюшенная, д. 19/8
@@ -368,43 +370,54 @@
         </div>
       </div>
       <div class="contacts__map">
-        <img src="./img/bg-map-mobile@1x.png" alt="Мы на карте" class="map">
+        <img class="contacts__img contacts__img--mobile" src="./img/bg-map-mobile@1x.png" alt="Мы на карте" class="map">
+        <img class="contacts__img contacts__img--tablet" src="./img/bg-map-tablet@1x.png" alt="Мы на карте" class="map">
+        <img class="contacts__img contacts__img--desktop" src="./img/bg-map-desktop@1x.png" alt="Мы на карте"
+          class="map">
       </div>
     </section>
   </main>
   <footer class="page-footer">
     <div class="container">
-      <div class="page-footer__logo"><img src="./img/logo-footer.svg" width="128" height="24" alt="CAT ENERGY"></div>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="#">
-              <div class="social__link-img-wrapper">
-                <img src="./img/icon-vk.svg" width="23" height="16" alt="Мы Вконтакте">
-              </div>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagramm" href="#">
-              <div class="social__link-img-wrapper">
-                <img src="./img/icon-insta.svg" width="16" height="16" alt="Мы в Инстаграмме">
-              </div>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="#">
-              <div class="social__link-img-wrapper">
-                <img src="./img/icon-fb.svg" width="22" height="22" alt="Мы в Фейсбуке">
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
 
-      <div class="page-footer__copyright copyright">
+      <!-- Обёртка для флексов -->
+      <div class="footer__wrapper">
 
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <img class="copyright__logo" src="./img/htmlacademy.svg" width="27" height="34" alt="HTML Academy logo" />
+        <div class="page-footer__logo">
+          <img src="./img/logo-footer.svg" width="128" height="24" alt="CAT ENERGY">
+        </div>
+
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="#">
+                <div class="social__link-img-wrapper">
+                  <img src="./img/icon-vk.svg" width="23" height="16" alt="Мы Вконтакте">
+                </div>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--instagramm" href="#">
+                <div class="social__link-img-wrapper">
+                  <img src="./img/icon-insta.svg" width="16" height="16" alt="Мы в Инстаграмме">
+                </div>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#">
+                <div class="social__link-img-wrapper">
+                  <img src="./img/icon-fb.svg" width="22" height="22" alt="Мы в Фейсбуке">
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="page-footer__copyright copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <img class="copyright__logo" src="./img/htmlacademy.svg" width="27" height="34" alt="HTML Academy logo" />
+        </div>
+
       </div>
     </div>
   </footer>

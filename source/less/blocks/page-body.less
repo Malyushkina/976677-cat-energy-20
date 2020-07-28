@@ -44,23 +44,29 @@
   line-height: 1;
 }
 
+.decor-wrapper {
+  position: relative;
+  width: 100%;
+
+}
 
 .decor-title {
-  position: relative;
 
   padding-right: 24px;
 
   background-color: @color-white;
 }
 
-.decor-title::after {
+.decor-wrapper::after {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 50%;
   content: "";
+  transform: translateX(-50vw);
 
   width: 100vw;
   height: 2px;
+
 
   background-color: @color-basic-green;
 
