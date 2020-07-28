@@ -5,7 +5,6 @@
 
   border-top: 1px solid transparent;
   background: url(".././img/index-background-mobile@1x.jpg") no-repeat top center;
-
 }
 
 .promo__header {
@@ -28,47 +27,15 @@
   text-align: center;
 }
 
+.promo__title {
+  color: @color-white;
+  text-align: center;
+}
+
 .promo__img--tablet {
   display: none;
-
 }
 
 .promo__img--desktop {
   display: none;
-}
-
-@media (min-width: @tablet-width) {
-  .promo {
-    padding-top: 35px;
-    padding-bottom: 0;
-    min-height: 850px;
-    background: none;
-  }
-
-  .promo__slogan {
-    margin-bottom: 45px;
-    font-size: 20px;
-    color: @color-black;
-    text-align: left;
-  }
-
-  .promo__img--mobile {
-    display: none;
-  }
-
-  .promo__img--tablet {
-    display: block;
-    position: absolute;
-
-    z-index: -1;
-  }
-
-  .section-title--promo {
-    width: 414px;
-    margin-bottom: 16px;
-
-    font-size: 60px;
-    color: @color-black;
-    text-align: left;
-  }
 }

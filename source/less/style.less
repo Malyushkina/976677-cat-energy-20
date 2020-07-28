@@ -25,9 +25,12 @@
 
 //Форма
 @import url("./blocks/search-program.less");
+
 //Переменные
 @import url("./blocks/var.less");
 
+//медиазапросы
+@import url("./blocks/media.less");
 //viewports
 @tablet-width: 768px;
 @desktop-width: 1200px;
@@ -50,21 +53,10 @@
   font-style: normal;
 }
 
-
-
 .page {
   height: 100%;
   font-family: "Arial", "Helvetica", sans-serif;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.285;
-}
-.display-none
-{display: none;}
-@media (min-width:@tablet-width)
-{
-  .page{
-    font-size: 16px;
-    line-height: 1.5;
-  }
 }
