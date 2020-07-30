@@ -1,14 +1,40 @@
 .promo {
-  border-top: 1px solid transparent;
-  background: url(.././img/index-background-mobile@1x.jpg) no-repeat top center;
+
+  padding-top: 22px;
   padding-bottom: 11px;
+
+  border-top: 1px solid transparent;
+  background: url(".././img/index-background-mobile@1x.jpg") no-repeat top center;
+}
+
+.promo__header {
+  max-width: 420px;
+  margin-bottom: 25px;
 }
 
 .promo__slogan {
   padding: 0;
   margin: 0;
-  margin-bottom: 29px;
+  max-width: 420px;
+  margin-bottom: 30px;
 
+  font-family: @font;
+  font-size: @font-size*1.4;
   line-height: 1;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+}
 
+.promo__title {
+  color: @color-white;
+  text-align: center;
+}
+
+.promo__img--tablet {
+  display: none;
+}
+
+.promo__img--desktop {
+  display: none;
 }

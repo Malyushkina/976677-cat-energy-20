@@ -1,5 +1,6 @@
 .button {
-  width: 100%;
+  display: block;
+
   background-color: @color-basic-green;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -9,10 +10,20 @@
 
 .button-text {
 
-  font-family: 'Oswald', sans-serif;
-  font-size: 14px;
+  font-family: "Oswald", sans-serif;
+  font-size: @font-size*1.4;
   line-height: 1.26;
   text-transform: uppercase;
   color: @color-white;
   text-align: center;
+}
+
+.button--promo {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.button--form {
+  width: 100%;
 }

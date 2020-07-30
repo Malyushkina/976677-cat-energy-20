@@ -1,0 +1,389 @@
+@media (min-width: @desktop-width) {
+  .container {
+    width: 1220px;
+  }
+
+  // *********************************
+  //           page-header
+  // *********************************
+  .page-header {
+
+    padding-top: 53px;
+    background-color: transparent;
+  }
+
+  .page-header__logo {
+    height: 59px;
+  }
+
+  .page-header__logo--tablet {
+    display: none;
+  }
+
+  .page-header__logo--desctop {
+    display: block;
+  }
+
+  .main-header .page-header__wrapper {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: -53px;
+      left: 50%;
+      content: url(".././img/index-background-desktop@1x.jpg");
+      z-index: -1;
+    }
+  }
+
+  .main-nav__wrapper {
+    width: 478px;
+  }
+
+  .site-list {
+    width: 480px;
+  }
+
+  .site-list__item-link {
+    font-size: @font-size*2;
+  }
+
+  .site-list--white .site-list__item--active {
+    border-bottom: 2px solid @color-white;
+  }
+
+  .site-list--white .site-list__item-link {
+    color: @color-white;
+  }
+
+  // *********************************
+  //           promo
+  // *********************************
+  .promo {
+    position: relative;
+    padding-top: 110px;
+    padding-bottom: 227px;
+    min-height: auto;
+  }
+
+  .promo__wrapper {
+    position: relative;
+  }
+
+  .promo__img--tablet {
+    display: none;
+  }
+
+  .promo__img--desktop {
+    display: block;
+    position: absolute;
+    top: -80px;
+    left: 37%;
+  }
+
+  .promo__title {
+    width: 414px;
+    margin-bottom: 0;
+    color: @color-black;
+    text-align: left;
+  }
+
+  .promo__slogan {
+    margin-bottom: 50px;
+  }
+
+  // *********************************
+  //           program-item
+  // *********************************
+  .program {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .program__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .program-item {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "img title title title"
+      "text text text text"
+      " link link link link";
+    grid-row-gap: 22px;
+    grid-column-gap: 50px;
+    align-items: center;
+
+    padding-left: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 490px;
+    margin-bottom: 0;
+  }
+
+  .program__title {
+    font-size: @font-size*3.6;
+  }
+
+  .program__img-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .program__img--slim {
+    width: 70px;
+    height: 97px;
+  }
+
+  .program__img--pro {
+    width: 134px;
+    height: 56px;
+  }
+
+  // *********************************
+  //           special
+  // *********************************
+  .special {
+    padding-top: 30px;
+  }
+
+  .special__header {
+    margin-bottom: 30px;
+  }
+
+  .special__title {
+    width: 414px;
+
+    color: @color-black;
+    text-align: left;
+  }
+
+  .special__list {
+    grid-template-columns: 230px 230px 230px 230px;
+    grid-column-gap: 95px;
+  }
+
+  // *********************************
+  //           contacts
+  // *********************************
+  .contacts__wrapper {
+    position: relative;
+  }
+
+  .contacts-description {
+    position: absolute;
+    top: 150px;
+    left: 0;
+
+    padding-top: 66px;
+    padding-bottom: 66px;
+    padding-left: 75px;
+    padding-right: 75px;
+    width: 420px;
+    background-color: @color-white;
+    z-index: 1;
+  }
+
+  .contacts__map::after {
+    top: 50%;
+    left: 70%;
+    content: url(".././img/map-pin.png");
+    transform: translateY(-50%);
+  }
+
+  .contacts__img--tablet {
+    display: none;
+  }
+
+  .contacts__img--desktop {
+    display: block;
+  }
+
+  // *********************************
+  //             catalog
+  // *********************************
+  .catalog__wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 80px;
+  }
+
+  // *********************************
+  //           card-product
+  // *********************************
+  .card-product {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .card-product__wrapper {
+    width: 180px;
+  }
+
+  .card-product__img--tablet {
+    display: none;
+  }
+
+  .card-product__img--desktop {
+    display: block;
+  }
+
+  .card-product__description {
+    margin-bottom: 13px;
+
+    font-size: @font-size*1.6;
+  }
+
+  .card-product__description--more-products {
+    min-height: 97px;
+    width: 170px;
+  }
+
+  .description-row {
+    height: 32px;
+    border-bottom: 1px solid @color-special_gray;
+  }
+
+  .button-grid {
+    width: 100%;
+  }
+
+  .card-product__wrapper--more-products {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 96px auto auto auto;
+    grid-template-areas:
+      "img "
+      "title"
+      "description"
+      "button ";
+    grid-row-gap: 13px;
+    align-items: center;
+  }
+
+  .card-product__wrapper--mini {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "title description"
+      "button button";
+    width: 100%;
+  }
+
+  .more-products__img {
+    width: 60px;
+    height: 60px;
+  }
+
+  // *********************************
+  //           additional-goods
+  // *********************************
+
+  .additional-goods__header {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .additional-goods__title {
+    font-size: @font-size*3.6;
+  }
+
+  .additional__title {
+    width: 100%;
+    align-self: center;
+    text-align: left;
+  }
+
+  .additional__description {
+    margin: 0;
+  }
+
+  .additional__description td {
+    text-align: right;
+  }
+
+  .additional-row {
+    border: none;
+  }
+
+  .gift {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .gift__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: url(".././img/gift-photo-tablet@1x.jpg") no-repeat top center;
+    background-size: cover;
+  }
+
+  .gift__promo {
+    width: 160px;
+    text-align: left;
+  }
+
+  // *********************************
+  //           button
+  // *********************************
+
+  // *********************************
+  //           form
+  // *********************************
+  .search-program {
+    display: grid;
+    grid-template-columns: 570px 570px;
+    grid-column-gap: 80px;
+    grid-template-areas:
+      "title title"
+      "subtitle subtitle"
+      "fieldset-1 fieldset-2"
+      "fieldset-3 fieldset-3"
+      "fieldset-4 fieldset-4"
+      "fieldset-5 fieldset-5";
+  }
+
+  .form__header {
+    grid-area: title;
+  }
+
+  .search-program__subtitle {
+    grid-area: subtitle;
+  }
+
+  .search-program__cat-data-fieldset {
+    grid-area: fieldset-1;
+    width: 570px;
+  }
+
+  .search-program__check-program-radio-fieldset {
+    grid-area: fieldset-2;
+    border-left: 1px solid @color-gray;
+    border-right: 1px solid @color-gray;
+  }
+
+  .search-program__owner-contact-fieldset {
+    grid-area: fieldset-3;
+    display: flex;
+  }
+
+  .search-program__comments-fieldset {
+    grid-area: fieldset-4;
+  }
+
+  .search-program__additional {
+    grid-area: fieldset-5;
+  }
+
+  .container--inner {
+    width: auto;
+  }
+
+  .fieldset__title {
+    margin-left: -40px;
+  }
+}

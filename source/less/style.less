@@ -1,48 +1,62 @@
 // Начните писать стили здесь
 
 // главная страница
-@import url(./blocks/page-body.less);
-@import url(./blocks/page-header.less);
-@import url(./blocks/page-main.less);
-@import url(./blocks/page-footer.less);
-@import url(./blocks/logo-wrapper.less);
-@import url(./blocks/main-nav.less);
-@import url(./blocks/promo.less);
-@import url(./blocks/program.less);
-@import url(./blocks/program-item.less);
-@import url(./blocks/button.less);
-@import url(./blocks/special.less);
-@import url(./blocks/example.less);
-@import url(./blocks/contacts.less);
-@import url(./blocks/section-title.less);
-
+@import url("./blocks/page-body.less");
+@import url("./blocks/page-header.less");
+@import url("./blocks/page-main.less");
+@import url("./blocks/page-footer.less");
+@import url("./blocks/main-nav.less");
+@import url("./blocks/promo.less");
+@import url("./blocks/program.less");
+@import url("./blocks/program-item.less");
+@import url("./blocks/button.less");
+@import url("./blocks/special.less");
+@import url("./blocks/example.less");
+@import url("./blocks/example-result.less");
+@import url("./blocks/contacts.less");
 
 //Каталог
-@import url(./blocks/catalog.less);
-@import url(./blocks/card-product.less);
-@import url(./blocks/more-products.less);
-@import url(./blocks/additional-goods.less);
+@import url("./blocks/catalog.less");
+@import url("./blocks/card-product.less");
+@import url("./blocks/more-products.less");
+@import url("./blocks/additional-goods.less");
+@import url("./blocks/gift.less");
 
 //Форма
-@import url(./blocks/search-program.less);
+@import url("./blocks/search-program.less");
+
 //Переменные
-@import url(./blocks/var.less);
+@import url("./blocks/var.less");
+
+//медиазапросы
+@import url("./blocks/media-tablet.less");
+@import url("./blocks/media-desktop.less");
+//viewports
+@tablet-width: 768px;
+@desktop-width: 1288px;
+@mobile-width-only: 767px;
 
 @font-face {
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url('../fonts/oswaldregular.woff') format('woff'),
-    url('../fonts/oswaldregular.woff2') format('woff2');
-
+  src: url("../fonts/oswaldregular.woff") format("woff"),
+    url("../fonts/oswaldregular.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Oswald';
-  src: url('../fonts/oswaldmedium.woff') format('woff'),
-    url('../fonts/oswaldmedium.woff2') format('woff2');
+  font-family: "Oswald";
+  src: url("../fonts/oswaldmedium.woff") format("woff"),
+    url("../fonts/oswaldmedium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 
+.page {
+  height: 100%;
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.285;
+}
