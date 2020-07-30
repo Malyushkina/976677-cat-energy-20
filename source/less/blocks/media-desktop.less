@@ -167,6 +167,39 @@
   }
 
   // *********************************
+  //           example
+  // *********************************
+
+  .example__content-wrapper {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-row-gap: 60px;
+    grid-column-gap: 134px;
+    grid-template-areas:
+      "title slider"
+      "text slider"
+      "result slider"
+      "expenses slider";
+  }
+
+  .example__img--before-tablet {
+    display: none;
+  }
+
+  .example__img--after-tablet {
+    display: none;
+  }
+
+  .example__img--before-desktop {
+    display: block;
+  }
+
+  .example__img--after-desktop {
+    display: none;
+  }
+
+
+  // *********************************
   //           contacts
   // *********************************
   .contacts__wrapper {
@@ -215,8 +248,8 @@
   //           card-product
   // *********************************
   .card-product {
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 33px;
+    padding-right: 32px;
   }
 
   .card-product__wrapper {
@@ -265,12 +298,20 @@
   }
 
   .card-product__wrapper--mini {
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-      "title description"
-      "button button";
+    grid-template-columns: 245px auto 245px;
+    grid-template-rows: auto;
+    grid-template-areas: "title description button";
     width: 100%;
+    align-items: center;
+  }
+
+  .card-product--mini {
+    padding-top: 13px;
+    padding-bottom: 14px;
+    padding-left: 0;
+    padding-right: 0;
+    border-left: none;
+    border-right: none;
   }
 
   .more-products__img {
@@ -278,31 +319,37 @@
     height: 60px;
   }
 
+
   // *********************************
   //           additional-goods
   // *********************************
-
-  .additional-goods__header {
-    padding-top: 70px;
-    padding-bottom: 70px;
+  .additional-goods {
+    padding-bottom: 85px;
   }
 
-  .additional-goods__title {
-    font-size: @font-size*3.6;
+  .additional-goods__catalog {
+    display: grid;
+    grid-template-columns: auto 245px;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "cards gift"
+      "cards gift"
+      "cards gift"
+      "cards gift";
+    grid-column-gap: 80px;
+    border: none;
   }
 
-  .additional__title {
-    width: 100%;
-    align-self: center;
-    text-align: left;
+  .additional-goods__wrapper {
+    grid-area: cards;
   }
 
   .additional__description {
-    margin: 0;
+    margin-bottom: 0;
   }
 
   .additional__description td {
-    text-align: right;
+    text-align: left;
   }
 
   .additional-row {
@@ -310,21 +357,22 @@
   }
 
   .gift {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    grid-area: gift;
+    padding: 0;
   }
 
   .gift__wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: url(".././img/gift-photo-tablet@1x.jpg") no-repeat top center;
-    background-size: cover;
+    flex-direction: column;
+    padding-top: 55px;
+    padding-bottom: 40px;
+    width: 245px;
+    height: 194px;
+    background: url(".././img/gift-photo-desktop@1x.jpg") no-repeat top center;
   }
 
   .gift__promo {
-    width: 160px;
-    text-align: left;
+    margin: 0;
+    text-align: center;
   }
 
   // *********************************
@@ -368,7 +416,17 @@
 
   .search-program__owner-contact-fieldset {
     grid-area: fieldset-3;
+  }
+
+  .fieldset-owner__wrapper {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .fieldset-owner__wrapper .search-program__label {
+    width: 570px;
   }
 
   .search-program__comments-fieldset {
@@ -383,7 +441,31 @@
     width: auto;
   }
 
+  .fieldset__header {
+    width: 100%;
+  }
+
   .fieldset__title {
     margin-left: -40px;
+  }
+
+  .fieldset-additional__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .fieldset-additional__wrapper .search-program__label {
+    width: 245px;
+    margin-bottom: 60px;
+  }
+
+  .button--form {
+    width: 565px;
+  }
+
+  .search-program__clarification {
+    width: 565px;
   }
 }

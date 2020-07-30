@@ -66,119 +66,118 @@
 
         <fieldset class="search-program__fieldset search-program__cat-data-fieldset">
 
-          <label class="search-program__label flex-label">ИМЯ:*
+          <label class="search-program__label search-program__label--flex">ИМЯ:*
             <input class="searh-program__input searh-program__input--cat-name" type="text" name="cat-name"
               placeholder="барсик" required />
           </label>
 
-          <label class="search-program__label flex-label"> Вес (кг):*
+          <label class="search-program__label search-program__label--flex"> Вес (кг):*
             <input class="searh-program__input searh-program__input--weight" type="number" name="cat-weight"
               placeholder="7" required />
           </label>
 
-          <label class="search-program__label flex-label">Возраст (лет):
+          <label class="search-program__label search-program__label--flex">Возраст (лет):
             <input class="searh-program__input searh-program__input--age" type="number" name="cat-age"
               placeholder="7" />
           </label>
 
-    </fieldset>
+        </fieldset>
 
-    <fieldset class="search-program__fieldset search-program__check-program-radio-fieldset fieldset-flex">
-
-
-      <label class="search-program__label">
-        <input class="check-program__radio" type="radio" name="check-program" value="program-slim" checked />
-        похудение
-      </label>
-
-      <label class="search-program__label">
-        <input class="check-program__radio" type="radio" name="check-program" value="program-pro" />
-        Набор массы
-      </label>
-
-      <label class="search-program__label">
-        <input class="check-program__radio" type="radio" name="check-program" value="program-advice" />
-        Не знаю (Нужен ваш совет)
-      </label>
+        <fieldset class="search-program__fieldset search-program__check-program-radio-fieldset fieldset-flex">
 
 
-    </fieldset>
+          <label class="search-program__label">
+            <input class="check-program__radio" type="radio" name="check-program" value="program-slim" checked />
+            похудение
+          </label>
 
-    <fieldset class="search-program__fieldset search-program__owner-contact-fieldset">
+          <label class="search-program__label">
+            <input class="check-program__radio" type="radio" name="check-program" value="program-pro" />
+            Набор массы
+          </label>
 
-      <header class="fieldset__header">
-        <div class="decor-wrapper">
-          <span class="section-title decor-title fieldset__title">
-            Контактные данные (владельца кота)
-          </span>
-        </div>
-      </header>
-
-      <label class="search-program__label flex-label"> E-mail:*
-        <input class="searh-program__input owner-contact--email" type="email" name="email"
-          placeholder="kuklachev@gmail.com" required />
-      </label>
-
-      <label class="search-program__label flex-label"> Телефон:*
-        <input class="searh-program__input owner-contact--tel" type="tel" name="tel" placeholder="8 (960) 900-60-90"
-          required />
-      </label>
+          <label class="search-program__label">
+            <input class="check-program__radio" type="radio" name="check-program" value="program-advice" />
+            Не знаю (Нужен ваш совет)
+          </label>
 
 
-    </fieldset>
+        </fieldset>
 
-    <fieldset class="search-program__fieldset search-program__comments-fieldset">
+        <fieldset class="search-program__fieldset search-program__owner-contact-fieldset">
 
-      <header class="fieldset__header">
-        <div class="decor-wrapper">
-          <span class="section-title decor-title fieldset__title">
-            Комментарий
-          </span>
-        </div>
-      </header>
+          <header class="fieldset__header">
+            <div class="decor-wrapper">
+              <span class="section-title decor-title fieldset__title">
+                Контактные данные (владельца кота)
+              </span>
+            </div>
+          </header>
+          <div class="fieldset-owner__wrapper">
+            <label class="search-program__label search-program__label--flex"> E-mail:*
+              <input class="searh-program__input owner-contact--email" type="email" name="email"
+                placeholder="kuklachev@gmail.com" required />
+            </label>
+
+            <label class="search-program__label search-program__label--flex"> Телефон:*
+              <input class="searh-program__input owner-contact--tel" type="tel" name="tel"
+                placeholder="8 (960) 900-60-90" required />
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="search-program__fieldset search-program__comments-fieldset">
+
+          <header class="fieldset__header">
+            <div class="decor-wrapper">
+              <span class="section-title decor-title fieldset__title">
+                Комментарий
+              </span>
+            </div>
+          </header>
 
 
-      <textarea class="search-program__comments-textarea" name="comments" id="" cols="30" rows="10"
-        placeholder="Расскажите обо всех повАдках кота"></textarea>
-    </fieldset>
+          <textarea class="search-program__comments-textarea" name="comments" id="" cols="30" rows="10"
+            placeholder="Расскажите обо всех повАдках кота"></textarea>
+        </fieldset>
 
-    <fieldset class="search-program__fieldset search-program__additional fieldset-flex">
+        <fieldset class="search-program__fieldset search-program__additional fieldset-flex">
 
-      <header class="fieldset__header">
-        <div class="decor-wrapper">
-          <span class="section-title decor-title fieldset__title">
-            Дополнительно
-          </span>
-        </div>
-      </header>
-      <div class="fieldset-additional__wrapper">
-        <label class="search-program__label">
-          <input class="search-program__additional--sweetener" name="sweetener" type="checkbox" value="sweetener"
-            checked />
-          сахарозаменитель
-        </label>
+          <header class="fieldset__header">
+            <div class="decor-wrapper">
+              <span class="section-title decor-title fieldset__title">
+                Дополнительно
+              </span>
+            </div>
+          </header>
+          <div class="fieldset-additional__wrapper">
+            <label class="search-program__label">
+              <input class="search-program__additional--sweetener" name="sweetener" type="checkbox" value="sweetener"
+                checked />
+              сахарозаменитель
+            </label>
 
-        <label class="search-program__label">
-          <input class="search-program__additional--water" name="water" type="checkbox" value="water" />
-          питьевая вода
-        </label>
+            <label class="search-program__label">
+              <input class="search-program__additional--water" name="water" type="checkbox" value="water" />
+              питьевая вода
+            </label>
 
-        <label class="search-program__label">
-          <input class="search-program__additional--milk" name="milk" type="checkbox" value="milk" />
-          молоко
-        </label>
+            <label class="search-program__label">
+              <input class="search-program__additional--milk" name="milk" type="checkbox" value="milk" />
+              молоко
+            </label>
 
-        <label class="search-program__label">
-          <input class="search-program__additional--vitamins" name="vitamins" type="checkbox" value="vitamins" />
-          витамины
-        </label>
+            <label class="search-program__label">
+              <input class="search-program__additional--vitamins" name="vitamins" type="checkbox" value="vitamins" />
+              витамины
+            </label>
 
-        <input class="button button-text button--form" type="submit" value="отправить заявку" />
-        <p class="search-program__clarification">* — Обязательные поля</p>
+            <input class="button button-text button--form" type="submit" value="отправить заявку" />
+            <p class="search-program__clarification">* — Обязательные поля</p>
 
-      </div>
-    </fieldset>
-    </form>
+          </div>
+        </fieldset>
+      </form>
     </div>
     <!-- Секция Contacts -->
 
