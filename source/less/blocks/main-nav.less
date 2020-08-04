@@ -14,8 +14,6 @@
   z-index: 2;
 }
 
-
-
 .main-nav__list {
   padding: 0;
   margin: 0;
@@ -24,14 +22,25 @@
 }
 
 .site-list__item {
+  position: relative;
   flex-shrink: 1;
   flex-basis: 64px;
 
-  padding-top: 22px;
-  padding-bottom: 22px;
+  padding-top: 23px;
+  padding-bottom: 21px;
+
   text-align: center;
 
-  border-top: 1px solid @color-gray2;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    height: 2px;
+    width: 100vw;
+    background-color: @color-gray2 ;
+    transform: translateX(-50%);
+  }
 }
 
 .site-list__item-link {
@@ -42,8 +51,4 @@
   line-height: 1;
   text-decoration: none;
   text-transform: uppercase;
-}
-
-.site-list__item--active {
-  border-bottom: 2px solid @color-basic-green;
 }

@@ -5,7 +5,35 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
-  <script src="./js/main.js"></script>
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* По умолчанию показывается мобильный макет */
+      background-image: url("./img/Mobile.png");
+    }
+
+    /* Планшет */
+    @media (min-width: 768px) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url("./img/tablet.png");
+      }
+    }
+
+    /* Десктоп */
+    @media (min-width: 1288px) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url("./img/Desktop.png");
+      }
+    }
+
+  </style>
+  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet" type="text/css">
+  <script src="../node_modules/pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 
@@ -32,7 +60,7 @@
         <!-- Главное меню сайта -->
 
         <nav class="main-nav main-nav--closed main-nav--nojs">
-          <button class="main-nav__toggle" type="button" >
+          <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">
               Открыть меню
             </span>
@@ -103,7 +131,7 @@
           </p>
           <footer class="program-item__footer">
             <a class="program__link" href="./catalog.html">каталог slim <img src="./img/icon-right-arrow-long.svg"
-                width="32" height="10" alt=""></a>
+                width="24" height="10" alt=""></a>
           </footer>
         </div>
 
@@ -197,34 +225,20 @@
           <div class="example__expenses">
             Затраты на питание: 15 000 РУБ.
           </div>
+        </div>
+      </div>
+      <!--  Контейнер для слайдера -->
+      <div class="example__img slider">
 
-          <!--  Контейнер для слайдера -->
-          <div class="example__img slider">
+        <div class="example__wrapper slider--list">
+          <div class="slider__item slider__item--before slider-item--active"></div>
+          <div class="slider__item slider__item--after slider-item--hidden"></div>
 
-            <div class="example__wrapper slider--list">
-              <img class="example__img--before example__img--before-mobile slider--item"
-                src="./img/before-mobile@1x.png" width="280" alt="было">
-              <img class="example__img--before example__img--before-tablet slider--item"
-                src="./img/before-tablet@1x.png" width="690" height="517" alt="было">
-              <img class="example__img--before example__img--before-desktop slider--item"
-                src="./img/before-desktop@1x.png" width="690" height="517" alt="было">
-
-              <img class="example__img--after example__img--after-mobile slider--item " src="./img/after-mobile@1x.png"
-                width="280" alt="стало">
-              <img class="example__img--after example__img--after-tablet slider--item " src="./img/after-tablet@1x.png"
-                width="690" height="517" alt="стало">
-              <img class="example__img--after example__img--after-desktop slider--item "
-                src="./img/after-desktop@1x.png" width="690" height="517" alt="стало">
-              <div class="example__toggles slider__toggles">
-                <span class="slider__designation slider__designation--prev">было</span>
-                <div class="slider__toggler__wrapper">
-                  <div class="slider__toggler"></div>
-                </div>
-                <span class="slider__designation slider__designation--next">стало</span>
-              </div>
-            </div>
+          <div class="example__toggles slider__toggles">
+            <span class="slider__designation slider__designation--prev">было</span>
+            <input class="slider__toggler" type="range" min="0" max="1" value="0" oninput="range()">
+            <span class="slider__designation slider__designation--next">стало</span>
           </div>
-
         </div>
       </div>
     </section>
@@ -235,7 +249,7 @@
       <div class="container contacts__wrapper">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts-description">
-          <h3 class="contacts__title section-title">приглашаем
+          <h3 class="contacts__title section-title">приглашаем <br>
             к сотрудничеству дилеров!</h3>
           <p class="contacts__adress">ул. Большая
             Конюшенная, д. 19/8
@@ -300,20 +314,36 @@
     </div>
   </footer>
   <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
+    // var navMain = document.querySelector('.main-nav');
+    // var navToggle = document.querySelector('.main-nav__toggle');
 
-    navMain.classList.remove('main-nav--nojs');
+    // navMain.classList.remove('main-nav--nojs');
 
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
+    // navToggle.addEventListener('click', function () {
+    //   if (navMain.classList.contains('main-nav--closed')) {
+    //     navMain.classList.remove('main-nav--closed');
+    //     navMain.classList.add('main-nav--opened');
+    //   } else {
+    //     navMain.classList.add('main-nav--closed');
+    //     navMain.classList.remove('main-nav--opened');
+    //   }
+    // });
+
+  </script>
+  <script>
+    function range() {
+      var sliderItem = document.querySelectorAll('.slider__item');
+      for (var i = 0; i < sliderItem.length; i++) {
+        if (sliderItem[i].classList.contains('slider-item--active')) {
+          sliderItem[i].classList.remove('slider-item--active');
+          sliderItem[i].classList.add('slider-item--hidden');
+        } else {
+          sliderItem[i].classList.add('slider-item--active');
+          sliderItem[i].classList.remove('slider-item--hidden');
+        }
       }
-    });
+    }
+
   </script>
 </body>
 

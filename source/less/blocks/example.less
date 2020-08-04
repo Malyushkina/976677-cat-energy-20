@@ -1,5 +1,5 @@
 .example {
-  padding-top: 25px;
+  padding-top: 30px;
   padding-bottom: 35px;
   background-color: @color-gray3;
 }
@@ -8,7 +8,11 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto auto auto auto;
-  grid-row-gap: 25px;
+  grid-row-gap: 26px;
+}
+
+.example__header {
+  padding-bottom: 10px;
 }
 
 .example__title {
@@ -17,6 +21,8 @@
 
 .example__description {
   margin: 0;
+  line-height: 1.314;
+  padding-right: 2px;
 }
 
 .example__expenses {
@@ -28,24 +34,24 @@
   text-align: center;
 }
 
-.example__wrapper {
-  text-align: center;
+.slider {
+  padding-top: 10px;
+ &__item{
+  width: 320px;
+  height: 240px;
+  margin: 0 auto;
+  margin-bottom: 31px;
+  &--before{
+    background-image: url(".././img/before-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &--after{
+    background-image: url(".././img/after-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
-
-.example__img--before-tablet {
-  display: none;
-}
-
-.example__img--before-desktop {
-  display: none;
-}
-
-.example__img--after-tablet {
-  display: none;
-}
-
-.example__img--after-desktop {
-  display: none;
 }
 
 .slider__designation {
@@ -62,23 +68,48 @@
   justify-content: space-between;
   align-items: center;
 
-  width: 228px;
+  width: 198px;
   margin: 0 auto;
 }
 
-.slider__toggler__wrapper {
-  width: 84px;
+.slider__toggler {
+  -webkit-appearance: none;
+  width: 75px;
   padding: 4px;
 
   background-color: @color-white;
   border: 1px solid @color-special_gray;
   border-radius: 7px;
+  text-align: left;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 36px;
+    height: 6px;
+
+    background-color: @color-basic-green;
+    border-radius: 6px;
+    cursor: pointer;
+    transition:0.1s;
+  }
+
+  &::-moz-range-thumb {
+    width: 36px;
+    height: 6px;
+
+    background-color: @color-basic-green;
+    border-radius: 6px;
+    cursor: pointer;
+  }
 }
 
-.slider__toggler {
-  width: 36px;
-  height: 6px;
-
-  background-color: @color-basic-green;
-  border-radius: 6px;
+.slider-item--active{
+  display: block;
+}
+.slider-item--hidden{
+  display: none;
 }

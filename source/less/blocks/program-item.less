@@ -7,12 +7,12 @@
     "img title title title"
     "text text text text"
     " link link link link";
-  grid-row-gap: 22px;
+  grid-row-gap: 23px;
   grid-column-gap: 20px;
   align-items: center;
 
   background-color: @color-basic-gray;
-  padding-top: 19px;
+  padding-top: 24px;
   padding-left: 20px;
   padding-right: 20px;
   margin-bottom: 20px;
@@ -40,6 +40,7 @@
 
   width: 50px;
   height: 50px;
+  margin-left: 2px;
 
   border-radius: 50%;
   background-color: @color-basic-green;
@@ -47,7 +48,7 @@
 
 .program__img {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -65,23 +66,20 @@
 .program__description {
   margin: 0;
   grid-area: text;
+  line-height: 18/14;
 }
 
 .program-item__footer {
   grid-area: link;
-  display: flex;
-  justify-content: start;
-  align-items: center;
   width: 100%;
-  padding-top: 15px;
-  padding-bottom: 19px;
+  padding-top: 18px;
+  padding-bottom: 23px;
 
   border-top: 1px solid @color-gray;
 }
 
 .program__link {
-  padding-right: 17px;
-
+  display: block;
   font-family: @font;
   font-weight: 400;
   font-size: @font-size*1.6;
@@ -89,4 +87,10 @@
   text-decoration: none;
   color: @color-black;
   line-height: 1;
+
+  img {
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 2px;
+  }
 }
