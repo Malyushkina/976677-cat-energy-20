@@ -2,6 +2,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
+
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 
@@ -11,7 +12,7 @@
     <div class="container">
       <div class="page-header__wrapper">
 
-        <!-- Логотип и кнопка -->
+        <!-- Логотип -->
 
         <div class="logo__wrapper">
           <a class="page-header__logo" href="#">
@@ -22,25 +23,27 @@
             <img class="page-header__logo--desctop" src="./img/logo-desktop.svg"
               alt="Функциональное питание для котов CAT ENERGY" width="202" height="59" />
           </a>
+        </div>
 
+        <!-- Главное меню сайта -->
+
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">
               Открыть меню
             </span>
           </button>
-        </div>
-
-        <!-- Главное меню сайта -->
-        <nav class="main-nav main-nav--closed">
-          <ul class="main-nav__list site-list ">
-            <li class="site-list__item ">
-              <a class="site-list__item-link" href="./index.html">главная</a>
-            </li>
-            <li class="site-list__item"><a class="site-list__item-link" href="./catalog.html">каталог продукции</a>
-            </li>
-            <li class="site-list__item site-list__item--active"><a class="site-list__item-link"
-                href="./form.html">подбор программы</a></li>
-          </ul>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item">
+                <a class="site-list__item-link" href="./index.html">главная</a>
+              </li>
+              <li class="site-list__item"><a class="site-list__item-link" href="./catalog.html">каталог продукции</a>
+              </li>
+              <li class="site-list__item site-list__item--active"><a class="site-list__item-link"
+                  href="./form.html">подбор программы</a></li>
+            </ul>
+          </div>
         </nav>
       </div>
     </div>
@@ -66,12 +69,12 @@
 
         <fieldset class="search-program__fieldset search-program__cat-data-fieldset">
 
-          <label class="search-program__label search-program__label--flex">ИМЯ:*
+          <label class="search-program__label search-program__label--flex">ИМЯ: <sup>*</sup>
             <input class="searh-program__input searh-program__input--cat-name" type="text" name="cat-name"
               placeholder="барсик" required />
           </label>
 
-          <label class="search-program__label search-program__label--flex"> Вес (кг):*
+          <label class="search-program__label search-program__label--flex"> Вес (кг):<sup>*</sup>
             <input class="searh-program__input searh-program__input--weight" type="number" name="cat-weight"
               placeholder="7" required />
           </label>
@@ -114,12 +117,12 @@
             </div>
           </header>
           <div class="fieldset-owner__wrapper">
-            <label class="search-program__label search-program__label--flex"> E-mail:*
+            <label class="search-program__label search-program__label--flex"> E-mail:<sup>*</sup>
               <input class="searh-program__input owner-contact--email" type="email" name="email"
                 placeholder="kuklachev@gmail.com" required />
             </label>
 
-            <label class="search-program__label search-program__label--flex"> Телефон:*
+            <label class="search-program__label search-program__label--flex"> Телефон:<sup>*</sup>
               <input class="searh-program__input owner-contact--tel" type="tel" name="tel"
                 placeholder="8 (960) 900-60-90" required />
             </label>
@@ -249,6 +252,23 @@
       </div>
     </div>
   </footer>
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+
+  </script>
 </body>
 
 </html>

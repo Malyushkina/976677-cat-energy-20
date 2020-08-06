@@ -1,6 +1,7 @@
 // Начните писать стили здесь
 
 // главная страница
+@import url("./blocks/global.less");
 @import url("./blocks/page-body.less");
 @import url("./blocks/page-header.less");
 @import url("./blocks/page-main.less");
@@ -28,13 +29,15 @@
 //Переменные
 @import url("./blocks/var.less");
 
-//медиазапросы
-@import url("./blocks/media-tablet.less");
-@import url("./blocks/media-desktop.less");
 //viewports
 @tablet-width: 768px;
 @desktop-width: 1288px;
 @mobile-width-only: 767px;
+
+//медиазапросы
+@import url("./blocks/media-tablet.less");
+@import url("./blocks/media-desktop.less");
+@import url("./blocks/media-mobile-only.less");
 
 @font-face {
   font-family: "Oswald";
@@ -51,12 +54,4 @@
     url("../fonts/oswaldmedium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
-}
-
-.page {
-  height: 100%;
-  font-family: "Arial", "Helvetica", sans-serif;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.285;
 }
