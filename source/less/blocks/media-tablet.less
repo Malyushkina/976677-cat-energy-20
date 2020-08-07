@@ -270,11 +270,7 @@
   //           example
   // *********************************
   .example {
-    background: linear-gradient(
-      to bottom,
-      @color-white 619px,
-      @color-gray3 619px
-    );
+    background: linear-gradient(to bottom, @color-white 619px, @color-gray3 619px);
     border-top: 1px solid @color-gray2;
     padding-top: 20px;
     padding-bottom: 66px;
@@ -526,10 +522,7 @@
   .card-product {
     padding-bottom: 40px;
 
-    background-image: linear-gradient(
-      @color-white 75px,
-      @color-basic-gray 75px
-    );
+    background-image: linear-gradient(@color-white 75px, @color-basic-gray 75px);
     background-repeat: no-repeat;
 
     &::after {
@@ -586,7 +579,6 @@
   }
 
   .card-product__description {
-    // margin-bottom: 13px;
     width: 252px;
     margin-bottom: auto;
     font-size: @font-size*1.6;
@@ -676,16 +668,19 @@
     background: url(".././img/gift-photo-tablet@1x.jpg") no-repeat top center;
     background-size: cover;
   }
+
   .gift__img-wrapper {
     margin: 0;
     width: 58px;
     height: 78px;
   }
+
   .gift__promo {
     width: 162px;
     text-align: left;
     margin: 0;
   }
+
   // *********************************
   //           button
   // *********************************
@@ -717,6 +712,10 @@
   // *********************************
   //           form
   // *********************************
+  .form {
+    border-top: none;
+  }
+
   .form__header {
     padding-top: 60px;
     padding-bottom: 60px;
