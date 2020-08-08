@@ -2,6 +2,36 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
+  <!-- Pixel Glass -->
+  <!-- <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* По умолчанию показывается мобильный макет */
+      background-image: url("./img/Mobile.png");
+    }
+
+    /* Планшет */
+    @media (min-width: 768px) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url("./img/tablet.png");
+      }
+    }
+
+    /* Десктоп */
+    @media (min-width: 1288px) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url("./img/Desktop.png");
+      }
+    }
+
+  </style>
+  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet" type="text/css" />
+  <script src="../node_modules/pixel-glass/script.js"></script> -->
+  <!-- // Pixel Glass -->
+
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 
@@ -11,7 +41,7 @@
     <div class="container">
       <div class="page-header__wrapper">
 
-        <!-- Логотип и кнопка -->
+        <!-- Логотип -->
 
         <div class="logo__wrapper">
           <a class="page-header__logo" href="#">
@@ -22,184 +52,182 @@
             <img class="page-header__logo--desctop" src="./img/logo-desktop.svg"
               alt="Функциональное питание для котов CAT ENERGY" width="202" height="59" />
           </a>
+        </div>
 
+        <!-- Главное меню сайта -->
+
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">
               Открыть меню
             </span>
           </button>
-        </div>
-
-        <!-- Главное меню сайта -->
-        <nav class="main-nav main-nav--closed">
-          <ul class="main-nav__list site-list ">
-            <li class="site-list__item ">
-              <a class="site-list__item-link" href="./index.html">главная</a>
-            </li>
-            <li class="site-list__item"><a class="site-list__item-link" href="./catalog.html">каталог продукции</a>
-            </li>
-            <li class="site-list__item site-list__item--active"><a class="site-list__item-link"
-                href="./form.html">подбор программы</a></li>
-          </ul>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item">
+                <a class="site-list__item-link" href="./index.html">главная</a>
+              </li>
+              <li class="site-list__item"><a class="site-list__item-link" href="./catalog.html">каталог продукции</a>
+              </li>
+              <li class="site-list__item site-list__item--active"><a class="site-list__item-link"
+                  href="./form.html">подбор программы</a></li>
+            </ul>
+          </div>
         </nav>
       </div>
     </div>
   </header>
 
   <main class="page-main">
+    <section class="form">
 
-    <h1 class="visually-hidden">
-      CAT ENERGY - Функциональное питание для котов
-    </h1>
-    <!-- Форма -->
-    <div class="container">
-      <form class="search-program" action="https://echo.htmlacademy.ru">
+      <h1 class="visually-hidden">
+        CAT ENERGY - Функциональное питание для котов
+      </h1>
+      <!-- Форма -->
+      <div class="container">
+        <form class="search-program" action="https://echo.htmlacademy.ru">
 
-        <header class="form__header">
-          <h2 class="section-title">Подбор программы</h2>
-        </header>
-
-        <p class="search-program__subtitle">
-          Заполните анкету, и мы подберем программу питания для вашего кота
-        </p>
-
-
-        <fieldset class="search-program__fieldset search-program__cat-data-fieldset">
-
-          <label class="search-program__label search-program__label--flex">ИМЯ:*
-            <input class="searh-program__input searh-program__input--cat-name" type="text" name="cat-name"
-              placeholder="барсик" required />
-          </label>
-
-          <label class="search-program__label search-program__label--flex"> Вес (кг):*
-            <input class="searh-program__input searh-program__input--weight" type="number" name="cat-weight"
-              placeholder="7" required />
-          </label>
-
-          <label class="search-program__label search-program__label--flex">Возраст (лет):
-            <input class="searh-program__input searh-program__input--age" type="number" name="cat-age"
-              placeholder="7" />
-          </label>
-
-        </fieldset>
-
-        <fieldset class="search-program__fieldset search-program__check-program-radio-fieldset fieldset-flex">
-
-
-          <label class="search-program__label">
-            <input class="check-program__radio" type="radio" name="check-program" value="program-slim" checked />
-            похудение
-          </label>
-
-          <label class="search-program__label">
-            <input class="check-program__radio" type="radio" name="check-program" value="program-pro" />
-            Набор массы
-          </label>
-
-          <label class="search-program__label">
-            <input class="check-program__radio" type="radio" name="check-program" value="program-advice" />
-            Не знаю (Нужен ваш совет)
-          </label>
-
-
-        </fieldset>
-
-        <fieldset class="search-program__fieldset search-program__owner-contact-fieldset">
-
-          <header class="fieldset__header">
-            <div class="decor-wrapper">
-              <span class="section-title decor-title fieldset__title">
-                Контактные данные (владельца кота)
-              </span>
-            </div>
-          </header>
-          <div class="fieldset-owner__wrapper">
-            <label class="search-program__label search-program__label--flex"> E-mail:*
-              <input class="searh-program__input owner-contact--email" type="email" name="email"
-                placeholder="kuklachev@gmail.com" required />
-            </label>
-
-            <label class="search-program__label search-program__label--flex"> Телефон:*
-              <input class="searh-program__input owner-contact--tel" type="tel" name="tel"
-                placeholder="8 (960) 900-60-90" required />
-            </label>
-          </div>
-        </fieldset>
-
-        <fieldset class="search-program__fieldset search-program__comments-fieldset">
-
-          <header class="fieldset__header">
-            <div class="decor-wrapper">
-              <span class="section-title decor-title fieldset__title">
-                Комментарий
-              </span>
-            </div>
+          <header class="form__header">
+            <h2 class="section-title">Подбор программы</h2>
           </header>
 
+          <p class="search-program__subtitle">
+            Заполните анкету, и мы подберем программу питания для вашего кота
+          </p>
 
-          <textarea class="search-program__comments-textarea" name="comments" id="" cols="30" rows="10"
-            placeholder="Расскажите обо всех повАдках кота"></textarea>
-        </fieldset>
 
-        <fieldset class="search-program__fieldset search-program__additional fieldset-flex">
+          <fieldset class="search-program__fieldset search-program__cat-data-fieldset">
 
-          <header class="fieldset__header">
-            <div class="decor-wrapper">
-              <span class="section-title decor-title fieldset__title">
-                Дополнительно
-              </span>
+            <label class="search-program__label search-program__label--flex">ИМЯ: <sup>*</sup>
+              <input class="searh-program__input searh-program__input--cat-name" type="text" name="cat-name"
+                placeholder="барсик" required />
+            </label>
+
+            <label class="search-program__label search-program__label--flex"> Вес (кг):<sup>*</sup>
+              <input class="searh-program__input searh-program__input--weight" type="number" name="cat-weight"
+                placeholder="7" required />
+            </label>
+
+            <label class="search-program__label search-program__label--flex">Возраст (лет):
+              <input class="searh-program__input searh-program__input--age" type="number" name="cat-age"
+                placeholder="7" />
+            </label>
+
+          </fieldset>
+
+          <fieldset class="search-program__fieldset search-program__check-program-radio-fieldset fieldset-flex">
+
+
+            <label class="search-program__label">
+              <input class="check-program__radio" type="radio" name="check-program" value="program-slim" checked />
+              похудение
+            </label>
+
+            <label class="search-program__label">
+              <input class="check-program__radio" type="radio" name="check-program" value="program-pro" />
+              Набор массы
+            </label>
+
+            <label class="search-program__label">
+              <input class="check-program__radio" type="radio" name="check-program" value="program-advice" />
+              Не знаю (Нужен ваш совет)
+            </label>
+
+
+          </fieldset>
+
+          <fieldset class="search-program__fieldset search-program__owner-contact-fieldset">
+
+            <header class="fieldset__header">
+              <div class="decor-wrapper">
+                <span class="section-title decor-title fieldset__title">
+                  Контактные данные (владельца кота)
+                </span>
+              </div>
+            </header>
+            <div class="fieldset-owner__wrapper">
+              <label class="search-program__label search-program__label--flex"> E-mail:<sup>*</sup>
+                <input class="searh-program__input owner-contact--email" type="email" name="email"
+                  placeholder="kuklachev@gmail.com" required />
+              </label>
+
+              <label class="search-program__label search-program__label--flex"> Телефон:<sup>*</sup>
+                <input class="searh-program__input owner-contact--tel" type="tel" name="tel"
+                  placeholder="8 (960) 900-60-90" required />
+              </label>
             </div>
-          </header>
-          <div class="fieldset-additional__wrapper">
-            <label class="search-program__label">
-              <input class="search-program__additional--sweetener" name="sweetener" type="checkbox" value="sweetener"
-                checked />
-              сахарозаменитель
-            </label>
+          </fieldset>
 
-            <label class="search-program__label">
-              <input class="search-program__additional--water" name="water" type="checkbox" value="water" />
-              питьевая вода
-            </label>
+          <fieldset class="search-program__fieldset search-program__comments-fieldset">
 
-            <label class="search-program__label">
-              <input class="search-program__additional--milk" name="milk" type="checkbox" value="milk" />
-              молоко
-            </label>
+            <header class="fieldset__header">
+              <div class="decor-wrapper">
+                <span class="section-title decor-title fieldset__title">
+                  Комментарий
+                </span>
+              </div>
+            </header>
 
-            <label class="search-program__label">
-              <input class="search-program__additional--vitamins" name="vitamins" type="checkbox" value="vitamins" />
-              витамины
-            </label>
 
-            <input class="button button-text button--form" type="submit" value="отправить заявку" />
-            <p class="search-program__clarification">* — Обязательные поля</p>
+            <textarea class="search-program__comments-textarea" name="comments" id="" cols="30" rows="10"
+              placeholder="Расскажите обо всех повАдках кота"></textarea>
+          </fieldset>
 
-          </div>
-        </fieldset>
-      </form>
-    </div>
+          <fieldset class="search-program__fieldset search-program__additional fieldset-flex">
+
+            <header class="fieldset__header">
+              <div class="decor-wrapper">
+                <span class="section-title decor-title fieldset__title">
+                  Дополнительно
+                </span>
+              </div>
+            </header>
+            <div class="fieldset-additional__wrapper">
+              <label class="search-program__label">
+                <input class="search-program__additional--sweetener" name="sweetener" type="checkbox" value="sweetener"
+                  checked />
+                сахарозаменитель
+              </label>
+
+              <label class="search-program__label">
+                <input class="search-program__additional--water" name="water" type="checkbox" value="water" />
+                питьевая вода
+              </label>
+
+              <label class="search-program__label">
+                <input class="search-program__additional--milk" name="milk" type="checkbox" value="milk" />
+                молоко
+              </label>
+
+              <label class="search-program__label">
+                <input class="search-program__additional--vitamins" name="vitamins" type="checkbox" value="vitamins" />
+                витамины
+              </label>
+
+              <input class="button button-text button--form" type="submit" value="отправить заявку" />
+              <p class="search-program__clarification">* — Обязательные поля</p>
+
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </section>
     <!-- Секция Contacts -->
-
     <section class="contacts">
       <div class="container contacts__wrapper">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts-description">
-          <h3 class="contacts__title section-title">приглашаем
-            к сотрудничеству дилеров!</h3>
-          <p class="contacts__adress">ул. Большая
-            Конюшенная, д. 19/8
-            Санкт-Петербург</p>
+          <h3 class="contacts__title section-title">
+            приглашаем <br />
+            к сотрудничеству дилеров!
+          </h3>
+          <p class="contacts__adress">
+            ул. Большая Конюшенная, д. 19/8 <span> Санкт-Петербург</span>
+          </p>
         </div>
       </div>
-      <div class="contacts__map">
-        <img class="contacts__img contacts__img--mobile" src="./img/bg-map-mobile@1x.png" width="320" height="362"
-          alt="Мы на карте" class="map">
-        <img class="contacts__img contacts__img--tablet" src="./img/bg-map-tablet@1x.png" width="768" height="400"
-          alt="Мы на карте" class="map">
-        <img class="contacts__img contacts__img--desktop" src="./img/bg-map-desktop@1x.png" width="1440" height="500"
-          alt="Мы на карте" class="map">
-      </div>
+      <div class="contacts__map"></div>
     </section>
   </main>
 
@@ -207,12 +235,10 @@
 
   <footer class="page-footer">
     <div class="container">
-
       <!-- Обёртка для флексов -->
       <div class="footer__wrapper">
-
         <div class="page-footer__logo">
-          <img src="./img/logo-footer.svg" width="128" height="24" alt="CAT ENERGY">
+          <img src="./img/logo-footer.svg" width="128" height="24" alt="CAT ENERGY" />
         </div>
 
         <div class="page-footer__social social">
@@ -220,21 +246,21 @@
             <li class="social__item">
               <a class="social__link social__link--vkontakte" href="#">
                 <div class="social__link-img-wrapper">
-                  <img src="./img/icon-vk.svg" width="23" height="16" alt="Мы Вконтакте">
+                  <img src="./img/icon-vk.svg" width="23" height="16" alt="Мы Вконтакте" />
                 </div>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--instagramm" href="#">
                 <div class="social__link-img-wrapper">
-                  <img src="./img/icon-insta.svg" width="16" height="16" alt="Мы в Инстаграмме">
+                  <img src="./img/icon-insta.svg" width="16" height="16" alt="Мы в Инстаграмме" />
                 </div>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="#">
                 <div class="social__link-img-wrapper">
-                  <img src="./img/icon-fb.svg" width="22" height="22" alt="Мы в Фейсбуке">
+                  <img src="./img/icon-fb.svg" width="10" height="19" alt="Мы в Фейсбуке" />
                 </div>
               </a>
             </li>
@@ -243,12 +269,28 @@
 
         <div class="page-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <img class="copyright__logo" src="./img/htmlacademy.svg" width="27" height="34" alt="HTML Academy logo" />
+          <img class="copyright__logo" src="./img/htmlacademy.svg" width="40" height="40" alt="HTML Academy logo" />
         </div>
-
       </div>
     </div>
   </footer>
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+
+  </script>
 </body>
 
 </html>

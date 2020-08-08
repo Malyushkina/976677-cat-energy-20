@@ -1,6 +1,17 @@
 .card-product {
-  padding-bottom: 25px;
-  border-top: 1px solid @color-gray;
+  position: relative;
+  padding-bottom: 24px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    height: 1px;
+    width: 100vw;
+    background-color: @color-gray2;
+    transform: translateX(-50%);
+  }
 }
 
 .card-product--more-products {
@@ -8,14 +19,24 @@
 }
 
 .card-product--mini {
+
   padding-top: 12px;
-  padding-bottom: 19px;
+  padding-bottom: 18px;
+  border-top: 1px solid @color-gray;
+
+  &:last-child {
+    border-bottom: 1px solid @color-gray;
+  }
+
+  &::after {
+    display: none;
+  }
 }
 
 .card-product__wrapper {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 140px 140px;
+  grid-template-rows: 61px 58px auto;
   grid-template-areas:
     "img title"
     "img description"
@@ -26,25 +47,24 @@
 .card-product__wrapper--more-products {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: 35px 32px 29px auto;
   grid-template-areas:
     "img "
     "title"
     "description"
     "button ";
-  grid-row-gap: 13px;
+  grid-row-gap: 8px;
   align-items: center;
 }
 
 .card-product__wrapper--mini {
   grid-template-columns: auto;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: 20px 21px auto;
   grid-template-areas:
-
     "title"
     "description"
     "button ";
-  grid-row-gap: 13px;
+  grid-row-gap: 9px;
   align-items: center;
 }
 
@@ -67,14 +87,14 @@
 
 .card-product__description {
   grid-area: description;
-  align-self: center;
+  align-self: flex-start;
   width: 100%;
   margin: 0;
   padding: 0;
 
   border-collapse: collapse;
   font-size: @font-size*1.2;
-  line-height: 1.33;
+  line-height: 1.2;
   color: @color-special_dark-grey;
 }
 
@@ -90,6 +110,7 @@
 
 .card-product__img {
   width: 100%;
+  height: auto;
 }
 
 .card-product__img--tablet {
@@ -98,10 +119,6 @@
 
 .card-product__img--desktop {
   display: none;
-}
-
-.button-grid {
-  grid-area: button;
 }
 
 .col2 {

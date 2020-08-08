@@ -13,6 +13,8 @@
   }
 
   .page-header__logo {
+    position: relative;
+    left: 10px;
     height: 59px;
   }
 
@@ -60,25 +62,17 @@
   //           promo
   // *********************************
   .promo {
-    position: relative;
-    padding-top: 110px;
+    padding-top: 87px;
     padding-bottom: 227px;
     min-height: auto;
   }
 
   .promo__wrapper {
-    position: relative;
+    margin-left: 80px;
   }
 
-  .promo__img--tablet {
-    display: none;
-  }
-
-  .promo__img--desktop {
-    display: block;
-    position: absolute;
-    top: -80px;
-    left: 37%;
+  .promo__header {
+    padding-left: 0;
   }
 
   .promo__title {
@@ -90,6 +84,17 @@
 
   .promo__slogan {
     margin-bottom: 50px;
+    padding-left: 0;
+  }
+
+  .promo__img {
+    top: -59px;
+    left: 368px;
+    width: 552px;
+    height: 499px;
+    margin: 0;
+
+    background-image: url(".././img/index-can-desktop@1x.png");
   }
 
   // *********************************
@@ -98,7 +103,7 @@
   .program {
     display: flex;
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 41px;
   }
 
   .program__wrapper {
@@ -108,24 +113,30 @@
 
   .program-item {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
       "img title title title"
       "text text text text"
       " link link link link";
-    grid-row-gap: 22px;
-    grid-column-gap: 50px;
+    grid-row-gap: 23px;
+    grid-column-gap: 62px;
     align-items: center;
 
     padding-left: 50px;
-    padding-top: 40px;
+    padding-right: 30px;
+    padding-top: 32px;
     padding-bottom: 40px;
     width: 490px;
     margin-bottom: 0;
   }
 
+  .program-item:nth-of-type(2) .program__description {
+    max-width: none;
+  }
+
   .program__title {
     font-size: @font-size*3.6;
+    padding-top: 11px;
   }
 
   .program__img-wrapper {
@@ -134,24 +145,40 @@
   }
 
   .program__img--slim {
+    padding-top: 6px;
     width: 70px;
     height: 97px;
   }
 
   .program__img--pro {
+    padding-right: 4px;
+    padding-bottom: 1px;
     width: 134px;
     height: 56px;
+  }
+
+  .program__description {
+
+    padding-bottom: 0;
+    padding-top: 16px;
+    padding-left: 3px;
+  }
+
+  .program-item__footer {
+    padding-top: 9px;
+    padding-left: 3px;
   }
 
   // *********************************
   //           special
   // *********************************
   .special {
-    padding-top: 30px;
+    padding-top: 16px;
+    padding-bottom: 0;
   }
 
   .special__header {
-    margin-bottom: 30px;
+    margin-bottom: 17px;
   }
 
   .special__title {
@@ -162,42 +189,86 @@
   }
 
   .special__list {
-    grid-template-columns: 230px 230px 230px 230px;
-    grid-column-gap: 95px;
+    grid-template-columns: 241px 245px 244px 250px;
+    grid-column-gap: 82px;
   }
 
   // *********************************
   //           example
   // *********************************
+  .example {
+    padding-top: 5px;
+    padding-bottom: 40px;
+    border-top: none;
+    background: linear-gradient(to bottom, @color-white 200px, @color-gray3 200px);
+
+    &__header {
+      padding-top: 57px;
+      padding-bottom: 73px;
+    }
+
+    &__description {
+      padding-top: 25px;
+      padding-right: 0;
+      padding-bottom: 5px;
+    }
+
+    &__subtitle {
+      background-color: @color-gray3;
+    }
+
+    &__expenses {
+      padding-top: 0;
+      text-align: left;
+      display: flex;
+
+      span {
+        margin-left: 65px;
+      }
+    }
+
+    &__toggles {
+      width: 570px;
+      margin-left: 80px;
+    }
+  }
+
+  .example .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 
   .example__content-wrapper {
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto auto;
-    grid-row-gap: 60px;
-    grid-column-gap: 134px;
-    grid-template-areas:
-      "title slider"
-      "text slider"
-      "result slider"
-      "expenses slider";
+    max-width: 435px;
+    grid-template-columns: auto;
+    grid-row-gap: 50px;
+    grid-template-areas: "title"
+      "text"
+      "result"
+      "expenses";
   }
 
-  .example__img--before-tablet {
-    display: none;
+  .example-result__wrapper {
+    width: 366px;
   }
 
-  .example__img--after-tablet {
-    display: none;
-  }
+  .slider {
+    padding-top: 0;
+    margin-right: -40px;
 
-  .example__img--before-desktop {
-    display: block;
-  }
+    &__item {
+      margin-bottom: 37px;
+    }
 
-  .example__img--after-desktop {
-    display: none;
-  }
+    &__item--before {
+      background-image: url(".././img/before-desktop@1x.png");
+    }
 
+    &__item--after {
+      background-image: url(".././img/after-desktop@1x.png");
+    }
+  }
 
   // *********************************
   //           contacts
@@ -208,31 +279,45 @@
 
   .contacts-description {
     position: absolute;
-    top: 150px;
+    top: 95px;
     left: 0;
 
-    padding-top: 66px;
-    padding-bottom: 66px;
+    padding-top: 60px;
+    padding-bottom: 58px;
     padding-left: 75px;
     padding-right: 75px;
     width: 420px;
+
     background-color: @color-white;
     z-index: 1;
   }
 
-  .contacts__map::after {
-    top: 50%;
-    left: 70%;
-    content: url(".././img/map-pin.png");
-    transform: translateY(-50%);
+  .contacts__adress {
+    padding-top: 4px;
+    flex-basis: 169px;
+    text-align: left;
   }
 
-  .contacts__img--tablet {
-    display: none;
+  .contacts__map {
+    background-image: url(".././img/bg-map-desktop@1x.png");
+    width: auto;
+    height: 400px;
+
+    &::after {
+      top: 188px;
+      left: 1037px;
+    }
   }
 
-  .contacts__img--desktop {
-    display: block;
+  // *********************************
+  //             page-footer
+  // *********************************
+  .page-footer__logo {
+    padding-top: 8px;
+  }
+
+  .social__list {
+    padding-top: 2px;
   }
 
   // *********************************
@@ -240,20 +325,26 @@
   // *********************************
   .catalog__wrapper {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 245px 245px 245px 245px;
     grid-column-gap: 80px;
+    grid-row-gap: 57px;
+  }
+
+  .catalog__header {
+    padding-top: 75px;
+    padding-bottom: 83px;
   }
 
   // *********************************
   //           card-product
   // *********************************
   .card-product {
-    padding-left: 33px;
-    padding-right: 32px;
+    background-image: linear-gradient(@color-white 80px, @color-basic-gray 80px);
   }
 
   .card-product__wrapper {
-    width: 180px;
+    width: 100%;
+    grid-template-rows: 220px 65px 120px auto;
   }
 
   .card-product__img--tablet {
@@ -266,13 +357,19 @@
 
   .card-product__description {
     margin-bottom: 13px;
-
+    width: 170px;
     font-size: @font-size*1.6;
   }
 
   .card-product__description--more-products {
     min-height: 97px;
     width: 170px;
+  }
+
+  .card-product--more-products {
+    background-image: none;
+    background-color: @color-white;
+    padding-top: 20px;
   }
 
   .description-row {
@@ -287,7 +384,7 @@
   .card-product__wrapper--more-products {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 96px auto auto auto;
+    grid-template-rows: 125px auto auto auto;
     grid-template-areas:
       "img "
       "title"
@@ -325,6 +422,15 @@
   // *********************************
   .additional-goods {
     padding-bottom: 85px;
+  }
+
+  .additional-goods__header {
+    padding-top: 78px;
+    padding-bottom: 74px;
+  }
+
+  .additional-goods__title {
+    padding-left: 0;
   }
 
   .additional-goods__catalog {
@@ -365,6 +471,8 @@
     flex-direction: column;
     padding-top: 55px;
     padding-bottom: 40px;
+    padding-left: 0;
+    padding-right: 0;
     width: 245px;
     height: 194px;
     background: url(".././img/gift-photo-desktop@1x.jpg") no-repeat top center;
@@ -378,6 +486,9 @@
   // *********************************
   //           button
   // *********************************
+  .button--card {
+    width: 170px;
+  }
 
   // *********************************
   //           form
