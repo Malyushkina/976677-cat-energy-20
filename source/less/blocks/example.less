@@ -62,12 +62,16 @@
 }
 
 .slider__designation {
-
   font-family: @font;
   font-size: @font-size*1.6;
   text-transform: uppercase;
   line-height: 1.25;
   color: @color-black;
+  border-bottom: 1px dotted transparent;
+
+  &:hover {
+    border-bottom: 1px solid fade(@color-black, 40%);
+  }
 }
 
 .example__toggles {

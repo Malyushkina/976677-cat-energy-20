@@ -3,7 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
   <!-- Pixel Glass -->
-  <style>
+  <!-- <style>
     HTML {
       background-repeat: no-repeat;
       background-position: 50% 0;
@@ -29,7 +29,7 @@
 
   </style>
   <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet" type="text/css" />
-  <script src="../node_modules/pixel-glass/script.js"></script>
+  <script src="../node_modules/pixel-glass/script.js"></script> -->
   <!-- // Pixel Glass -->
 
   <title>HTML Academy: Кэт энерджи</title>
@@ -92,10 +92,10 @@
           <h2 class="section-title">Подбор программы</h2>
         </header>
 
-          <form class="search-program" action="https://echo.htmlacademy.ru">
-            <p class="search-program__subtitle">
-              Заполните анкету, и мы подберем программу питания для вашего кота
-            </p>
+        <form class="search-program" action="https://echo.htmlacademy.ru">
+          <p class="search-program__subtitle">
+            Заполните анкету, и мы подберем программу питания для вашего кота
+          </p>
           <fieldset class="search-program__fieldset cat-data-fieldset">
 
             <label class="search-program__label search-program__label--flex">ИМЯ: <sup>*</sup>
@@ -184,23 +184,22 @@
             </header>
             <div class="fieldset-additional__wrapper">
               <label class="search-program__label label-additional">
-                <input name="sweetener" type="checkbox" value="sweetener"
-                  checked />
+                <input name="sweetener" type="checkbox" value="sweetener" checked />
                 <span>сахарозаменитель</span>
               </label>
 
               <label class="search-program__label label-additional">
-                <input  name="water" type="checkbox" value="water" />
+                <input name="water" type="checkbox" value="water" />
                 <span>питьевая вода</span>
               </label>
 
               <label class="search-program__label label-additional">
-                <input  name="milk" type="checkbox" value="milk" />
+                <input name="milk" type="checkbox" value="milk" />
                 <span>молоко</span>
               </label>
 
               <label class="search-program__label label-additional">
-                <input  name="vitamins" type="checkbox" value="vitamins" />
+                <input name="vitamins" type="checkbox" value="vitamins" />
                 <span>витамины</span>
               </label>
 
@@ -274,20 +273,20 @@
     </div>
   </footer>
   <script>
-    // var navMain = document.querySelector('.main-nav');
-    // var navToggle = document.querySelector('.main-nav__toggle');
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
 
-    // navMain.classList.remove('main-nav--nojs');
+    navMain.classList.remove('main-nav--nojs');
 
-    // navToggle.addEventListener('click', function () {
-    //   if (navMain.classList.contains('main-nav--closed')) {
-    //     navMain.classList.remove('main-nav--closed');
-    //     navMain.classList.add('main-nav--opened');
-    //   } else {
-    //     navMain.classList.add('main-nav--closed');
-    //     navMain.classList.remove('main-nav--opened');
-    //   }
-    // });
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
 
   </script>
 
