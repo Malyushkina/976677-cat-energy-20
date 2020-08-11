@@ -138,7 +138,7 @@
   }
 }
 
-.label-radio > input {
+.input-check {
   position: absolute;
   z-index: -1;
   opacity: 0;
@@ -152,13 +152,13 @@
   cursor: pointer;
 }
 
-.label-radio > span {
+.label-title {
   display: inline-flex;
   align-items: center;
   user-select: none;
 }
 
-.label-radio > span::before {
+.label-title::before {
   flex-shrink: 0;
   flex-grow: 0;
 
@@ -171,15 +171,20 @@
 
   border: 8px solid #ffffff;
   box-shadow: 0 0 2px fade(@color-black, 50);
+}
+
+.label-radio .label-title::before {
   border-radius: 50%;
 }
 
-.label-radio > input:checked + span::before {
+
+.label-radio .input-check:checked + .label-title::before {
   background-color: @color-basic-green;
   box-shadow: 0 0 2px fade(@color-black, 50);
 }
 
-.label-radio:hover > span::before {
+.label-radio:hover .label-title::before,
+.label-additional:hover .label-title::before {
   box-shadow: 0 0 1px fade(@color-black, 50);
 }
 
@@ -254,46 +259,30 @@
   cursor: pointer;
 }
 
-.label-additional > input {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-
-.label-additional > span {
-  display: inline-flex;
-  align-items: center;
-  user-select: none;
-}
-
-.label-additional > span::before {
+.label-additional .label-title::before {
   flex-shrink: 0;
   flex-grow: 0;
 
-  position: absolute;
-  left: 0;
-  content: "";
-  display: block;
   width: 28px;
   height: 28px;
 
   border: 1px solid @color-special_gray;
 }
 
-.label-additional > input:checked + span::before {
+.label-additional .input-check:checked + .label-title::before {
   border-color: #bababa;
 }
 
-.label-additional > input:checked + span::after {
+.label-additional .input-check:checked + .label-title::after {
   position: absolute;
   content: url(".././img/icon-tick.svg");
   width: 18px;
   height: 14px;
-  top: 28.5%;
-  left: 38.9%;
+  top: 8.5%;
+  left: 2.5%;
 }
 
-.label-additional:hover > span::before {
+.label-additional:hover .label-title::before {
   border-color: #bababa;
 }
 

@@ -119,18 +119,20 @@
 
 
             <label class="search-program__label label-radio ">
-              <input class="searh-program__input" type="radio" name="check-program" value="program-slim" checked />
-              <span>похудение</span>
+              <input class="searh-program__input input-check" type="radio" name="check-program" value="program-slim"
+                checked />
+              <span class="label-title">похудение</span>
             </label>
 
             <label class="search-program__label label-radio">
-              <input class="searh-program__input" type="radio" name="check-program" value="program-pro" />
-              <span>Набор массы</span>
+              <input class="searh-program__input input-check" type="radio" name="check-program" value="program-pro" />
+              <span class="label-title">Набор массы</span>
             </label>
 
             <label class="search-program__label label-radio">
-              <input type="radio" name="check-program" value="program-advice" />
-              <span>Не знаю (Нужен ваш совет)</span>
+              <input class="searh-program__input input-check" type="radio" name="check-program"
+                value="program-advice" />
+              <span class="label-title">Не знаю (Нужен ваш совет)</span>
             </label>
 
 
@@ -184,23 +186,24 @@
             </header>
             <div class="fieldset-additional__wrapper">
               <label class="search-program__label label-additional">
-                <input name="sweetener" type="checkbox" value="sweetener" checked />
-                <span>сахарозаменитель</span>
+                <input class="searh-program__input input-check" name="sweetener" type="checkbox" value="sweetener"
+                  checked />
+                <span class="label-title">сахарозаменитель</span>
               </label>
 
               <label class="search-program__label label-additional">
-                <input name="water" type="checkbox" value="water" />
-                <span>питьевая вода</span>
+                <input class="searh-program__input input-check" name="water" type="checkbox" value="water" />
+                <span class="label-title">питьевая вода</span>
               </label>
 
               <label class="search-program__label label-additional">
-                <input name="milk" type="checkbox" value="milk" />
-                <span>молоко</span>
+                <input class="searh-program__input input-check" name="milk" type="checkbox" value="milk" />
+                <span class="label-title">молоко</span>
               </label>
 
               <label class="search-program__label label-additional">
-                <input name="vitamins" type="checkbox" value="vitamins" />
-                <span>витамины</span>
+                <input class="searh-program__input input-check" name="vitamins" type="checkbox" value="vitamins" />
+                <span class="label-title">витамины</span>
               </label>
 
               <input class="button button-text button--form" type="submit" value="отправить заявку" />
@@ -273,20 +276,7 @@
     </div>
   </footer>
   <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
 
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-      }
-    });
 
   </script>
 
