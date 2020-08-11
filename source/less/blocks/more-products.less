@@ -36,4 +36,12 @@
 .more-products__button {
   background-color: @color-basic-gray;
   color: @color-special_dark-grey;
+
+  &:hover {
+    background-color: @color-special_gray2;
+  }
+
+  &:active {
+    color: fade(@color-special_dark-grey, 70%);
+  }
 }

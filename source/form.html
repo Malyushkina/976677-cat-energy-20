@@ -20,7 +20,7 @@
     }
 
     /* Десктоп */
-    @media (min-width: 1288px) {
+    @media (min-width: 1440px) {
       HTML {
         /* Десктопный макет */
         background-image: url("./img/Desktop.png");
@@ -84,20 +84,19 @@
       <h1 class="visually-hidden">
         CAT ENERGY - Функциональное питание для котов
       </h1>
+
       <!-- Форма -->
+
       <div class="container">
+        <header class="form__header">
+          <h2 class="section-title">Подбор программы</h2>
+        </header>
+
         <form class="search-program" action="https://echo.htmlacademy.ru">
-
-          <header class="form__header">
-            <h2 class="section-title">Подбор программы</h2>
-          </header>
-
           <p class="search-program__subtitle">
             Заполните анкету, и мы подберем программу питания для вашего кота
           </p>
-
-
-          <fieldset class="search-program__fieldset search-program__cat-data-fieldset">
+          <fieldset class="search-program__fieldset cat-data-fieldset">
 
             <label class="search-program__label search-program__label--flex">ИМЯ: <sup>*</sup>
               <input class="searh-program__input searh-program__input--cat-name" type="text" name="cat-name"
@@ -116,28 +115,30 @@
 
           </fieldset>
 
-          <fieldset class="search-program__fieldset search-program__check-program-radio-fieldset fieldset-flex">
+          <fieldset class="search-program__fieldset radio-fieldset fieldset-flex">
 
 
-            <label class="search-program__label">
-              <input class="check-program__radio" type="radio" name="check-program" value="program-slim" checked />
-              похудение
+            <label class="search-program__label label-radio ">
+              <input class="searh-program__input input-check" type="radio" name="check-program" value="program-slim"
+                checked />
+              <span class="label-title">похудение</span>
             </label>
 
-            <label class="search-program__label">
-              <input class="check-program__radio" type="radio" name="check-program" value="program-pro" />
-              Набор массы
+            <label class="search-program__label label-radio">
+              <input class="searh-program__input input-check" type="radio" name="check-program" value="program-pro" />
+              <span class="label-title">Набор массы</span>
             </label>
 
-            <label class="search-program__label">
-              <input class="check-program__radio" type="radio" name="check-program" value="program-advice" />
-              Не знаю (Нужен ваш совет)
+            <label class="search-program__label label-radio">
+              <input class="searh-program__input input-check" type="radio" name="check-program"
+                value="program-advice" />
+              <span class="label-title">Не знаю (Нужен ваш совет)</span>
             </label>
 
 
           </fieldset>
 
-          <fieldset class="search-program__fieldset search-program__owner-contact-fieldset">
+          <fieldset class="search-program__fieldset owner-contact-fieldset">
 
             <header class="fieldset__header">
               <div class="decor-wrapper">
@@ -147,19 +148,19 @@
               </div>
             </header>
             <div class="fieldset-owner__wrapper">
-              <label class="search-program__label search-program__label--flex"> E-mail:<sup>*</sup>
+              <label class="search-program__label label--owner-email search-program__label--flex"> E-mail:<sup>*</sup>
                 <input class="searh-program__input owner-contact--email" type="email" name="email"
                   placeholder="kuklachev@gmail.com" required />
               </label>
 
-              <label class="search-program__label search-program__label--flex"> Телефон:<sup>*</sup>
+              <label class="search-program__label label--owner-tel search-program__label--flex"> Телефон:<sup>*</sup>
                 <input class="searh-program__input owner-contact--tel" type="tel" name="tel"
                   placeholder="8 (960) 900-60-90" required />
               </label>
             </div>
           </fieldset>
 
-          <fieldset class="search-program__fieldset search-program__comments-fieldset">
+          <fieldset class="search-program__fieldset comments-fieldset">
 
             <header class="fieldset__header">
               <div class="decor-wrapper">
@@ -174,7 +175,7 @@
               placeholder="Расскажите обо всех повАдках кота"></textarea>
           </fieldset>
 
-          <fieldset class="search-program__fieldset search-program__additional fieldset-flex">
+          <fieldset class="search-program__fieldset additional-fieldset fieldset-flex">
 
             <header class="fieldset__header">
               <div class="decor-wrapper">
@@ -184,25 +185,25 @@
               </div>
             </header>
             <div class="fieldset-additional__wrapper">
-              <label class="search-program__label">
-                <input class="search-program__additional--sweetener" name="sweetener" type="checkbox" value="sweetener"
+              <label class="search-program__label label-additional">
+                <input class="searh-program__input input-check" name="sweetener" type="checkbox" value="sweetener"
                   checked />
-                сахарозаменитель
+                <span class="label-title">сахарозаменитель</span>
               </label>
 
-              <label class="search-program__label">
-                <input class="search-program__additional--water" name="water" type="checkbox" value="water" />
-                питьевая вода
+              <label class="search-program__label label-additional">
+                <input class="searh-program__input input-check" name="water" type="checkbox" value="water" />
+                <span class="label-title">питьевая вода</span>
               </label>
 
-              <label class="search-program__label">
-                <input class="search-program__additional--milk" name="milk" type="checkbox" value="milk" />
-                молоко
+              <label class="search-program__label label-additional">
+                <input class="searh-program__input input-check" name="milk" type="checkbox" value="milk" />
+                <span class="label-title">молоко</span>
               </label>
 
-              <label class="search-program__label">
-                <input class="search-program__additional--vitamins" name="vitamins" type="checkbox" value="vitamins" />
-                витамины
+              <label class="search-program__label label-additional">
+                <input class="searh-program__input input-check" name="vitamins" type="checkbox" value="vitamins" />
+                <span class="label-title">витамины</span>
               </label>
 
               <input class="button button-text button--form" type="submit" value="отправить заявку" />
@@ -291,6 +292,7 @@
     });
 
   </script>
+
 </body>
 
 </html>

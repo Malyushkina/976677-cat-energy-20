@@ -369,7 +369,7 @@
   .card-product--more-products {
     background-image: none;
     background-color: @color-white;
-    padding-top: 20px;
+    padding-top: 27px;
   }
 
   .description-row {
@@ -403,8 +403,8 @@
   }
 
   .card-product--mini {
-    padding-top: 13px;
-    padding-bottom: 14px;
+    padding-top: 14px;
+    padding-bottom: 17px;
     padding-left: 0;
     padding-right: 0;
     border-left: none;
@@ -430,7 +430,9 @@
   }
 
   .additional-goods__title {
-    padding-left: 0;
+    padding-left: 40px;
+    position: relative;
+    left: -40px;
   }
 
   .additional-goods__catalog {
@@ -452,6 +454,8 @@
 
   .additional__description {
     margin-bottom: 0;
+    width: 325px;
+    align-self: center;
   }
 
   .additional__description td {
@@ -469,13 +473,17 @@
 
   .gift__wrapper {
     flex-direction: column;
-    padding-top: 55px;
+    padding-top: 60px;
     padding-bottom: 40px;
     padding-left: 0;
     padding-right: 0;
     width: 245px;
-    height: 194px;
+    // height: 194px;
     background: url(".././img/gift-photo-desktop@1x.jpg") no-repeat top center;
+  }
+
+  .gift__img-wrapper {
+    margin-bottom: 50px;
   }
 
   .gift__promo {
@@ -498,35 +506,43 @@
     grid-template-columns: 570px 570px;
     grid-column-gap: 80px;
     grid-template-areas:
-      "title title"
       "subtitle subtitle"
       "fieldset-1 fieldset-2"
       "fieldset-3 fieldset-3"
       "fieldset-4 fieldset-4"
       "fieldset-5 fieldset-5";
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .form__header {
-    grid-area: title;
+    padding-top: 75px;
   }
 
   .search-program__subtitle {
     grid-area: subtitle;
   }
 
-  .search-program__cat-data-fieldset {
+  .cat-data-fieldset {
     grid-area: fieldset-1;
     width: 570px;
+    padding-bottom: 0;
   }
 
-  .search-program__check-program-radio-fieldset {
+  .radio-fieldset {
     grid-area: fieldset-2;
     border-left: 1px solid @color-gray;
     border-right: 1px solid @color-gray;
   }
 
-  .search-program__owner-contact-fieldset {
+  .owner-contact-fieldset {
     grid-area: fieldset-3;
+    padding-top: 11px;
+    padding-bottom: 10px;
+  }
+
+  .label--owner-email {
+    margin-bottom: 0;
   }
 
   .fieldset-owner__wrapper {
@@ -540,43 +556,46 @@
     width: 570px;
   }
 
-  .search-program__comments-fieldset {
+  .comments-fieldset {
     grid-area: fieldset-4;
   }
 
-  .search-program__additional {
+  .additional-fieldset {
     grid-area: fieldset-5;
+    padding-bottom: 36px;
   }
 
   .container--inner {
     width: auto;
   }
 
-  .fieldset__header {
-    width: 100%;
-  }
-
-  .fieldset__title {
-    margin-left: -40px;
-  }
-
   .fieldset-additional__wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   .fieldset-additional__wrapper .search-program__label {
-    width: 245px;
-    margin-bottom: 60px;
+    flex-basis: 160px;
+    margin-right: 45px;
+    margin-bottom: 23px;
+  }
+
+  .fieldset-additional__wrapper .search-program__label:nth-of-type(4n) {
+    margin-right: 0;
+  }
+
+  .label-additional .input-check:checked + .label-title::after {
+    left: 5%;
   }
 
   .button--form {
-    width: 565px;
+    width: 569px;
   }
 
   .search-program__clarification {
     width: 565px;
+    padding-top: 16px;
+    padding-left: 21px;
   }
 }
