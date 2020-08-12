@@ -4,6 +4,11 @@
 
   border-top: 1px solid transparent;
   background: url(".././img/index-background-mobile@1x.jpg") no-repeat top center;
+
+  @media (min-resolution: 2dppx) {
+    background: url(".././img/index-background-mobile@2x.jpg") no-repeat top center;
+    background-size: 320px 305px;
+  }
 }
 
 .promo__header {
@@ -30,11 +35,15 @@
   text-align: center;
 }
 
-.promo__img {
+.promo__img-wrapper {
   margin: 0 auto;
   margin-bottom: 4px;
   width: 280px;
   height: 270px;
-  background-image: url(".././img/index-can-mobile@1x.png");
-  background-repeat: no-repeat;
+}
+
+.promo__img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
