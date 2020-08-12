@@ -41,18 +41,6 @@
     padding-bottom: 0;
   }
 
-  .page-header__logo {
-    height: 57.1px;
-  }
-
-  .page-header__logo--mobile {
-    display: none;
-  }
-
-  .page-header__logo--tablet {
-    display: block;
-  }
-
   .main-nav__toggle {
     display: none;
   }
@@ -125,10 +113,9 @@
     text-align: left;
   }
 
-  .promo__img {
+  .promo__img-wrapper {
     width: 709px;
     height: 609px;
-    background-image: url("../img/index-can-tablet@1x.jpg");
     position: absolute;
     left: -84px;
     top: 224px;
@@ -358,10 +345,17 @@
 
   .slider__item--before {
     background-image: url(".././img/before-tablet@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(".././img/before-tablet@2x.png");
+    }
   }
 
   .slider__item--after {
     background-image: url(".././img/after-tablet@1x.png");
+    @media (min-resolution: 2dppx) {
+      background-image: url(".././img/after-tablet@2x.png");
+    }
   }
 
   .slider__designation {
@@ -428,6 +422,7 @@
       }
     }
   }
+
   // *********************************
   //           contacts
   // *********************************
@@ -877,7 +872,7 @@
     height: 38px;
   }
 
-  .label-additional .input-check:checked + .label-title::after {
+  .label-additional .input-check:checked+.label-title::after {
     left: 3.5%;
     top: 15%;
   }
