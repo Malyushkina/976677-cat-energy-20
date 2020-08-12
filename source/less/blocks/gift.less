@@ -24,6 +24,9 @@
   color: @color-white;
   background: url(".././img/gift-photo-mobile@1x.jpg") no-repeat top center;
   background-size: cover;
+  @media (min-resolution: 2dppx) {
+    background-image: url(".././img/gift-photo-mobile@2x.jpg");
+  }
 }
 
 .gift svg {

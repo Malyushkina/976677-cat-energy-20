@@ -353,6 +353,7 @@
 
   .slider__item--after {
     background-image: url(".././img/after-tablet@1x.png");
+
     @media (min-resolution: 2dppx) {
       background-image: url(".././img/after-tablet@2x.png");
     }
@@ -462,6 +463,7 @@
     background-image: url(".././img/bg-map-tablet@1x.png");
     width: auto;
     height: 400px;
+
     @media (min-resolution: 2dppx) {
       background-image: url(".././img/bg-map-tablet@2x.png");
     }
@@ -594,14 +596,6 @@
     text-align: center;
   }
 
-  .card-product__img--mobile {
-    display: none;
-  }
-
-  .card-product__img--tablet {
-    display: block;
-  }
-
   .card-product__description {
     width: 252px;
     margin-bottom: auto;
@@ -691,6 +685,9 @@
     align-items: center;
     background: url(".././img/gift-photo-tablet@1x.jpg") no-repeat top center;
     background-size: cover;
+    @media (min-resolution: 2dppx) {
+      background-image: url(".././img/gift-photo-tablet@2x.jpg");
+    }
   }
 
   .gift__img-wrapper {
