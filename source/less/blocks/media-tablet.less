@@ -460,9 +460,11 @@
 
   .contacts__map {
     background-image: url(".././img/bg-map-tablet@1x.png");
-
     width: auto;
     height: 400px;
+    @media (min-resolution: 2dppx) {
+      background-image: url(".././img/bg-map-tablet@2x.png");
+    }
   }
 
   // *********************************
