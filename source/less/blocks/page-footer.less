@@ -5,8 +5,11 @@
 }
 
 .page-footer__logo {
-  text-align: center;
-  margin-bottom: 28px;
+  width: 128px;
+  height: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 33px;
 
   &:hover {
     opacity: 0.8;
@@ -50,6 +53,14 @@
   }
 }
 
+.icon-social {
+  fill: @color-special_gray3;
+
+  &:hover {
+    fill: @color-basic-green;
+  }
+}
+
 .copyright {
   display: flex;
   justify-content: space-between;
@@ -57,6 +68,10 @@
 
   &:hover {
     opacity: 0.8;
+
+    .copyright__logo {
+      fill: @color-basic-green;
+    }
   }
 
   &:active {
@@ -72,4 +87,10 @@
   font-size: @font-size*1.6;
   line-height: 1;
   color: @color-special_dark-grey;
+}
+
+.copyright__logo {
+  position: relative;
+  right: -7px;
+  fill: @color-special_gray3;
 }
