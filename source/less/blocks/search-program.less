@@ -3,7 +3,7 @@
 }
 
 .form__header {
-  padding-top: 29px;
+  padding-top: 22px;
   padding-bottom: 38px;
 }
 
@@ -87,11 +87,23 @@
   padding: 0;
   margin-left: 15px;
   padding-top: 16px;
-  padding-bottom: 10px;
+  padding-bottom: 11px;
   padding-left: 13px;
   color: @color-special_dark-grey;
   border: 1px solid @color-gray4;
+
+  &:hover {
+    border-color: @color-special_gray;
+  }
+
+  &:focus {
+    border-color: @color-special_dark-grey;
+  }
+  // &:invalid{
+  //   border-color:#ff8282;
+  // }
 }
+
 
 .searh-program__input::placeholder {
   text-transform: uppercase;
@@ -109,7 +121,7 @@
 }
 
 .cat-data-fieldset {
-  padding-bottom: 27px;
+  padding-bottom: 24px;
 }
 
 .radio-fieldset {
@@ -180,7 +192,7 @@
 }
 
 
-.label-radio .input-check:checked + .label-title::before {
+.label-radio .input-check:checked+.label-title::before {
   background-color: @color-basic-green;
   box-shadow: 0 0 2px fade(@color-black, 50);
 }
@@ -199,28 +211,11 @@
   position: relative;
 }
 
-
-.label--owner-email::before,
-.label--owner-tel::before {
+.input__icon {
   position: absolute;
-  width: 17px;
-  height: 13px;
-  content: "";
   top: 50%;
-  right: 17px;
+  left: 88%;
   transform: translateY(-50%);
-  background-size: cover;
-}
-
-.label--owner-email::before {
-  background-image: url(".././img/icon-mail.svg");
-}
-
-.label--owner-tel::before {
-  width: 20px;
-  height: 20px;
-  right: 14px;
-  background-image: url(".././img/icon-phone.svg");
 }
 
 .comments-fieldset {
@@ -274,11 +269,11 @@
   border: 1px solid @color-special_gray;
 }
 
-.label-additional .input-check:checked + .label-title::before {
+.label-additional .input-check:checked+.label-title::before {
   border-color: #bababa;
 }
 
-.label-additional .input-check:checked + .label-title::after {
+.label-additional .input-check:checked+.label-title::after {
   position: absolute;
   content: url(".././img/icon-tick.svg");
   width: 18px;
