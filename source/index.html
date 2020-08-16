@@ -38,7 +38,7 @@
 </head>
 
 <body class="page-body">
-    <header class="page-header main-header">
+  <header class="page-header main-header">
     <div class="container">
       <div class="page-header__wrapper">
         <!-- Логотип -->
@@ -97,6 +97,11 @@
 
           <div class="promo__img-wrapper">
             <picture>
+              <source media="(min-width: 1440px)" type="image/webp"
+                srcset="img/index-can-desktop@1x.webp, img/index-can-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" type="image/webp"
+                srcset="img/index-can-tablet@1x.webp , img/index-can-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
               <source media="(min-width: 1440px)"
                 srcset="img/index-can-desktop@1x.png, img/index-can-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg , img/index-can-tablet@2x.jpg 2x">
@@ -277,7 +282,21 @@
           </p>
         </div>
       </div>
-      <div class="contacts__map"></div>
+      <div class="contacts__map">
+        <picture>
+          <source media="(min-width: 1440px)" type="image/webp"
+            srcset="img/bg-map-desktop@1x.webp, img/bg-map-desktop@2x.webp 2x">
+          <source media="(min-width: 768px)" type="image/webp"
+            srcset="img/bg-map-tablet@1x.webp , img/bg-map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+          <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg , img/bg-map-tablet@2x.jpg 2x">
+          <img class="contacts__img" src="img/bg-map-mobile@1x.png"
+            alt="Адрес: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург" width="280"
+            srcset="img/bg-map-mobile@1x.png, img/bg-map-mobile@2x.png 2x"
+            sizes="(min-width: 1440px) 502px, (min-width: 768px) 709px, 280px ">
+        </picture>
+      </div>
     </section>
   </main>
 
