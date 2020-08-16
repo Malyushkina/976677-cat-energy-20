@@ -31,7 +31,9 @@
       height: 696px;
       content: "";
       background-color: @color-basic-green;
-      background: url(".././img/index-background-desktop@1x.jpg") no-repeat top center;
+      background-image: url(".././img/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: top center;
       background-size: cover;
       z-index: -1;
 
@@ -611,7 +613,7 @@
     margin-right: 0;
   }
 
-  .label-additional .input-check:checked+.label-title::after {
+  .label-additional .input-check:checked + .label-title::after {
     left: 5%;
   }
 
