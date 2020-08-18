@@ -315,14 +315,17 @@
   }
 
   .contacts__map {
+    max-width: 1440px;
+
     &::after {
       top: 188px;
       left: 958px;
     }
   }
 
-  .contacts__img {
-    width: 1440px;
+  .contacts__pin-wrapper {
+    top: 47%;
+    left: 66.5%;
   }
 
   // *********************************
@@ -614,7 +617,13 @@
   }
 
   .label-additional .input-check:checked + .label-title::after {
-    left: 5%;
+    left: -50px;
+    top: 7px;
+  }
+
+  .label-additional:hover .label-title::after {
+    left: -50px;
+    top: 7px;
   }
 
   .button--form {

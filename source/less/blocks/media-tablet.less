@@ -465,8 +465,12 @@
     }
   }
 
-  .contacts__img {
-    width: 767px;
+  .contacts__map {
+    max-width: 769px;
+  }
+
+  .contacts__pin-wrapper {
+    width: 124px;
   }
 
   // *********************************
@@ -852,6 +856,10 @@
     padding-left: 60px;
   }
 
+  .label-title::before {
+    left: -62px;
+  }
+
   .label-radio .label-title::before {
     width: 17px;
     height: 17px;
@@ -890,7 +898,7 @@
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 41px;
     grid-column-gap: 60px;
-    padding-top: 28px;
+    padding-top: 30px;
   }
 
   .label-additional {
@@ -899,17 +907,23 @@
   }
 
   .label-additional:last-of-type {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
   }
 
   .label-additional .label-title::before {
     width: 38px;
     height: 38px;
+    left: -62px;
   }
 
   .label-additional .input-check:checked + .label-title::after {
-    left: 3.5%;
-    top: 15%;
+    left: -50px;
+    top: 7px;
+  }
+
+  .label-additional:hover .label-title::after {
+    left: -50px;
+    top: 7px;
   }
 
   .search-program__clarification {

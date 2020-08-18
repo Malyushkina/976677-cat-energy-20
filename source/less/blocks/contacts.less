@@ -40,21 +40,26 @@
 .contacts__map {
   position: relative;
   background-color: @color-basic-gray;
-  width: auto;
-  height: 362px;
+  max-width: 320px;
   margin: 0 auto;
   text-align: center;
 }
 
-.contacts__map::after {
+.contacts__img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.contacts__pin-wrapper {
   position: absolute;
+  width: 53px;
+  height: auto;
   top: 50%;
   left: 50%;
-  content: url(".././img/map-pin.png");
   transform: translate(-50%, -50%);
 }
 
-.contacts__img {
-  width: 280px;
-  height: auto;
+.contacts__pin {
+  width: 100%;
 }

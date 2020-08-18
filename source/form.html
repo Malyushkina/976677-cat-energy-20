@@ -3,7 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
   <!-- Pixel Glass -->
-  <style>
+  <!-- <style>
     HTML {
       background-repeat: no-repeat;
       background-position: 50% 0;
@@ -29,7 +29,7 @@
 
   </style>
   <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet" type="text/css" />
-  <script src="../node_modules/pixel-glass/script.js"></script>
+  <script src="../node_modules/pixel-glass/script.js"></script> -->
   <!-- // Pixel Glass -->
 
   <title>HTML Academy: Кэт энерджи</title>
@@ -149,22 +149,19 @@
                 E-mail:<sup>*</sup>
                 <input class="searh-program__input owner-contact--email" type="email" name="email"
                   placeholder="kuklachev@gmail.com" required />
-                <div class="input__icon">
-                  <svg width="17" height="13">
-                    <use xlink:href="#icon-mail"></use>
-                  </svg>
-                </div>
+                <svg class="input__icon" width="17" height="13">
+                  <use xlink:href="#icon-mail"></use>
+                </svg>
+
               </label>
 
               <label class="search-program__label label-owner label--owner-tel search-program__label--flex">
                 Телефон:<sup>*</sup>
                 <input class="searh-program__input owner-contact--tel" type="tel" name="tel"
                   placeholder="8 (960) 900-60-90" required />
-                <div class="input__icon">
-                  <svg width="20" height="20">
-                    <use xlink:href="#icon-phone"></use>
-                  </svg>
-                </div>
+                <svg class="input__icon" width="20" height="20">
+                  <use xlink:href="#icon-phone"></use>
+                </svg>
               </label>
             </div>
           </fieldset>
@@ -251,7 +248,12 @@
             srcset="img/bg-map-mobile@1x.png, img/bg-map-mobile@2x.png 2x"
             sizes="(min-width: 1440px) 502px, (min-width: 768px) 709px, 280px ">
         </picture>
-      </div>
+        <div class="contacts__pin-wrapper">
+          <picture>
+            <img class="contacts__pin" src="./img/map-pin.png"
+              sizes=" (min-width: 1440px) 1440px, (min-width: 768px) 113px, 53px ">
+          </picture>
+        </div>
     </section>
   </main>
 
