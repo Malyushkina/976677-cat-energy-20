@@ -91,24 +91,26 @@
   padding-left: 13px;
   color: @color-special_dark-grey;
   border: 1px solid @color-gray4;
+  outline: transparent;
 
   &:hover {
     border-color: @color-special_gray;
   }
 
   &:focus {
+    outline: transparent;
     border-color: @color-special_dark-grey;
   }
 
-  &:focus + .input__icon {
+  &:focus+.input__icon {
     fill: @color-basic-green;
   }
 
-  &:invalid:required:not(:placeholder-shown) {
+  &:not(:focus):invalid:not(:placeholder-shown) {
     box-shadow: inset 0 0 0 2px @color-status_error;
   }
 
-  &:invalid:required:not(:placeholder-shown) + .input__icon {
+  &:not(:focus):invalid:not(:placeholder-shown)+.input__icon {
     fill: @color-status_error;
   }
 }
@@ -203,7 +205,7 @@
 }
 
 
-.label-radio .input-check:checked + .label-title::before {
+.label-radio .input-check:checked+.label-title::before {
   background-color: @color-basic-green;
 }
 
@@ -293,11 +295,11 @@
   left: -39px;
 }
 
-.label-additional .input-check:checked + .label-title::before {
+.label-additional .input-check:checked+.label-title::before {
   border-color: #bababa;
 }
 
-.label-additional .input-check:checked + .label-title::after {
+.label-additional .input-check:checked+.label-title::after {
   position: absolute;
   content: url(".././img/icon-tick.svg");
   width: 18px;
