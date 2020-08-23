@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/styles.min.css" />
   <title>HTML Academy: Кэт энерджи</title>
   <!-- Pixel Glass -->
   <!-- <style>
@@ -649,23 +649,26 @@
         navMain.classList.remove('main-nav--opened');
       }
     });
-    for(let i=0; i<buttonCard.length; i++){
-      buttonCard[i].addEventListener('click', function(){
+    for (let i = 0; i < buttonCard.length; i++) {
+      buttonCard[i].addEventListener('click', function () {
         openModal();
       })
     }
-    function openModal(n){
+
+    function openModal(n) {
       modal.classList.remove('display-none');
     }
+
     function closeModal(n) {
-    modal.classList.add('display-none');
-}
-// закрыть модальное окно при нажатии esc
-document.addEventListener("keydown", function (evt) {
-  if (evt.code == "Escape") {
-    closeModal();
-  }
-});
+      modal.classList.add('display-none');
+    }
+    // закрыть модальное окно при нажатии esc
+    document.addEventListener("keydown", function (evt) {
+      if (evt.code == "Escape") {
+        closeModal();
+      }
+    });
+
   </script>
 
   <svg style="display:none">
