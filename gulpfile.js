@@ -122,6 +122,6 @@ const clean = () => {
 };
 exports.clean = clean;
 
-const build = gulp.series(clean, copy, styles, images, toWebp, sprite, server);
+const build = gulp.series(clean, copy, styles, images, toWebp, sprite);
 
 exports.build = build;
