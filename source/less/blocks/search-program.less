@@ -91,12 +91,14 @@
   padding-left: 13px;
   color: @color-special_dark-grey;
   border: 1px solid @color-gray4;
+  outline: transparent;
 
   &:hover {
     border-color: @color-special_gray;
   }
 
   &:focus {
+    outline: transparent;
     border-color: @color-special_dark-grey;
   }
 
@@ -104,11 +106,11 @@
     fill: @color-basic-green;
   }
 
-  &:invalid:required:not(:placeholder-shown) {
+  &:not(:focus):invalid:not(:placeholder-shown) {
     box-shadow: inset 0 0 0 2px @color-status_error;
   }
 
-  &:invalid:required:not(:placeholder-shown) + .input__icon {
+  &:not(:focus):invalid:not(:placeholder-shown) + .input__icon {
     fill: @color-status_error;
   }
 }

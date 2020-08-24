@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/styles.min.css" />
   <title>HTML Academy: Кэт энерджи</title>
   <!-- Pixel Glass -->
   <!-- <style>
@@ -92,6 +92,7 @@
       </div>
       <div class="container">
         <div class="catalog__wrapper">
+
           <div class="card-product">
             <div class="card-product__wrapper">
               <h3 class="section-title card-product__title">
@@ -501,6 +502,48 @@
       </div>
     </section>
 
+    <!--Модальное окно-->
+
+    <div class="modal display-none">
+      <div class="container">
+        <form action="https://echo.htmlacademy.ru" class="form-order">
+          <button class="modal__toggle" type="button">
+            <span class="close" onclick="closeModal(this)">
+              x
+            </span>
+          </button>
+          <fieldset class="order-fieldset">
+
+            <header class="fieldset__header">
+              <span class="section-title fieldset__title">
+                Пожалуйста оставьте Ваши контактные данные и мы обязательно свяжемся с Вами, чтобы оформить заказ.
+              </span>
+            </header>
+
+            <label class="search-program__label search-program__label--flex order__label order__label--name">
+              Имя:<sup>*</sup>
+              <input class="order__input searh-program__input order__input--name" type="text" name="name"
+                placeholder="Мария" required />
+            </label>
+
+            <label class="search-program__label search-program__label--flex order__label order__label--email">
+              E-mail:<sup>*</sup>
+              <input class="order__input searh-program__input order__input--email" type="email" name="email"
+                placeholder="kuklachev@gmail.com" required />
+            </label>
+
+            <label class="search-program__label search-program__label--flex order__label order__label--tel">
+              Телефон:<sup>*</sup>
+              <input class="order__input searh-program__input order__input--tel" type="tel" name="tel"
+                placeholder="8 (960) 900-60-90" required />
+            </label>
+            <input class="button button-text button--form" type="submit" value="отправить заявку" />
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
+
     <!-- Секция Contacts -->
 
     <section class="contacts contacts--gray">
@@ -532,9 +575,10 @@
         </picture>
         <div class="contacts__pin-wrapper">
           <picture>
-            <img class="contacts__pin"  src="./img/map-pin.png" sizes=" (min-width: 1440px) 1440px, (min-width: 768px) 113px, 53px ">
+            <img class="contacts__pin" src="./img/map-pin.png"
+              sizes=" (min-width: 1440px) 1440px, (min-width: 768px) 113px, 53px ">
           </picture>
-      </div>
+        </div>
     </section>
 
   </main>
@@ -589,8 +633,10 @@
     </div>
   </footer>
   <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
+    let navMain = document.querySelector('.main-nav');
+    let navToggle = document.querySelector('.main-nav__toggle');
+    let modal = document.querySelector('.modal');
+    let buttonCard = document.querySelectorAll('.button--card');
 
     navMain.classList.remove('main-nav--nojs');
 
@@ -603,8 +649,28 @@
         navMain.classList.remove('main-nav--opened');
       }
     });
+    for (let i = 0; i < buttonCard.length; i++) {
+      buttonCard[i].addEventListener('click', function () {
+        openModal();
+      })
+    }
+
+    function openModal(n) {
+      modal.classList.remove('display-none');
+    }
+
+    function closeModal(n) {
+      modal.classList.add('display-none');
+    }
+    // закрыть модальное окно при нажатии esc
+    document.addEventListener("keydown", function (evt) {
+      if (evt.code == "Escape") {
+        closeModal();
+      }
+    });
 
   </script>
+
   <svg style="display:none">
     <symbol viewbox="0 0 202 60" fill="none" id="header-logo" role="img" aria-label="Вернуться на главную">
       <style>
