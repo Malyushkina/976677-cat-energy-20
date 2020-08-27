@@ -125,7 +125,8 @@
                   <source media="(min-width: 768px)"
                     srcset="./img/chicken-small-tablet@1x.png 1x, ./img/chicken-small-tablet@2x.png 2x">
                   <img class="card-product__img" src="./img/chicken-small-mobile@1x.jpg"
-                    srcset="./img/chicken-small-mobile@2x.jpg 2x" alt="Cat Energy PRO 500 г" width="140" />
+                    srcset="./img/chicken-small-mobile@2x.jpg 2x" alt="Cat Energy PRO 500 г" width="140"
+                    loading="lazy" />
                 </picture>
               </div>
               <button class="button button-text button--card" type="button">
@@ -166,7 +167,8 @@
                   <source media="(min-width: 768px)"
                     srcset="./img/chicken-big-tablet@1x.png 1x, ./img/chicken-big-tablet@2x.png 2x">
                   <img class="card-product__img" src="./img/chicken-big-mobile@1x.jpg"
-                    srcset="./img/chicken-big-mobile@2x.jpg 2x" alt="Cat Energy PRO 1000 г" width="140" />
+                    srcset="./img/chicken-big-mobile@2x.jpg 2x" alt="Cat Energy PRO 1000 г" width="140"
+                    loading="lazy" />
                 </picture>
               </div>
               <button class="button button-text button--card" type="button">
@@ -206,7 +208,7 @@
                   <source media="(min-width: 768px)"
                     srcset="./img/fish-small-tablet@1x.png 1x, ./img/fish-small-tablet@2x.png 2x">
                   <img class="card-product__img" src="./img/fish-small-mobile@1x.jpg"
-                    srcset="./img/fish-small-mobile@2x.jpg 2x" alt="Cat Energy PRO 500 г" width="140" />
+                    srcset="./img/fish-small-mobile@2x.jpg 2x" alt="Cat Energy PRO 500 г" width="140" loading="lazy" />
                 </picture>
               </div>
               <button class="button button-text button--card" type="button">
@@ -246,7 +248,7 @@
                   <source media="(min-width: 768px)"
                     srcset="./img/fish-big-tablet@1x.png 1x, ./img/fish-big-tablet@2x.png 2x">
                   <img class="card-product__img" src="./img/fish-big-mobile@1x.jpg"
-                    srcset="./img/fish-big-mobile@2x.jpg 2x" alt="Cat Energy PRO 1000 г" width="140" />
+                    srcset="./img/fish-big-mobile@2x.jpg 2x" alt="Cat Energy PRO 1000 г" width="140" loading="lazy" />
                 </picture>
               </div>
               <button class="button button-text button--card" type="button">
@@ -287,7 +289,8 @@
                   <source media="(min-width: 768px)"
                     srcset="./img/buckwheat-small-tablet@1x.png 1x, ./img/buckwheat-small-tablet@2x.png 2x">
                   <img class="card-product__img" src="./img/fish-small-mobile@1x.jpg"
-                    srcset="./img/buckwheat-small-mobile@2x.jpg 2x" alt="Cat Energy SLIM 500 г" width="140" />
+                    srcset="./img/buckwheat-small-mobile@2x.jpg 2x" alt="Cat Energy SLIM 500 г" width="140"
+                    loading="lazy" />
                 </picture>
               </div>
               <button class="button button-text button--card" type="button">
@@ -328,7 +331,8 @@
                   <source media="(min-width: 768px)"
                     srcset="./img/buckwheat-big-tablet@1x.png 1x, ./img/buckwheat-big-tablet@2x.png 2x">
                   <img class="card-product__img" src="./img/fish-small-mobile@1x.jpg"
-                    srcset="./img/buckwheat-big-mobile@2x.jpg 2x" alt="Cat Energy SLIM 1000 г" width="140" />
+                    srcset="./img/buckwheat-big-mobile@2x.jpg 2x" alt="Cat Energy SLIM 1000 г" width="140"
+                    loading="lazy" />
                 </picture>
 
               </div>
@@ -369,7 +373,7 @@
                   <source media="(min-width: 768px)"
                     srcset="./img/rice-small-tablet@1x.png 1x, ./img/rice-small-tablet@2x.png 2x">
                   <img class="card-product__img" src="./img/fish-small-mobile@1x.jpg"
-                    srcset="./img/rice-small-mobile@2x.jpg 2x" alt="Cat Energy SLIM 500 г" width="140" />
+                    srcset="./img/rice-small-mobile@2x.jpg 2x" alt="Cat Energy SLIM 500 г" width="140" loading="lazy" />
                 </picture>
               </div>
               <button class="button button-text button--card" type="button">
@@ -507,10 +511,7 @@
     <div class="modal display-none">
       <div class="container">
         <form action="https://echo.htmlacademy.ru" class="form-order">
-          <button class="modal__toggle" type="button">
-            <span class="close" onclick="closeModal(this)">
-              x
-            </span>
+          <button class="modal__toggle" type="button" onclick="closeModal(this)">
           </button>
           <fieldset class="order-fieldset">
 
@@ -571,7 +572,7 @@
           <img class="contacts__img" src="img/bg-map-mobile@1x.png"
             alt="Адрес: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург" width="280"
             srcset="img/bg-map-mobile@1x.png, img/bg-map-mobile@2x.png 2x"
-            sizes="(min-width: 1440px) 502px, (min-width: 768px) 709px, 280px ">
+            sizes="(min-width: 1440px) 502px, (min-width: 768px) 709px, 280px " loading="lazy">
         </picture>
         <div class="contacts__pin-wrapper">
           <picture>
@@ -632,44 +633,6 @@
       </div>
     </div>
   </footer>
-  <script>
-    let navMain = document.querySelector('.main-nav');
-    let navToggle = document.querySelector('.main-nav__toggle');
-    let modal = document.querySelector('.modal');
-    let buttonCard = document.querySelectorAll('.button--card');
-
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-      }
-    });
-    for (let i = 0; i < buttonCard.length; i++) {
-      buttonCard[i].addEventListener('click', function () {
-        openModal();
-      })
-    }
-
-    function openModal(n) {
-      modal.classList.remove('display-none');
-    }
-
-    function closeModal(n) {
-      modal.classList.add('display-none');
-    }
-    // закрыть модальное окно при нажатии esc
-    document.addEventListener("keydown", function (evt) {
-      if (evt.code == "Escape") {
-        closeModal();
-      }
-    });
-
-  </script>
 
   <svg style="display:none">
     <symbol viewbox="0 0 202 60" fill="none" id="header-logo" role="img" aria-label="Вернуться на главную">
@@ -890,6 +853,7 @@
   c0.4,0,0.7,0.3,0.7,0.7V24.7z" />
     </symbol>
   </svg>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

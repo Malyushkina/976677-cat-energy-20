@@ -11,6 +11,7 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
+const htmlmin = require("gulp-htmlmin");
 
 // Styles
 
@@ -35,7 +36,7 @@ exports.styles = styles;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: "build",
+      baseDir: "source",
     },
     cors: true,
     notify: false,
@@ -106,8 +107,7 @@ const copy = () => {
         "source/js/**",
         "source/*.ico",
         "source/*.html",
-      ],
-      {
+      ], {
         base: "source",
       }
     )
@@ -122,6 +122,17 @@ const clean = () => {
 };
 exports.clean = clean;
 
-const build = gulp.series(clean, copy, styles, images, toWebp, sprite);
+const html = () => {
+  return gulp
+    .src("source/**/*.html")
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
+    .pipe(gulp.dest("build"))
+};
+exports.html = html;
+
+// const build = gulp.series(clean, copy, styles, images, toWebp, sprite, html);
+const build = gulp.series(clean, copy, styles, html);
 
 exports.build = build;

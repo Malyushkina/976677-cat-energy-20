@@ -4,9 +4,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" href="./fonts/oswaldregular.woff2" as="font" />
+  <link rel="preload" href="./fonts/oswaldmedium.woff2" as="font" />
+  <link rel="preload" href="./css/styles.min.css" as="style" />
   <link rel="stylesheet" href="./css/styles.min.css" />
+
   <!-- Pixel Glass -->
-  <!-- <style>
+  <style>
     HTML {
       background-repeat: no-repeat;
       background-position: 50% 0;
@@ -32,7 +36,7 @@
 
   </style>
   <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet" type="text/css" />
-  <script src="../node_modules/pixel-glass/script.js"></script> -->
+  <script src="../node_modules/pixel-glass/script.js"></script>
   <!-- // Pixel Glass -->
   <title>HTML Academy: Кэт энерджи</title>
 </head>
@@ -112,7 +116,8 @@
             </picture>
           </div>
 
-          <button class="button button-text button--promo" type="button"><a class="button__link" href="./form.html"> подобрать программу</a>
+          <button class="button button-text button--promo" type="button"><a class="button__link" href="./form.html">
+              подобрать программу</a>
 
           </button>
         </div>
@@ -282,26 +287,27 @@
           </p>
         </div>
       </div>
+
       <div class="contacts__map">
-        <picture>
-          <source media="(min-width: 1440px)" type="image/webp"
-            srcset="img/bg-map-desktop@1x.webp, img/bg-map-desktop@2x.webp 2x">
-          <source media="(min-width: 768px)" type="image/webp"
-            srcset="img/bg-map-tablet@1x.webp , img/bg-map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
-          <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg , img/bg-map-tablet@2x.jpg 2x">
-          <img class="contacts__img" src="img/bg-map-mobile@1x.png"
-            alt="Адрес: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург" width="280"
-            srcset="img/bg-map-mobile@1x.png, img/bg-map-mobile@2x.png 2x"
-            sizes="(min-width: 1440px) 1440px, (min-width: 768px) 709px, 280px ">
-        </picture>
-        <div class="contacts__pin-wrapper">
-          <picture>
-            <img class="contacts__pin"  src="./img/map-pin.png" sizes=" (min-width: 1440px) 1440px, (min-width: 768px) 113px, 53px ">
-          </picture>
+        <div class="yandex-map yandex-map--mobile" style="position:relative;overflow:hidden;">
+          <a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
+            style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a>
+          <a href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.322943%2C59.938675&mode=usermaps&source=constructorLink&um=constructor%3Adccb4483e8c14d86cd056ee235b5b76fe4fc84a82ff3885880acec406e8d4e7c&utm_medium=mapframe&utm_source=maps&z=17"
+            style="color:#eee;font-size:12px;position:absolute;top:14px;"></a>
+          <iframe src="https://yandex.ru/map-widget/v1/-/CCQtbWGyhC" width="100%" height="362" frameborder="1"
+            allowfullscreen="true" style="position:relative;"></iframe>
+        </div>
+        <div class="yandex-map yandex-map--desktop" style="position:relative;overflow:hidden;">
+          <a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
+            style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a>
+          <a href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.322943%2C59.938675&mode=usermaps&source=constructorLink&um=constructor%3Adccb4483e8c14d86cd056ee235b5b76fe4fc84a82ff3885880acec406e8d4e7c&utm_medium=mapframe&utm_source=maps&z=17"
+            style="color:#eee;font-size:12px;position:absolute;top:14px;"></a>
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3Adccb4483e8c14d86cd056ee235b5b76fe4fc84a82ff3885880acec406e8d4e7c&amp;source=constructor"
+            width="100%" height="400" frameborder="0"></iframe>
         </div>
       </div>
+
 
     </section>
   </main>
@@ -607,38 +613,7 @@
     </symbol>
 
   </svg>
-  <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
-
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-      }
-    });
-
-  </script>
-  <script>
-    function range() {
-      var sliderItem = document.querySelectorAll(".slider__item");
-      for (var i = 0; i < sliderItem.length; i++) {
-        if (sliderItem[i].classList.contains("slider-item--active")) {
-          sliderItem[i].classList.remove("slider-item--active");
-          sliderItem[i].classList.add("slider-item--hidden");
-        } else {
-          sliderItem[i].classList.add("slider-item--active");
-          sliderItem[i].classList.remove("slider-item--hidden");
-        }
-      }
-    }
-
-  </script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
