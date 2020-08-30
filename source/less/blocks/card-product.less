@@ -42,9 +42,11 @@
     "img description"
     "button button";
   grid-row-gap: 13px;
+  align-items: center;
 }
 
 .card-product__wrapper--more-products {
+
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 35px 32px 29px auto;
@@ -128,4 +130,47 @@
 .col2 {
   text-align: right;
   width: 80px;
+}
+
+.product__link,
+.basket__link {
+  text-decoration: none;
+  color: @color-white;
+}
+
+.show-all {
+  text-decoration: none;
+  color: @color-special_dark-grey;
+}
+
+.roll-up {
+  margin: 0 auto;
+  display: block;
+  width: 60px;
+  height: 60px;
+  border: 1px solid @color-basic-green;
+  border-radius: 50%;
+  background-color: @color-white;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @color-basic-green;
+
+    .roll-up__img {
+      stroke: @color-white;
+    }
+  }
+
+  &:active {
+    background-color: @color-basic-green2;
+  }
+}
+
+.roll-up__img {
+  width: 30px;
+  height: 30px;
+  stroke: @color-basic-green;
+  stroke-width: 2px;
+  fill: transparent;
 }

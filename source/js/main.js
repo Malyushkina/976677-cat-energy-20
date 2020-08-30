@@ -1,7 +1,14 @@
 var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle');
 let modal = document.querySelector('.modal');
-    let buttonCard = document.querySelectorAll('.button--card');
+let buttonCard = document.querySelectorAll('.button--card');
+
+let showAll = document.querySelector('.show-all');
+let buttonShowAll = document.querySelector('.more-products__button');
+let catalog = document.querySelector('.catalog');
+let buttonRollUp = document.querySelector('.roll-up');
+let card = document.querySelectorAll('.card-product');
+let moreProducts = document.querySelector('.card-product--more-products')
 
 navMain.classList.remove('main-nav--nojs');
 
@@ -14,15 +21,11 @@ navToggle.addEventListener('click', function () {
     navMain.classList.remove('main-nav--opened');
   }
 });
-for (let i = 0; i < buttonCard.length; i++) {
-  buttonCard[i].addEventListener('click', function () {
-    openModal();
-  })
-}
+
 
 function range() {
   var sliderItem = document.querySelectorAll(".slider__item");
-  for (var i = 0; i < sliderItem.length; i++) {
+  for (let i = 0; i < sliderItem.length; i++) {
     if (sliderItem[i].classList.contains("slider-item--active")) {
       sliderItem[i].classList.remove("slider-item--active");
       sliderItem[i].classList.add("slider-item--hidden");
@@ -31,6 +34,16 @@ function range() {
       sliderItem[i].classList.remove("slider-item--hidden");
     }
   }
+}
+
+for (let j = 0; j < buttonCard.length; j++) {
+  if (buttonCard[j].classList.contains('more-products__button')) {} else {
+    buttonCard[j].addEventListener('click', function () {
+      buttonCard[j].removeAttribute("href");
+      openModal();
+    })
+  }
+
 }
 
 function openModal(n) {
@@ -46,3 +59,25 @@ document.addEventListener("keydown", function (evt) {
     closeModal();
   }
 });
+buttonShowAll.addEventListener('click', function () {
+  showAll.removeAttribute("href");
+  catalog.classList.add('additional-padding-bottom');
+  for (let m = 0; m < card.length; m++) {
+    if (card[m].classList.contains('visually-hidden')) {
+      card[m].classList.remove('visually-hidden');
+    }
+  }
+  moreProducts.classList.add('visually-hidden');
+  buttonRollUp.classList.remove('display-none');
+})
+
+buttonRollUp.addEventListener('click', function () {
+  for (let p = 7; p < card.length; p++) {
+    if (card[p].classList.contains('card-product--mini')) {} else {
+      card[p].classList.add('visually-hidden');
+    }
+  }
+  moreProducts.classList.remove('visually-hidden');
+  buttonRollUp.classList.add('display-none');
+  catalog.classList.remove('additional-padding-bottom');
+})

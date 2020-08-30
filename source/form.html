@@ -1,7 +1,14 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/styles.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" href="./fonts/oswaldregular.woff2" as="font" />
+  <link rel="preload" href="./fonts/oswaldmedium.woff2" as="font" />
+  <link rel="preload" href="./css/styles.min.css" as="style" />
+  <link rel="stylesheet" href="./css/styles.min.css" />
+  <!-- <link rel="stylesheet" href="./css/style.css"> -->
   <!-- Pixel Glass -->
   <!-- <style>
     HTML {
@@ -44,7 +51,7 @@
         <!-- Логотип -->
 
         <div class="logo__wrapper">
-          <a class="page-header__logo" href="#">
+          <a class="page-header__logo" href="index.html">
             <svg class="logo__img--header" width="202" height="37">
               <use xlink:href="#header-logo" class="header-logo"></use>
               <use xlink:href="#header-logo--mobile" class="header-logo--mobile"></use>
@@ -137,7 +144,7 @@
 
           <fieldset class="search-program__fieldset owner-contact-fieldset">
 
-            <header class="fieldset__header">
+            <header class="fieldset__header owner__header">
               <div class="decor-wrapper">
                 <span class="section-title decor-title fieldset__title">
                   Контактные данные (владельца кота)
@@ -168,7 +175,7 @@
 
           <fieldset class="search-program__fieldset comments-fieldset">
 
-            <header class="fieldset__header">
+            <header class="fieldset__header comments__header">
               <div class="decor-wrapper">
                 <span class="section-title decor-title fieldset__title">
                   Комментарий
@@ -177,13 +184,13 @@
             </header>
 
 
-            <textarea class="search-program__comments-textarea" name="comments" id="" cols="30" rows="10"
+            <textarea class="search-program__comments-textarea" name="comments" cols="30" rows="10"
               placeholder="Расскажите обо всех повАдках кота"></textarea>
           </fieldset>
 
           <fieldset class="search-program__fieldset additional-fieldset fieldset-flex">
 
-            <header class="fieldset__header">
+            <header class="fieldset__header additional__header">
               <div class="decor-wrapper">
                 <span class="section-title decor-title fieldset__title">
                   Дополнительно
@@ -224,7 +231,7 @@
     <section class="contacts contacts--gray">
       <div class="container contacts__wrapper">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts-description">
+        <div class="contacts-description contacts--gray">
           <h3 class="contacts__title section-title">
             приглашаем <br />
             к сотрудничеству дилеров!
@@ -234,26 +241,16 @@
           </p>
         </div>
       </div>
-      <div class="contacts__map">
-        <picture>
-          <source media="(min-width: 1440px)" type="image/webp"
-            srcset="img/bg-map-desktop@1x.webp, img/bg-map-desktop@2x.webp 2x">
-          <source media="(min-width: 768px)" type="image/webp"
-            srcset="img/bg-map-tablet@1x.webp , img/bg-map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
-          <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg , img/bg-map-tablet@2x.jpg 2x">
-          <img class="contacts__img" src="img/bg-map-mobile@1x.png"
-            alt="Адрес: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург" width="280"
-            srcset="img/bg-map-mobile@1x.png, img/bg-map-mobile@2x.png 2x"
-            sizes="(min-width: 1440px) 502px, (min-width: 768px) 709px, 280px" loading="lazy" >
-        </picture>
-        <div class="contacts__pin-wrapper">
-          <picture>
-            <img class="contacts__pin" src="./img/map-pin.png"
-              sizes=" (min-width: 1440px) 1440px, (min-width: 768px) 113px, 53px ">
-          </picture>
-        </div>
+      <div class="contacts__map contacts__map--mobile">
+        <iframe class="contacts__iframe"
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3Adccb4483e8c14d86cd056ee235b5b76fe4fc84a82ff3885880acec406e8d4e7c&amp;source=constructor"
+          style="border: none;"></iframe>
+      </div>
+      <div class="contacts__map contacts__map--desktop">
+        <iframe class="contacts__iframe"
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A1de2c0e31225f7c6dfb034ef79d7a21d5f49aa1f34d97c490217d2e14f7c0474&amp;source=constructor"
+          style="border: none;"></iframe>
+      </div>
     </section>
   </main>
 
@@ -264,10 +261,11 @@
       <!-- Обёртка для флексов -->
       <div class="footer__wrapper">
         <div class="page-footer__logo">
-          <svg width="128" height="24">
-            <use xlink:href="#footer-logo"></use>
-          </svg>
-          <!-- <img src="./img/logo-footer.svg" width="128" height="24" alt="CAT ENERGY" /> -->
+          <a class="page-footer__logo" href="index.html">
+            <svg width="128" height="24">
+              <use xlink:href="#footer-logo"></use>
+            </svg>
+          </a>
         </div>
 
         <div class="page-footer__social social">
@@ -287,6 +285,7 @@
                   <svg class="icon-social icon-social--inst" width="16" height="16">
                     <use xlink:href="#icon-inst"></use>
                   </svg>
+                </div>
               </a>
             </li>
             <li class="social__item">
@@ -310,7 +309,7 @@
       </div>
     </div>
   </footer>
-    <svg style="display:none">
+  <svg style="display:none">
     <symbol viewbox="0 0 202 60" fill="none" id="header-logo" role="img" aria-label="Вернуться на главную">
       <style>
         .header-logo--desktop {
