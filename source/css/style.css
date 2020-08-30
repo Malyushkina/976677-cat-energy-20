@@ -411,6 +411,9 @@
   font-size: 16px;
   line-height: 1;
 }
+.button--modal {
+  margin: 0 auto;
+}
 .special {
   padding-top: 18px;
   padding-bottom: 42px;
@@ -1183,9 +1186,6 @@
   font-size: 18px;
   line-height: 1.5;
   color: #444444;
-}
-.button--modal {
-  margin: 0 auto;
 }
 .order-fieldset {
   padding: 0;
