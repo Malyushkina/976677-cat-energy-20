@@ -2,11 +2,8 @@
   background-color: @color-white;
 }
 
-.contacts--gray {
-  background-color: @color-basic-gray;
-}
-
 .contacts-description {
+  background-color: @color-white;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -40,26 +37,18 @@
 .contacts__map {
   position: relative;
   background-color: @color-basic-gray;
-  max-width: 320px;
-  margin: 0 auto;
-  text-align: center;
+  height: 362px;
 }
 
-.contacts__img {
-  max-width: 100%;
+.contacts__map--desktop {
+  display: none;
+}
+
+.contacts--gray {
+  background-color: @color-basic-gray;
+}
+
+.contacts__iframe {
   width: 100%;
-  height: auto;
-}
-
-.contacts__pin-wrapper {
-  position: absolute;
-  width: 53px;
-  height: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.contacts__pin {
-  width: 100%;
+  height: 100%;
 }

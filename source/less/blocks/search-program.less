@@ -3,7 +3,7 @@
 }
 
 .form__header {
-  padding-top: 22px;
+  padding-top: 32px;
   padding-bottom: 38px;
 }
 
@@ -40,14 +40,7 @@
 }
 
 .search-program__fieldset {
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  padding-block-start: 0;
-  padding-inline-start: 0;
-  padding-inline-end: 0;
-  padding-block-end: 0;
   padding-bottom: 24px;
-
   border: none;
 }
 
@@ -106,11 +99,11 @@
     fill: @color-basic-green;
   }
 
-  &:not(:focus):invalid:not(:placeholder-shown) {
+  &:not(:focus):invalid {
     box-shadow: inset 0 0 0 2px @color-status_error;
   }
 
-  &:not(:focus):invalid:not(:placeholder-shown) + .input__icon {
+  &:not(:focus):invalid + .input__icon {
     fill: @color-status_error;
   }
 }
@@ -210,7 +203,7 @@
 }
 
 .owner-contact-fieldset {
-  padding-bottom: 6px;
+  padding-bottom: 2px;
 }
 
 .label--owner-email,
@@ -229,9 +222,15 @@
   padding-bottom: 0;
 }
 
+.comments__header {
+  padding-bottom: 34px;
+}
+
 .search-program__comments-textarea {
   width: 100%;
+  height: 150px;
   margin: 0;
+
   padding: 0;
 
   border-color: @color-gray4;
@@ -254,15 +253,18 @@
   padding-bottom: 32px;
 }
 
-.additional-fieldset .fieldset__header {
-  padding-bottom: 30px;
+.additional__header {
+  padding-top: 25px;
+  padding-bottom: 34px;
 }
+
 
 .label-additional {
   display: flex;
   align-items: center;
-  padding-left: 45px;
   height: 30px;
+  padding-left: 45px;
+  margin-bottom: 12px;
   cursor: pointer;
 
   &:active .label-title {
@@ -291,7 +293,7 @@
   content: url(".././img/icon-tick.svg");
   width: 18px;
   height: 14px;
-  top: 3px;
+  top: 0;
   left: -39px;
 }
 
@@ -304,7 +306,7 @@
   content: url(".././img/icon-tick.svg");
   width: 18px;
   height: 14px;
-  top: 3px;
+  top: 0;
   left: -39px;
 }
 
@@ -313,7 +315,7 @@
 }
 
 .label-additional:last-of-type {
-  margin-bottom: 32px;
+  margin-bottom: 35px;
 }
 
 .search-program__clarification {
