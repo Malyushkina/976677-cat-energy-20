@@ -1,11 +1,5 @@
-.example-result__wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .example__result {
+  grid-area: result;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,7 +12,12 @@
   border: 1px solid @color-special_gray;
   border-radius: 5px;
 }
-
+.example__result--weight{
+  grid-area: result1;
+}
+.example__result--days{
+  grid-area: result2;
+}
 .example__caption {
   font-family: @font;
   font-size: @font-size*2.4;

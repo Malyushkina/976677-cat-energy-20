@@ -37,7 +37,25 @@
 .contacts__map {
   position: relative;
   background-color: @color-basic-gray;
+  background-image: url("../../img/bg-map-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
   height: 362px;
+  @media (min-resolution: 2dppx) {
+    background-image: url(".././img/bg-map-mobile@2x.jpg");
+  }
+}
+.contacts__map::before{
+  position: absolute;
+  content: "";
+  width:60px;
+  height: 60px;
+  top:50%;
+  left: 50%;
+  background-image:url(../../img/map-pin.png) ;
+  background-size: cover;
+  transform: translate(-50%, -50%);
 }
 
 .contacts__map--desktop {
