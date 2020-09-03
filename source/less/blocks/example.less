@@ -4,15 +4,21 @@
   background-color: @color-gray3;
 }
 
-.example__content-wrapper {
-
+.example__wrapper {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: auto auto;
   grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "title title"
+    "text text"
+    "result1 result2"
+    "expenses expenses"
+    "slider slider";
   grid-row-gap: 26px;
 }
 
 .example__header {
+  grid-area: title;
   padding-bottom: 10px;
 }
 
@@ -21,12 +27,14 @@
 }
 
 .example__description {
+  grid-area: text;
   margin: 0;
   line-height: 18/14;
   padding-right: 2px;
 }
 
 .example__expenses {
+  grid-area: expenses;
   font-family: @font;
   font-size: @font-size*1.4;
   line-height: 1.43;
@@ -35,23 +43,24 @@
   text-align: center;
 }
 
-.slider {
+.example__slider {
+  grid-area: slider;
   padding-top: 35px;
   padding-bottom: 3px;
+}
 
-  &__item {
-    width: 280px;
-    height: 240px;
-    margin: 0 auto;
-    margin-bottom: 31px;
-    animation: fadein 0.5s ease-in-out forwards;
-    text-align: center;
+.slider__item {
+  width: 280px;
+  height: 240px;
+  margin: 0 auto;
+  margin-bottom: 31px;
+  animation: fadein 0.5s ease-in-out forwards;
+  text-align: center;
+}
 
-    .slider__img {
-      width: 100%;
-      height: auto;
-    }
-  }
+.slider__img {
+  width: 100%;
+  height: auto;
 }
 
 .slider__designation {
@@ -67,7 +76,7 @@
   }
 }
 
-.example__toggles {
+.slider__togglers {
   display: flex;
   justify-content: space-between;
   align-items: center;

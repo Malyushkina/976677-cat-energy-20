@@ -35,13 +35,8 @@
     align-items: center;
   }
 
-  .logo__wrapper {
-    position: relative;
-    left: -10px;
-    padding-bottom: 0;
-  }
 
-  .page-header__logo {
+  .logo__link {
     .header-logo {
       display: block;
     }
@@ -49,6 +44,11 @@
     .header-logo--mobile {
       display: none;
     }
+  }
+
+  .logo__link--header {
+    left: -10px;
+    padding-bottom: 0;
   }
 
   .logo__img--header {
@@ -139,7 +139,7 @@
   // *********************************
   //           program-item
   // *********************************
-  .program-item {
+  .program__item {
     grid-template-columns: 1fr 1fr 244px;
     grid-template-areas:
       "title title img"
@@ -154,17 +154,17 @@
     margin-bottom: 27px;
 
     &:nth-of-type(2) {
-      .program__description {
+      .program-item__description {
         max-width: 342px;
       }
     }
   }
 
-  .program__title {
+  .program-item__title {
     font-size: @font-size*3.6;
   }
 
-  .program__description {
+  .program-item__description {
     padding-bottom: 15px;
 
     font-size: @font-size*1.6;
@@ -172,26 +172,26 @@
     color: @color-black;
   }
 
-  .program__img-wrapper {
+  .program-item__img-wrapper {
     width: 200px;
     height: 200px;
     align-self: start;
     margin-top: 15px;
   }
 
-  .program__img--slim {
+  .program-item__img--slim {
     width: 140px;
     height: 192px;
     padding-bottom: 12px;
   }
 
-  .program__img--pro {
+  .program-item__img--pro {
     padding-top: 14px;
     width: 268px;
     height: 112px;
   }
 
-  .program__link {
+  .program-item__link {
     font-size: @font-size*2;
   }
 
@@ -200,7 +200,7 @@
     padding-top: 18px;
   }
 
-  .program__arrow {
+  .program-item__arrow {
     margin-left: 15px;
   }
 
@@ -230,7 +230,7 @@
     grid-gap: 30px 137px;
   }
 
-  .special__item {
+  .special-item {
     position: relative;
     flex-direction: column;
     align-items: start;
@@ -244,7 +244,7 @@
   }
 
   .generate-after(@n) when (@n>0) {
-    .special__item:nth-child(@{n})::after {
+    .special-item:nth-child(@{n})::after {
       content: "@{n}";
       position: absolute;
       top: 0;
@@ -262,12 +262,12 @@
 
   .generate-after(4);
 
-  .special__text {
+  .special-item__text {
     width: 100%;
     font-size: @font-size*1.6;
   }
 
-  .special__img-wrapper {
+  .special-item__img-wrapper {
     width: 80px;
     height: 80px;
     margin-bottom: 32px;
@@ -288,15 +288,16 @@
     padding-bottom: 23px;
   }
 
-  .example__content-wrapper {
-    grid-template-columns: 366px 174px;
-    grid-template-rows: auto auto auto;
+  .example__wrapper {
+    grid-template-columns: auto auto 174px;
+    grid-template-rows: auto auto auto auto;
     grid-row-gap: 41px;
-    grid-column-gap: 167px;
+    // grid-column-gap: 167px;
     grid-template-areas:
-      "title title"
-      "text text"
-      "result expenses";
+      "title  title title"
+      "text text text"
+      "result1 result2 expenses"
+      "slider slider slider";
     margin-bottom: 28px;
   }
 
@@ -311,7 +312,7 @@
     line-height: 1.5;
   }
 
-  .example-result__wrapper {
+  .example-result {
     grid-area: result;
     padding-top: 12px;
   }
@@ -340,15 +341,8 @@
     text-align: right;
   }
 
-  .example__img {
-    grid-area: slider;
-  }
-
-  .example__wrapper {
-    width: 100%;
-  }
-
   .slider {
+    grid-area: slider;
     padding-top: 51px;
   }
 
@@ -358,29 +352,13 @@
     margin-bottom: 15px;
   }
 
-  .slider__item--before {
-    background-image: url(".././img/before-tablet@1x.png");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url(".././img/before-tablet@2x.png");
-    }
-  }
-
-  .slider__item--after {
-    background-image: url(".././img/after-tablet@1x.png");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url(".././img/after-tablet@2x.png");
-    }
-  }
-
   .slider__designation {
     font-size: @font-size*2;
     line-height: 1.5;
     border-bottom: 1px dotted fade(@color-black, 40%);
   }
 
-  .example__toggles {
+  .slider__togglers {
     width: 570px;
   }
 
@@ -472,6 +450,15 @@
 
   .contacts__map {
     height: 400px;
+    background-image: url("../../img/bg-map-tablet@1x.jpg");
+    @media (min-resolution: 2dppx) {
+      background-image: url(".././img/bg-map-tablet@2x.jpg");
+    }
+  }
+
+  .contacts__map::before {
+    width: 100px;
+    height: 100px;
   }
 
   // *********************************
@@ -939,7 +926,7 @@
     left: -62px;
   }
 
-  .label-additional .input-check:checked + .label-title::after {
+  .label-additional .input-check:checked+.label-title::after {
     left: -50px;
   }
 

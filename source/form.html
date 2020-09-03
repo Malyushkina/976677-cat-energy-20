@@ -8,77 +8,38 @@
   <link rel="preload" href="./fonts/oswaldmedium.woff2" as="font" />
   <link rel="preload" href="./css/styles.min.css" as="style" />
   <link rel="stylesheet" href="./css/styles.min.css" />
-  <!-- <link rel="stylesheet" href="./css/style.css"> -->
-  <!-- Pixel Glass -->
-  <!-- <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* По умолчанию показывается мобильный макет */
-      background-image: url("./img/Mobile.png");
-    }
-
-    /* Планшет */
-    @media (min-width: 768px) {
-      HTML {
-        /* Планшетный макет */
-        background-image: url("./img/tablet.png");
-      }
-    }
-
-    /* Десктоп */
-    @media (min-width: 1440px) {
-      HTML {
-        /* Десктопный макет */
-        background-image: url("./img/Desktop.png");
-      }
-    }
-
-  </style>
-  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet" type="text/css" />
-  <script src="../node_modules/pixel-glass/script.js"></script> -->
-  <!-- // Pixel Glass -->
-
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 
 <body class="page-body">
   <header class="page-header">
+    <div class="container page-header__wrapper">
+      <a class="logo__link logo__link--header" href="index.html">
+        <svg class="logo__img--header" width="202" height="37">
+          <use xlink:href="#header-logo" class="header-logo"></use>
+          <use xlink:href="#header-logo--mobile" class="header-logo--mobile"></use>
+        </svg>
+      </a>
+      <!-- Главное меню сайта -->
 
-    <div class="container">
-      <div class="page-header__wrapper">
-
-        <!-- Логотип -->
-
-        <div class="logo__wrapper">
-          <a class="page-header__logo" href="index.html">
-            <svg class="logo__img--header" width="202" height="37">
-              <use xlink:href="#header-logo" class="header-logo"></use>
-              <use xlink:href="#header-logo--mobile" class="header-logo--mobile"></use>
-            </svg>
-          </a>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">
+            Открыть меню
+          </span>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__item-link" href="./index.html">главная</a>
+            </li>
+            <li class="site-list__item"><a class="site-list__item-link" href="./catalog.html">каталог продукции</a>
+            </li>
+            <li class="site-list__item site-list__item--active"><a class="site-list__item-link"
+                href="./form.html">подбор программы</a></li>
+          </ul>
         </div>
-        <!-- Главное меню сайта -->
-
-        <nav class="main-nav main-nav--closed main-nav--nojs">
-          <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">
-              Открыть меню
-            </span>
-          </button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list site-list">
-              <li class="site-list__item">
-                <a class="site-list__item-link" href="./index.html">главная</a>
-              </li>
-              <li class="site-list__item"><a class="site-list__item-link" href="./catalog.html">каталог продукции</a>
-              </li>
-              <li class="site-list__item site-list__item--active"><a class="site-list__item-link"
-                  href="./form.html">подбор программы</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+      </nav>
     </div>
   </header>
 
@@ -183,9 +144,10 @@
               </div>
             </header>
 
-
-            <textarea class="search-program__comments-textarea" name="comments" cols="30" rows="10"
-              placeholder="Расскажите обо всех повАдках кота"></textarea>
+            <label>
+              <textarea class="search-program__comments-textarea" name="comments" cols="30" rows="10"
+                placeholder="Расскажите обо всех повАдках кота"></textarea>
+            </label>
           </fieldset>
 
           <fieldset class="search-program__fieldset additional-fieldset fieldset-flex">
