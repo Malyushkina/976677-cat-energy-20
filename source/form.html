@@ -46,7 +46,7 @@
   </header>
 
   <main class="page-main">
-    <section class="form">
+    <section class="search-form">
 
       <h1 class="visually-hidden">
         CAT ENERGY - Функциональное питание для котов
@@ -55,69 +55,67 @@
       <!-- Форма -->
 
       <div class="container">
-        <header class="form__header">
+        <header class="search-form__header">
           <h2 class="section-title">Подбор программы</h2>
         </header>
 
-        <form class="search-program" action="https://echo.htmlacademy.ru">
-          <p class="search-program__subtitle">
+        <form class="form" action="https://echo.htmlacademy.ru">
+          <p class="form__subtitle">
             Заполните анкету, и мы подберем программу питания для вашего кота
           </p>
-          <fieldset class="search-program__fieldset cat-data-fieldset">
+          <fieldset class="form__fieldset cat-data">
 
-            <label class="search-program__label search-program__label--flex">ИМЯ: <sup>*</sup>
-              <input class="searh-program__input searh-program__input--cat-name" type="text" name="cat-name"
+            <label class="form__label form__label--flex">ИМЯ: <sup>*</sup>
+              <input class="form__input form__input--cat-name" type="text" name="cat-name"
                 placeholder="барсик" required />
             </label>
 
-            <label class="search-program__label search-program__label--flex"> Вес (кг):<sup>*</sup>
-              <input class="searh-program__input searh-program__input--weight" type="number" name="cat-weight"
+            <label class="form__label form__label--flex"> Вес (кг):<sup>*</sup>
+              <input class="form__input form__input--weight" type="number" name="cat-weight"
                 placeholder="7" required />
             </label>
 
-            <label class="search-program__label search-program__label--flex">Возраст (лет):
-              <input class="searh-program__input searh-program__input--age" type="number" name="cat-age"
+            <label class="form__label form__label--flex">Возраст (лет):
+              <input class="form__input form__input--age" type="number" name="cat-age"
                 placeholder="7" />
             </label>
 
           </fieldset>
 
-          <fieldset class="search-program__fieldset radio-fieldset fieldset-flex">
+          <fieldset class="form__fieldset form__fieldset--radio fieldset-flex">
 
 
-            <label class="search-program__label label-radio ">
-              <input class="searh-program__input input-check" type="radio" name="check-program" value="program-slim"
+            <label class="form__label form__label--radio ">
+              <input class="form__input input-check" type="radio" name="check-program" value="program-slim"
                 checked />
-              <span class="label-title">похудение</span>
+              <span class="form__label-title">похудение</span>
             </label>
 
-            <label class="search-program__label label-radio">
-              <input class="searh-program__input input-check" type="radio" name="check-program" value="program-pro" />
-              <span class="label-title">Набор массы</span>
+            <label class="form__label form__label--radio">
+              <input class="form__input input-check" type="radio" name="check-program" value="program-pro" />
+              <span class="form__label-title">Набор массы</span>
             </label>
 
-            <label class="search-program__label label-radio">
-              <input class="searh-program__input input-check" type="radio" name="check-program"
+            <label class="form__label form__label--radio">
+              <input class="form__input input-check" type="radio" name="check-program"
                 value="program-advice" />
-              <span class="label-title">Не знаю (Нужен ваш совет)</span>
+              <span class="form__label-title">Не знаю (Нужен ваш совет)</span>
             </label>
 
 
           </fieldset>
 
-          <fieldset class="search-program__fieldset owner-contact-fieldset">
+          <fieldset class="form__fieldset fieldset owner">
 
             <header class="fieldset__header owner__header">
-              <div class="decor-wrapper">
                 <span class="section-title decor-title fieldset__title">
                   Контактные данные (владельца кота)
                 </span>
-              </div>
             </header>
-            <div class="fieldset-owner__wrapper">
-              <label class="search-program__label label-owner label--owner-email search-program__label--flex">
+
+            <label class="form__label owner__label--email  form__label--flex">
                 E-mail:<sup>*</sup>
-                <input class="searh-program__input owner-contact--email" type="email" name="email"
+                <input class="form__input owner__input--email input " type="email" name="email"
                   placeholder="kuklachev@gmail.com" required />
                 <svg class="input__icon" width="17" height="13">
                   <use xlink:href="#icon-mail"></use>
@@ -125,66 +123,63 @@
 
               </label>
 
-              <label class="search-program__label label-owner label--owner-tel search-program__label--flex">
+              <label class="form__label owner__label--tel  form__label--flex">
                 Телефон:<sup>*</sup>
-                <input class="searh-program__input owner-contact--tel" type="tel" name="tel"
+                <input class="form__input owner__input--tel input" type="tel" name="tel"
                   placeholder="8 (960) 900-60-90" required />
                 <svg class="input__icon" width="20" height="20">
                   <use xlink:href="#icon-phone"></use>
                 </svg>
               </label>
-            </div>
+
           </fieldset>
 
-          <fieldset class="search-program__fieldset comments-fieldset">
+          <fieldset class="form__fieldset fieldset comments">
 
             <header class="fieldset__header comments__header">
-              <div class="decor-wrapper">
                 <span class="section-title decor-title fieldset__title">
                   Комментарий
                 </span>
-              </div>
             </header>
 
-            <label>
-              <textarea class="search-program__comments-textarea" name="comments" cols="30" rows="10"
+            <label class="comments__label">
+              <textarea class="comments__textarea" name="comments" cols="30" rows="10"
                 placeholder="Расскажите обо всех повАдках кота"></textarea>
             </label>
           </fieldset>
 
-          <fieldset class="search-program__fieldset additional-fieldset fieldset-flex">
+          <fieldset class="form__fieldset fieldset additional fieldset-flex">
 
             <header class="fieldset__header additional__header">
-              <div class="decor-wrapper">
                 <span class="section-title decor-title fieldset__title">
                   Дополнительно
                 </span>
-              </div>
             </header>
-            <div class="fieldset-additional__wrapper">
-              <label class="search-program__label label-additional">
-                <input class="searh-program__input input-check" name="sweetener" type="checkbox" value="sweetener"
+
+            <div class="additional__wrapper">
+              <label class="form__label form__label--additional">
+                <input class="form__input input-check" name="sweetener" type="checkbox" value="sweetener"
                   checked />
-                <span class="label-title">сахарозаменитель</span>
+                <span class="form__label-title">сахарозаменитель</span>
               </label>
 
-              <label class="search-program__label label-additional">
-                <input class="searh-program__input input-check" name="water" type="checkbox" value="water" />
-                <span class="label-title">питьевая вода</span>
+              <label class="form__label form__label--additional">
+                <input class="form__input input-check" name="water" type="checkbox" value="water" />
+                <span class="form__label-title">питьевая вода</span>
               </label>
 
-              <label class="search-program__label label-additional">
-                <input class="searh-program__input input-check" name="milk" type="checkbox" value="milk" />
-                <span class="label-title">молоко</span>
+              <label class="form__label form__label--additional">
+                <input class="form__input input-check" name="milk" type="checkbox" value="milk" />
+                <span class="form__label-title">молоко</span>
               </label>
 
-              <label class="search-program__label label-additional">
-                <input class="searh-program__input input-check" name="vitamins" type="checkbox" value="vitamins" />
-                <span class="label-title">витамины</span>
+              <label class="form__label form__label--additional">
+                <input class="form__input input-check" name="vitamins" type="checkbox" value="vitamins" />
+                <span class="form__label-title">витамины</span>
               </label>
 
               <input class="button button-text button--form" type="submit" value="отправить заявку" />
-              <p class="search-program__clarification">* — Обязательные поля</p>
+              <p class="form__clarification">* — Обязательные поля</p>
 
             </div>
           </fieldset>
