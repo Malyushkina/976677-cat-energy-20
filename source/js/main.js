@@ -26,12 +26,12 @@ navToggle.addEventListener('click', function () {
 function range() {
   var sliderItem = document.querySelectorAll(".slider__item");
   for (let i = 0; i < sliderItem.length; i++) {
-    if (sliderItem[i].classList.contains("slider-item--active")) {
-      sliderItem[i].classList.remove("slider-item--active");
-      sliderItem[i].classList.add("slider-item--hidden");
+    if (sliderItem[i].classList.contains("slider__item--active")) {
+      sliderItem[i].classList.remove("slider__item--active");
+      sliderItem[i].classList.add("slider__item--hidden");
     } else {
-      sliderItem[i].classList.add("slider-item--active");
-      sliderItem[i].classList.remove("slider-item--hidden");
+      sliderItem[i].classList.add("slider__item--active");
+      sliderItem[i].classList.remove("slider__item--hidden");
     }
   }
 }

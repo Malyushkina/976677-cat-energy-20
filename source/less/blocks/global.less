@@ -44,21 +44,31 @@
 }
 
 .decor-title {
+  position: relative;
   padding-right: 24px;
   background-color: @color-white;
 }
 
-.decor-wrapper::after {
+.decor-title::after {
   position: absolute;
-  top: 17px;
-  left: 50%;
+  top: 50%;
+  left: 0;
   content: "";
 
-  width: 50vw;
+  width: 320px;
   height: 2px;
-
-  background-color: @color-basic-green;
   z-index: -5;
+  background-color: @color-basic-green;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    left: -30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    left: -110px;
+  }
 }
 
 
