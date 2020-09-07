@@ -9,6 +9,10 @@
 .container {
   width: 280px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+  }
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -36,17 +40,22 @@
   font-weight: 400;
   line-height: 1;
   color: @color-black;
-}
 
-.decor-wrapper {
-  position: relative;
-  width: 100%;
+  @media (min-width: @tablet-width) {
+    font-size: @font-size*6;
+  }
 }
 
 .decor-title {
   position: relative;
   padding-right: 24px;
   background-color: @color-white;
+
+  @media (min-width: @tablet-width) {
+    .decor-title {
+      padding-left: 40px;
+    }
+  }
 }
 
 .decor-title::after {

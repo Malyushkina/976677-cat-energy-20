@@ -1,43 +1,121 @@
 .special {
   padding-top: 18px;
   padding-bottom: 42px;
-}
 
-.special__title {
-  color: @color-black;
-}
+  @media (min-width: @tablet-width) {
+    padding-top: 20px;
+    padding-bottom: 39px;
 
-.special__list {
-  display: grid;
-  grid-row-gap: 20px;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
+    .generate-after(@n) when (@n>0) {
+      .special-item:nth-child(@{n})::after {
+        content: "@{n}";
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        font-size: 280px;
+        font-family: @font;
+        line-height: 1;
+        color: @color-basic-gray;
+        z-index: -1;
+      }
 
-.special__header {
-  margin-bottom: 39px;
+      .generate-after(@n - 1);
+    }
+
+    .generate-after(4);
+  }
+
+  // .special__header
+
+  &__header {
+    margin-bottom: 39px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 13px;
+      padding-bottom: 15px;
+      margin-bottom: 17px;
+    }
+  }
+
+  // .special__title
+
+  &__title {
+    color: @color-black;
+
+    @media (min-width: @tablet-width) {
+      width: 414px;
+      color: @color-black;
+      text-align: left;
+    }
+  }
+
+  // .special__list
+
+  &__list {
+    display: grid;
+    grid-row-gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    @media (min-width: @tablet-width) {
+      grid-template-columns: 247px 247px;
+      grid-gap: 30px 137px;
+    }
+  }
 }
 
 .special-item {
   display: flex;
   justify-content: start;
   align-items: center;
-}
 
-.special-item__img-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @media (min-width: @tablet-width) {
+    position: relative;
+    flex-direction: column;
+    align-items: start;
 
-  width: 60px;
-  height: 60px;
-  margin-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 63px;
 
-  background-color: @color-basic-green;
-}
+    &:first-child {
+      width: 230px;
+    }
+  }
 
-.special-item__text {
+  // .special-item__img-wrapper
 
-  width: 200px;
+  &__img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+
+    background-color: @color-basic-green;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 32px;
+    }
+  }
+
+  // .special-item__img
+
+  &__img {}
+
+  // .special-item__text
+
+  &__text {
+    width: 200px;
+
+    @media (min-width: @tablet-width) {
+      width: 100%;
+      font-size: @font-size*1.6;
+    }
+  }
 }

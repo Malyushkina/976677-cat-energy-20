@@ -9,41 +9,97 @@
     background: url(".././img/index-background-mobile@2x.jpg") no-repeat top center;
     background-size: 320px 305px;
   }
-}
 
-.promo__header {
-  max-width: 420px;
-  margin-bottom: 26px;
-}
+  @media (min-width: @tablet-width) {
+    padding-top: 33px;
+    padding-bottom: 0;
+    min-height: 820px;
+    background: none;
+  }
 
-.promo__slogan {
-  padding: 0;
-  margin: 0;
-  max-width: 420px;
-  margin-bottom: 29px;
+  // .promo__wrapper
 
-  font-family: @font;
-  font-size: @font-size*1.4;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #ffffff;
-  text-align: center;
-}
+  &__wrapper {
+    @media (min-width: @tablet-width) {
+      position: relative;
+      width: 540px;
+      margin: 0 auto;
+    }
+  }
 
-.promo__title {
-  color: @color-white;
-  text-align: center;
-}
+  // .promo__header
 
-.promo__img-wrapper {
-  margin: 0 auto;
-  margin-bottom: 4px;
-  width: 280px;
-  height: 270px;
-}
+  &__header {
+    max-width: 420px;
+    margin-bottom: 26px;
 
-.promo__img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
+    @media (min-width: @tablet-width) {
+      padding-top: 23px;
+      padding-bottom: 23px;
+      padding-left: 3px;
+      margin-bottom: 18px;
+    }
+  }
+
+  // .promo__title
+
+  &__title {
+    color: @color-white;
+    text-align: center;
+
+    @media (min-width: @tablet-width) {
+      color: @color-black;
+      text-align: left;
+    }
+  }
+
+  // .promo__slogan
+
+  &__slogan {
+    padding: 0;
+    margin: 0;
+    max-width: 420px;
+    margin-bottom: 29px;
+
+    font-family: @font;
+    font-size: @font-size*1.4;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 49px;
+      padding-left: 4px;
+      font-size: @font-size*2;
+      color: @color-black;
+      text-align: left;
+    }
+  }
+
+  // .promo__img-wrapper
+
+  &__img-wrapper {
+    margin: 0 auto;
+    margin-bottom: 4px;
+    width: 280px;
+    height: 270px;
+
+    @media (min-width: @tablet-width) {
+      width: 709px;
+      height: 609px;
+      position: absolute;
+      left: -84px;
+      top: 224px;
+      z-index: -1;
+    }
+  }
+
+  // .promo__img
+
+  &__img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
 }
