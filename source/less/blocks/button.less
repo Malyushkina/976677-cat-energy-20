@@ -54,7 +54,21 @@
   text-decoration: none;
 
   @media (min-width: @tablet-width) {
-    width: 250px;
+    // width: 250px;
+  }
+}
+
+.button--more-products {
+  background-color: @color-basic-gray;
+  color: @color-special_dark-grey;
+  
+  &:hover {
+    background-color: @color-special_gray2;
+  }
+
+  &:active {
+    background-color: @color-special_gray2;
+    color: fade(@color-special_dark-grey, 70%);
   }
 }
 
@@ -110,4 +124,9 @@
   stroke: @color-basic-green;
   stroke-width: 2px;
   fill: transparent;
+}
+
+.show-all {
+  text-decoration: none;
+  color: @color-special_dark-grey;
 }

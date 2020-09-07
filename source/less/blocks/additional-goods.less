@@ -1,17 +1,65 @@
-.additional-goods__title {
-  font-size: @font-size*2.4;
+.additional-goods {
+
+  // .additional-goods__header
+
+  &__header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 70px;
+      padding-bottom: 75px;
+    }
+  }
+
+  // .additional-goods__title
+
+  &__title {
+    font-size: @font-size*2.4;
+
+    @media (min-width: @tablet-width) {
+      font-size: @font-size*3.6;
+    }
+  }
+
+  // .additional-goods__catalog
+
+  &__catalog {}
+
+  // .additional-goods__wrapper
+
+  &__wrapper {}
 }
 
-.additional__title {
-  //заголовок карточки доп.товаров
-  width: 100%;
+.additional {
+
+  // .additional__title
+
+  &__title {
+    width: 100%;
+  }
+
+  // .additional__description
+
+  &__description {
+    font-size: @font-size*1.4;
+
+    @media (min-width: @tablet-width) {
+      margin-left: auto;
+    }
+  }
+
+  .description__col {
+    @media (min-width: @tablet-width) {
+      text-align: right;
+      padding-top: 5px;
+      min-width: 90px;
+    }
+  }
 }
 
-.additional-goods__header {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.additional__description {
-  font-size: @font-size*1.4;
+.additional__row {
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
