@@ -45,6 +45,10 @@
     &::after {
       display: none;
     }
+
+    @media (min-width: @desktop-width) {
+      background-image: linear-gradient(@color-white 80px, @color-basic-gray 80px);
+    }
   }
 
   // .card-product__link
@@ -74,6 +78,11 @@
       text-align: center;
       line-height: 24/20;
     }
+
+    @media (min-width: @desktop-width) {
+      padding-bottom: 6px;
+      line-height: 22/20;
+    }
   }
 
   // .card-product__description
@@ -95,6 +104,12 @@
       margin-bottom: auto;
       font-size: @font-size*1.6;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 13px;
+      width: 170px;
+      font-size: @font-size*1.6;
+    }
   }
 
   // .card-product__img-wrapper
@@ -105,6 +120,10 @@
 
     @media (min-width: @tablet-width) {
       align-self: end;
+    }
+
+    @media (min-width: @desktop-width) {
+      align-self: center;
     }
   }
 
@@ -135,6 +154,12 @@
     border: 2px solid @color-basic-gray;
   }
 
+  @media (min-width: @desktop-width) {
+    background-image: none;
+    background-color: @color-white;
+    padding-top: 25px;
+  }
+
   // .more-products__img
 
   &__img {
@@ -142,6 +167,11 @@
 
     @media (min-width: @tablet-width) {
       padding-bottom: 3px;
+      width: 60px;
+      height: 60px;
+    }
+
+    @media (min-width: @desktop-width) {
       width: 60px;
       height: 60px;
     }
@@ -156,6 +186,10 @@
 
     @media (min-width: @tablet-width) {
       padding-bottom: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-bottom: 10px;
     }
   }
 
@@ -173,6 +207,10 @@
       min-height: 97px;
       width: 170px;
     }
+
+    @media (min-width: @desktop-width) {
+      width: 170px;
+    }
   }
 }
 
@@ -182,6 +220,11 @@
 
   &__row {
     @media (min-width: @tablet-width) {
+      height: 32px;
+      border-bottom: 1px solid @color-special_gray;
+    }
+
+    @media (min-width: @desktop-width) {
       height: 32px;
       border-bottom: 1px solid @color-special_gray;
     }
@@ -224,6 +267,20 @@
     border: 1px solid @color-special_gray;
     background-color: @color-white;
     background-image: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 245px auto 245px;
+    grid-template-rows: auto;
+    grid-template-areas: "title description button";
+    width: 100%;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 14px;
+    padding-left: 0;
+    padding-right: 0;
+    border-left: none;
+    border-right: none;
   }
 
   &:last-child {

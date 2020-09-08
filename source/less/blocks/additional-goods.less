@@ -1,4 +1,7 @@
 .additional-goods {
+  @media (min-width: @desktop-width) {
+    padding-bottom: 85px;
+  }
 
   // .additional-goods__header
 
@@ -8,6 +11,11 @@
 
     @media (min-width: @tablet-width) {
       padding-top: 70px;
+      padding-bottom: 75px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 75px;
       padding-bottom: 75px;
     }
   }
@@ -20,15 +28,38 @@
     @media (min-width: @tablet-width) {
       font-size: @font-size*3.6;
     }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 40px;
+      position: relative;
+      left: -40px;
+    }
   }
 
   // .additional-goods__catalog
 
-  &__catalog {}
+  &__catalog {
+    @media (min-width: @desktop-width) {
+      display: grid;
+      grid-template-columns: auto 245px;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas:
+        "cards gift"
+        "cards gift"
+        "cards gift"
+        "cards gift";
+      grid-column-gap: 80px;
+      border: none;
+    }
+  }
 
   // .additional-goods__wrapper
 
-  &__wrapper {}
+  &__wrapper {
+    @media (min-width: @desktop-width) {
+      grid-area: cards;
+    }
+  }
 }
 
 .additional {
@@ -37,6 +68,11 @@
 
   &__title {
     width: 100%;
+
+    @media (min-width: @desktop-width) {
+      width: 245px;
+      text-align: left;
+    }
   }
 
   // .additional__description
@@ -47,6 +83,12 @@
     @media (min-width: @tablet-width) {
       margin-left: auto;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 0;
+      width: 325px;
+      align-self: center;
+    }
   }
 
   .description__col {
@@ -54,6 +96,11 @@
       text-align: right;
       padding-top: 5px;
       min-width: 90px;
+    }
+
+    @media (min-width: @desktop-width) {
+      text-align: left;
+      min-width: 40px;
     }
   }
 }

@@ -1,7 +1,19 @@
 .program {
   padding-top: 11px;
   padding-bottom: 11px;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 41px;
+  }
+
   // .program__wrapper
 
-  &__wrapper {}
+  &__wrapper {
+    @media (min-width: @desktop-width) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }

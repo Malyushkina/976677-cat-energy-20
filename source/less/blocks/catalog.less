@@ -16,6 +16,11 @@
       padding-top: 60px;
       padding-bottom: 90px;
     }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 70px;
+      padding-bottom: 83px;
+    }
   }
 
   // .catalog__wrapper
@@ -29,6 +34,13 @@
       grid-column-gap: 60px;
       grid-row-gap: 67px;
       align-items: flex-end;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: grid;
+      grid-template-columns: 245px 245px 245px 245px;
+      grid-column-gap: 80px;
+      grid-row-gap: 63px;
     }
   }
 }

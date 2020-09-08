@@ -10,6 +10,13 @@
     padding-bottom: 66px;
   }
 
+  @media (min-width: @desktop-width) {
+    padding-top: 5px;
+    padding-bottom: 40px;
+    border-top: none;
+    background: linear-gradient(to bottom, @color-white 200px, @color-gray3 200px);
+  }
+
   // .example__wrapper
 
   &__wrapper {
@@ -36,6 +43,16 @@
         "slider slider slider";
       margin-bottom: 28px;
     }
+
+    @media (min-width: @desktop-width) {
+      grid-template-columns: auto auto auto;
+      grid-row-gap: 50px;
+      grid-template-areas:
+        "title title slider"
+        "text text slider"
+        "result1 result2 slider"
+        "expenses expenses slider";
+    }
   }
 
   // .example__header
@@ -47,6 +64,11 @@
     @media (min-width: @tablet-width) {
       padding-top: 23px;
       padding-bottom: 23px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 57px;
+      padding-bottom: 73px;
     }
   }
 
@@ -73,6 +95,12 @@
       padding-right: 20px;
       font-size: @font-size*1.6;
       line-height: 1.5;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 25px;
+      padding-right: 0;
+      padding-bottom: 5px;
     }
   }
 
@@ -150,6 +178,10 @@
       font-size: @font-size*1.4;
       background-color: @color-white;
     }
+
+    @media (min-width: @desktop-width) {
+      background-color: @color-gray3;
+    }
   }
 
 
@@ -171,6 +203,20 @@
       line-height: 1.5;
       text-align: right;
     }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 0;
+      text-align: left;
+      display: flex;
+    }
+
+    // .example__expenses--summ
+
+    &--summ {
+      @media (min-width: @desktop-width) {
+        margin-left: 65px;
+      }
+    }
   }
 
   // .example__slider
@@ -188,6 +234,10 @@
 }
 
 .slider {
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    margin-right: -40px;
+  }
 
   // .slider__item
 
@@ -203,6 +253,10 @@
       width: 690px;
       height: 517px;
       margin-bottom: 15px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 37px;
     }
   }
 
@@ -237,6 +291,11 @@
 
     @media (min-width: @tablet-width) {
       width: 570px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 570px;
+      margin-left: 80px;
     }
   }
 
