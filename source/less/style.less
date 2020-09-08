@@ -1,5 +1,12 @@
+//Переменные
+@import url("var.less");
+
+//Шрифт
+@import url("fonts.less");
+
+@import url("global.less");
+
 // главная страница
-@import url("./blocks/global.less");
 @import url("./blocks/page-body.less");
 @import url("./blocks/page-header.less");
 @import url("./blocks/page-main.less");
@@ -24,32 +31,7 @@
 
 //Модальное окно
 @import url("./blocks/modal.less");
-//Переменные
-@import url("./blocks/var.less");
-
-//viewports
-@tablet-width: 768px;
-@desktop-width: 1440px;
-@mobile-width-only: 767px;
 
 //медиазапросы
 
 @import url("./blocks/media-mobile-only.less");
-
-@font-face {
-  font-family: "Oswald";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/oswaldregular.woff2") format("woff2"),
-    url("../fonts/oswaldregular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Oswald";
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/oswaldmedium.woff") format("woff"),
-    url("../fonts/oswaldmedium.woff2") format("woff2");
-}

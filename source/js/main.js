@@ -4,11 +4,11 @@ let modal = document.querySelector('.modal');
 let buttonCard = document.querySelectorAll('.button--card');
 
 let showAll = document.querySelector('.show-all');
-let buttonShowAll = document.querySelector('.more-products__button');
+let buttonShowAll = document.querySelector('.button--more-products');
 let catalog = document.querySelector('.catalog');
 let buttonRollUp = document.querySelector('.roll-up');
 let card = document.querySelectorAll('.card-product');
-let moreProducts = document.querySelector('.card-product--more-products')
+let moreProducts = document.querySelector('.more-products')
 
 navMain.classList.remove('main-nav--nojs');
 

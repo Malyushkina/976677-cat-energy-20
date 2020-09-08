@@ -1,6 +1,5 @@
 .button {
   display: block;
-
   background-color: @color-basic-green;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -20,7 +19,7 @@
 }
 
 .button-text {
-  font-family: "Oswald", sans-serif;
+  font-family: @font;
   font-size: @font-size*1.4;
   line-height: 1.26;
   text-transform: uppercase;
@@ -66,6 +65,7 @@
 .button--more-products {
   background-color: @color-basic-gray;
   color: @color-special_dark-grey;
+  width: 100%;
 
   &:hover {
     background-color: @color-special_gray2;
@@ -109,16 +109,16 @@
   text-align: center;
   cursor: pointer;
 
+  @media (min-width: @tablet-width) {
+    position: relative;
+    top: 50px;
+  }
+
   &:hover {
     background-color: @color-basic-green;
 
     .roll-up__img {
       stroke: @color-white;
-    }
-
-    @media (min-width: @tablet-width) {
-      position: relative;
-      top: 50px;
     }
   }
 

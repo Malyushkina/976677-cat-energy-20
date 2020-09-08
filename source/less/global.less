@@ -34,7 +34,6 @@
   overflow: hidden;
 }
 
-
 .section-title {
   padding: 0;
   margin: 0;
@@ -50,39 +49,7 @@
   }
 }
 
-.decor-title {
-  position: relative;
-  padding-right: 24px;
-  background-color: @color-white;
 
-  @media (min-width: @tablet-width) {
-    .decor-title {
-      padding-left: 40px;
-    }
-  }
-}
-
-.decor-title::after {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  content: "";
-
-  width: 320px;
-  height: 2px;
-  z-index: -5;
-  background-color: @color-basic-green;
-
-  @media (min-width: @tablet-width) {
-    width: @tablet-width;
-    left: -30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: @desktop-width;
-    left: -110px;
-  }
-}
 
 
 @keyframes fadein {
@@ -93,4 +60,8 @@
   to {
     opacity: 1;
   }
+}
+
+.additional-padding-bottom {
+  padding-bottom: 35px;
 }
