@@ -463,10 +463,6 @@
     grid-area: fieldset-3;
     padding-top: 11px;
     padding-bottom: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     // border:1px solid red;
   }
 
@@ -475,6 +471,16 @@
   &__header {
     @media (min-width: @desktop-width) {
       padding-bottom: 53px;
+    }
+  }
+
+  //.owner__wrapper
+  &__wrapper {
+    @media (min-width: @desktop-width) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
     }
   }
 
