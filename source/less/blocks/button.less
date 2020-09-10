@@ -25,7 +25,7 @@
 
 .button-text {
   font-family: @font;
-  font-size: @font-size*1.4;
+  font-size: @font-size*1.6;
   line-height: 1.26;
   text-transform: uppercase;
   color: @color-white;
@@ -53,24 +53,30 @@
   grid-area: button;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: @font-size*1.6;
+
   width: 100%;
   text-decoration: none;
 
   @media (min-width: @tablet-width) {
-    // width: 250px;
+    margin-top: 22px;
   }
 
   @media (min-width: @desktop-width) {
     width: 170px;
     padding-top: 11px;
+    margin-top: 10px;
   }
+}
+.additional .button--card{
+  width: 100%;
 }
 
 .button--more-products {
   background-color: @color-basic-gray;
   color: @color-special_dark-grey;
   width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   &:hover {
     background-color: @color-special_gray2;

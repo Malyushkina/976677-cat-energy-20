@@ -7,6 +7,9 @@
     padding-top: 52px;
     padding-bottom: 55px;
   }
+  @media (min-width: @desktop-width) {
+    padding-top: 47px;
+  }
 
   // .page-footer__wrapper
 
@@ -43,6 +46,7 @@
 
     @media (min-width: @tablet-width) {
       padding: 0;
+      padding-left: 15px;
       margin: 0;
       border: none;
       align-self: flex-start;
@@ -89,7 +93,7 @@
     }
 
     @media (min-width: @tablet-width) {
-      margin-right: 27px;
+      margin-right: 17px;
     }
   }
 }
@@ -107,6 +111,7 @@
   @media (min-width: @tablet-width) {
     width: 30px;
     height: 22px;
+    padding-right: 15px;
   }
 }
 
@@ -137,7 +142,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 5px;
+    padding-top: 7px;
   }
 
   &:hover {
@@ -169,6 +174,12 @@
 
     &:focus+.copyright__logo {
       fill: @color-basic-green;
+    }
+    @media (min-width: @tablet-width){
+      padding-bottom: 4px;
+    }
+    @media (min-width: @desktop-width){
+      padding-bottom: 0;
     }
   }
 

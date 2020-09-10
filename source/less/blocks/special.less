@@ -126,6 +126,7 @@
     @media (min-width: @tablet-width) {
       width: 100%;
       font-size: @font-size*1.6;
+      line-height: 1.5;
     }
   }
 }
@@ -133,21 +134,22 @@
 .display-none {
   display: none;
 }
+
 .decor-title {
   position: relative;
   padding-right: 24px;
   background-color: @color-white;
 
   @media (min-width: @tablet-width) {
-    .decor-title {
-      padding-left: 40px;
-    }
+
+    padding-left: 40px;
+
   }
 }
 
 .decor-title::after {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 0;
   content: "";
 
@@ -163,6 +165,6 @@
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
-    left: -110px;
+    left: -70px;
   }
 }

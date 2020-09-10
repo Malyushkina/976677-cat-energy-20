@@ -1,6 +1,9 @@
 .additional-goods {
+  @media (min-width: @tablet-width) {
+    padding-bottom: 77px;
+  }
   @media (min-width: @desktop-width) {
-    padding-bottom: 85px;
+    padding-bottom: 20px;
   }
 
   // .additional-goods__header
@@ -16,7 +19,7 @@
 
     @media (min-width: @desktop-width) {
       padding-top: 75px;
-      padding-bottom: 75px;
+      padding-bottom: 77px;
     }
   }
 
@@ -42,11 +45,8 @@
     @media (min-width: @desktop-width) {
       display: grid;
       grid-template-columns: auto 245px;
-      grid-template-rows: auto auto auto auto;
+      grid-template-rows: auto;
       grid-template-areas:
-        "cards gift"
-        "cards gift"
-        "cards gift"
         "cards gift";
       grid-column-gap: 80px;
       border: none;
@@ -68,6 +68,12 @@
 
   &__title {
     width: 100%;
+    padding: 0;
+    padding-left: 2px;
+
+    @media (min-width: @tablet-width) {
+      padding: 0;
+    }
 
     @media (min-width: @desktop-width) {
       width: 245px;
@@ -82,6 +88,7 @@
 
     @media (min-width: @tablet-width) {
       margin-left: auto;
+      font-size: @font-size*1.6;
     }
 
     @media (min-width: @desktop-width) {
@@ -94,13 +101,19 @@
   .description__col {
     @media (min-width: @tablet-width) {
       text-align: right;
-      padding-top: 5px;
+      padding-top: 8px;
       min-width: 90px;
     }
 
     @media (min-width: @desktop-width) {
       text-align: left;
       min-width: 40px;
+    }
+  }
+
+  .button--card {
+    @media (min-width: @tablet-width) {
+      margin: 0;
     }
   }
 }
