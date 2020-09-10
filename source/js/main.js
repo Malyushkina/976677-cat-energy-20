@@ -66,6 +66,7 @@ buttonShowAll.addEventListener('click', function () {
     if (card[m].classList.contains('visually-hidden')) {
       card[m].classList.remove('visually-hidden');
     }
+
   }
   moreProducts.classList.add('visually-hidden');
   buttonRollUp.classList.remove('display-none');
@@ -73,8 +74,11 @@ buttonShowAll.addEventListener('click', function () {
 
 buttonRollUp.addEventListener('click', function () {
   for (let p = 7; p < card.length; p++) {
-    if (card[p].classList.contains('card-product--mini')) {} else {
+    if (card[p].classList.contains('card-product--mini')) {
+
+    } else {
       card[p].classList.add('visually-hidden');
+
     }
   }
   moreProducts.classList.remove('visually-hidden');

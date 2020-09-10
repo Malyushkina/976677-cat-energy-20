@@ -66,6 +66,10 @@
       opacity: 0.6;
     }
 
+    &:focus {
+      opacity: 0.6;
+    }
+
     @media (min-width: @tablet-width) {
       .header-logo {
         display: block;
@@ -101,6 +105,8 @@
   &__img--header {
     @media (min-width: @tablet-width) {
       height: 51.8px;
+      position: relative;
+      left: -5px;
     }
 
     @media (min-width: @desktop-width) {
@@ -118,7 +124,7 @@
     height: 24px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 33px;
+    margin-bottom: 31px;
 
     &:hover {
       opacity: 0.8;

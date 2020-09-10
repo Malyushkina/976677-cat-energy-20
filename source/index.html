@@ -10,13 +10,40 @@
   <link rel="stylesheet" href="./css/styles.min.css" />
 
   <title>HTML Academy: Кэт энерджи</title>
+  <!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    /* Mobile layout by default */
+    background-image: url( "./img/Mobile.png" );
+  }
+  /* Tablet */
+  @media ( min-width: 768px ) {
+    HTML {
+      /* Tablet layout */
+      background-image: url( "./img/Tablet.png" );
+    }
+  }
+  /* Desktop */
+  @media ( min-width: 1440px ) {
+    HTML {
+      /* Desktop layout */
+      background-image: url( "./img/Desktop.png" );
+    }
+  }
+</style>
+<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+<script src="../node_modules/pixel-glass/script.js"></script>
+<!-- // Pixel Glass -->
 </head>
 
 <body class="page-body">
   <header class="page-header main-header">
     <div class="container page-header__wrapper">
-      <a class="logo__link logo__link--header" href="index.html">
+      <a class="logo__link logo__link--header" href="index.html" title="CAT ENERGY - Функциональное питание для котов">
         <svg class="logo__img--header" width="202" height="37">
+
           <use xlink:href="#header-logo" class="header-logo"></use>
           <use xlink:href="#header-logo--mobile" class="header-logo--mobile"></use>
         </svg>
@@ -297,7 +324,8 @@
 
       <div class="page-footer__wrapper">
 
-        <a class="logo__link logo__link--footer" href="index.html">
+        <a class="logo__link logo__link--footer" href="index.html"
+          title="CAT ENERGY - Функциональное питание для котов">
           <svg width="128" height="24">
             <use xlink:href="#footer-logo"></use>
           </svg>
@@ -307,7 +335,7 @@
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="#">
+              <a class="social__link social__link--vkontakte" href="#" title="Мы ВКонтакте">
 
                 <svg class="icon-social icon-social--vk" width="22" height="12">
                   <use xlink:href="#icon-vk"></use>
@@ -316,7 +344,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="#">
+              <a class="social__link social__link--instagram" href="#" title="Мы в Insagram">
 
                 <svg class="icon-social icon-social--inst" width="16" height="16">
                   <use xlink:href="#icon-inst"></use>
@@ -325,7 +353,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">
+              <a class="social__link social__link--facebook" href="#" title="Мы в Facebook">
 
                 <svg class="icon-social icon-social--fb" width="10" height="19">
                   <use xlink:href="#icon-fb"></use>
@@ -338,7 +366,7 @@
 
         <div class="page-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <svg class="copyright__logo" width="40" height="40">
+          <svg class="copyright__logo" width="40" height="40" title="HTML Академия">
             <use xlink:href="#icon-Academy"></use>
           </svg>
         </div>

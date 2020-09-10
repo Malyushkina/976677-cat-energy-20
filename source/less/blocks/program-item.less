@@ -30,9 +30,9 @@
     grid-column-gap: 17px;
 
     padding-left: 52px;
-    padding-top: 79px;
-    padding-bottom: 40px;
-    margin-bottom: 27px;
+    padding-top: 76px;
+    padding-bottom: 39px;
+    margin-bottom: 30px;
 
     &:nth-of-type(2) {
       .program-item__description {
@@ -43,7 +43,7 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 115px auto 52px;
     grid-template-areas:
       "img title title title"
       "text text text text"
@@ -166,7 +166,7 @@
 
     @media (min-width: @tablet-width) {
       padding-bottom: 15px;
-
+      min-height: 100px;
       font-size: @font-size*1.6;
       line-height: 24/16;
       color: @color-black;
@@ -191,7 +191,7 @@
 
     @media (min-width: @tablet-width) {
       border: none;
-      padding-top: 18px;
+      padding-top: 14px;
     }
 
     @media (min-width: @desktop-width) {
