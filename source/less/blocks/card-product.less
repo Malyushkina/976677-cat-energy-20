@@ -17,9 +17,13 @@
     top: 0;
     left: 50%;
     height: 1px;
-    width: 100vw;
+    width: 320px;
     background-color: @color-gray2;
     transform: translateX(-50%);
+
+    @media (min-width: @tablet-width) {
+      width: @tablet-width;
+    }
   }
 
   &:nth-of-type(2n) {
@@ -311,7 +315,7 @@
     grid-template-areas: "title description button";
     width: 100%;
     justify-items: flex-start;
-    padding-top: 14px;
+    padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 0;
     padding-right: 0;

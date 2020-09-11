@@ -10,32 +10,7 @@
   <link rel="stylesheet" href="./css/styles.min.css" />
 
   <title>HTML Academy: Кэт энерджи</title>
-  <!-- Pixel Glass -->
-<!--<style>
-  HTML {
-    background-repeat: no-repeat;
-    background-position:  50% 0;
-    /* Mobile layout by default */
-    background-image: url( "./img/Mobile.png" );
-  }
-  /* Tablet */
-  @media ( min-width: 768px ) {
-    HTML {
-      /* Tablet layout */
-      background-image: url( "./img/Tablet.png" );
-    }
-  }
-  /* Desktop */
-  @media ( min-width: 1440px ) {
-    HTML {
-      /* Desktop layout */
-      background-image: url( "./img/Desktop.png" );
-    }
-  }
-</style>
-<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-<script src="../node_modules/pixel-glass/script.js"></script> -->
-<!-- // Pixel Glass-->
+
 </head>
 
 <body class="page-body">
@@ -85,35 +60,36 @@
     <section class="promo">
       <div class="container">
         <div class="promo__wrapper">
-        <header class="promo__header">
-          <h2 class="promo__title section-title">
-            Функциональное питание для котов
-          </h2>
-        </header>
-        <p class="promo__slogan">Занялся собой? Займись котом!</p>
+          <header class="promo__header">
+            <h2 class="promo__title section-title">
+              Функциональное питание для котов
+            </h2>
+          </header>
+          <p class="promo__slogan">Занялся собой? Займись котом!</p>
 
-        <div class="promo__img-wrapper">
-          <picture>
-            <source media="(min-width: 1440px)" type="image/webp" srcset="img/index-can-desktop@1x.webp,
+          <div class="promo__img-wrapper">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/webp" srcset="img/index-can-desktop@1x.webp,
                       img/index-can-desktop@2x.webp 2x">
-            <source media="(min-width: 768px)" type="image/webp" srcset="img/index-can-tablet@1x.webp,
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/index-can-tablet@1x.webp,
                         img/index-can-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x,
+              <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x,
                         img/index-can-mobile@2x.webp 2x">
 
-            <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png, img/index-can-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg , img/index-can-tablet@2x.jpg 2x">
+              <source media="(min-width: 1440px)"
+                srcset="img/index-can-desktop@1x.png, img/index-can-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg , img/index-can-tablet@2x.jpg 2x">
 
-            <img class="promo__img" src="img/index-can-mobile@1x.png"
-              alt="CAT ENERGY - Функциональное питание для котов"
-              srcset="img/index-can-mobile@1x.png, img/index-can-mobile@2x.png 2x">
-          </picture>
+              <img class="promo__img" src="img/index-can-mobile@1x.png"
+                alt="CAT ENERGY - Функциональное питание для котов"
+                srcset="img/index-can-mobile@1x.png, img/index-can-mobile@2x.png 2x">
+            </picture>
+          </div>
+
+          <a class="button button-text button--promo" href="./form.html">
+            подобрать программу
+          </a>
         </div>
-
-        <a class="button button-text button--promo" href="./form.html">
-          подобрать программу
-        </a>
-      </div>
       </div>
     </section>
 

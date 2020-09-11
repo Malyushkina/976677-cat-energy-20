@@ -8,16 +8,16 @@
   // .search-form__header
 
   &__header {
-    padding-top: 32px;
-    padding-bottom: 38px;
+    padding-top: 18px;
+    padding-bottom: 37px;
 
     @media (min-width: @tablet-width) {
-      padding-top: 65px;
-      padding-bottom: 55px;
+      padding-top: 61px;
+      padding-bottom: 54px;
     }
 
     @media (min-width: @desktop-width) {
-      padding-top: 75px;
+      padding-top: 72px;
     }
   }
 }
@@ -29,7 +29,7 @@
   @media (min-width: @tablet-width) {
     padding-left: 41px;
     padding-right: 38px;
-    padding-bottom: 45px;
+    padding-bottom: 42px;
   }
 
   @media (min-width: @desktop-width) {
@@ -63,7 +63,7 @@
     color: @color-black;
 
     @media (min-width: @tablet-width) {
-      margin-bottom: 65px;
+      margin-bottom: 67px;
       max-width: 325px;
       font-size: @font-size*2;
       line-height: 1.5;
@@ -77,6 +77,8 @@
   // .form__fieldset
 
   &__fieldset {
+    padding: 0;
+    margin: 0;
     padding-bottom: 24px;
     border: none;
 
@@ -89,7 +91,7 @@
 
   &__label {
     display: block;
-    margin-bottom: 13px;
+    margin-bottom: 14px;
 
     font-family: @font;
     font-size: @font-size*1.6;
@@ -161,7 +163,7 @@
     }
 
     @media (min-width: @tablet-width) {
-      padding-top: 11px;
+      padding-top: 10px;
       padding-left: 19px;
       margin-left: 18px;
       text-transform: uppercase;
@@ -227,6 +229,7 @@
 
   &__label--radio {
     padding-left: 45px;
+    margin-bottom: 13px;
     height: 30px;
     cursor: pointer;
 
@@ -309,12 +312,12 @@
 
     @media (min-width: @tablet-width) {
       margin-bottom: 0;
-      padding-left: 60px;
+      padding-left: 58px;
     }
 
     @media (min-width: @desktop-width) {
       flex-basis: 220px;
-      margin-right: 42px;
+      margin-right: 45px;
       margin-bottom: 23px;
 
       &:nth-of-type(4n) {
@@ -336,7 +339,7 @@
       @media (min-width: @tablet-width) {
         width: 38px;
         height: 38px;
-        left: -62px;
+        left: -58px;
       }
     }
 
@@ -353,7 +356,7 @@
       left: -39px;
 
       @media (min-width: @tablet-width) {
-        left: -50px;
+        left: -47px;
       }
     }
 
@@ -374,7 +377,7 @@
 
   &__clarification {
     margin: 0;
-    padding-top: 21px;
+    padding-top: 20px;
     font-size: @font-size*1.4;
     text-align: center;
 
@@ -394,23 +397,31 @@
 
 
 .cat-data {
-  padding-bottom: 24px;
+  padding-bottom: 9px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 70px;
+    padding-bottom: 53px;
   }
 
   @media (min-width: @desktop-width) {
     grid-area: fieldset-1;
     width: 570px;
     padding-bottom: 0;
+
+    .form__label:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 
 .fieldset-flex {
   display: flex;
   flex-direction: column;
-  padding-bottom: 22px;
+  padding-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 25px;
+  }
 }
 
 .input-check {
@@ -454,6 +465,8 @@
 }
 
 .owner {
+  padding-bottom: 0;
+
   @media (min-width: @tablet-width) {
     padding-top: 18px;
     padding-bottom: 7px;
@@ -469,9 +482,25 @@
   // .owner__header
 
   &__header {
-    @media (min-width: @desktop-width) {
-      padding-bottom: 53px;
+    @media (min-width: @tablet-width) {
+      padding-bottom: 72px;
     }
+
+    @media (min-width: @desktop-width) {
+      padding-bottom: 72px;
+    }
+  }
+
+  // .owner__title
+
+  &__title {
+    max-width: 181px;
+
+    @media (min-width: @tablet-width) {
+      max-width: none;
+    }
+
+    @media (min-width: @desktop-width) {}
   }
 
   //.owner__wrapper
@@ -504,6 +533,24 @@
   &__label--tel {
     position: relative;
   }
+
+  // .owner__input--email
+
+  &__input--email {
+    margin-left: 13px;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 20px;
+    }
+  }
+
+  &__input--tel {
+    margin-left: 11px;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 15px;
+    }
+  }
 }
 
 .input {
@@ -517,7 +564,7 @@
     transform: translateY(-50%);
 
     @media (min-width: @tablet-width) {
-      left: 95%;
+      left: 94.5%;
     }
 
     @media (min-width: @desktop-width) {
@@ -541,10 +588,11 @@
 
   &__header {
     padding-bottom: 34px;
+    padding-top: 10px;
 
     @media (min-width: @tablet-width) {
       padding-bottom: 73px;
-      padding-top: 53px;
+      padding-top: 37px;
     }
   }
 
@@ -552,10 +600,11 @@
 
   &__textarea {
     width: 100%;
-    height: 150px;
+    box-sizing: border-box;
+    max-height: 150px;
     margin: 0;
     padding: 0;
-    padding-top: 15px;
+    padding-top: 12px;
     padding-left: 15px;
     text-transform: uppercase;
     font-family: @font;
@@ -579,6 +628,10 @@
       padding-top: 12px;
     }
 
+    @media (min-width: @desktop-width) {
+      padding-left: 17px;
+    }
+
     &::placeholder {
       text-transform: uppercase;
       font-family: @font;
@@ -595,7 +648,7 @@
 }
 
 .fieldset-additional {
-  padding-bottom: 32px;
+  padding-bottom: 30px;
 
   @media (min-width: @desktop-width) {
     grid-area: fieldset-5;
@@ -605,11 +658,16 @@
   // .fieldset-additional__header
 
   &__header {
-    padding-top: 25px;
-    padding-bottom: 34px;
+    padding-top: 21px;
+    padding-bottom: 33px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 51px;
+      padding-bottom: 54px;
+    }
 
     @media (min-width: @desktop-width) {
-      padding-top: 57px;
+      padding-top: 53px;
       padding-bottom: 53px;
     }
   }
