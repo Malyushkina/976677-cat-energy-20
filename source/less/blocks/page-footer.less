@@ -7,6 +7,7 @@
     padding-top: 52px;
     padding-bottom: 55px;
   }
+
   @media (min-width: @desktop-width) {
     padding-top: 47px;
   }
@@ -60,15 +61,10 @@
   // .social__link
 
   &__link {
-
     &:focus .icon-social {
       fill: @color-basic-green;
     }
   }
-  // &__link--vkontakte{
-  //   // align-self: start;
-  // }
-  // .social__item
 
   &__item {
     width: 30px;
@@ -107,7 +103,6 @@
 }
 
 .icon-social--vk {
-
   @media (min-width: @tablet-width) {
     width: 30px;
     height: 22px;
@@ -172,13 +167,15 @@
       opacity: 0.8;
     }
 
-    &:focus+.copyright__logo {
+    &:focus + .copyright__logo {
       fill: @color-basic-green;
     }
-    @media (min-width: @tablet-width){
+
+    @media (min-width: @tablet-width) {
       padding-bottom: 4px;
     }
-    @media (min-width: @desktop-width){
+
+    @media (min-width: @desktop-width) {
       padding-bottom: 0;
     }
   }

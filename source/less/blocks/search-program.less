@@ -106,7 +106,7 @@
       margin-bottom: 19px;
     }
 
-    &::last-child {
+    &:last-child {
       margin-bottom: 0;
     }
   }
@@ -142,16 +142,8 @@
       border-color: @color-special_dark-grey;
     }
 
-    &:focus+.input__icon {
+    &:focus + .input__icon {
       fill: @color-basic-green;
-    }
-
-    &:not(:focus):invalid:not(:placeholder-shown) {
-      box-shadow: inset 0 0 0 2px @color-status_error;
-    }
-
-    &:not(:focus):invalid:not(:placeholder-shown)+.input__icon {
-      fill: @color-status_error;
     }
 
     &::placeholder {
@@ -182,7 +174,6 @@
     position: relative;
     padding-top: 27px;
     padding-bottom: 15px;
-
 
     &::after {
       position: absolute;
@@ -256,7 +247,7 @@
       }
     }
 
-    .input-check:checked+.form__label-title::before {
+    .input-check:checked + .form__label-title::before {
       background-color: @color-basic-green;
     }
   }
@@ -343,11 +334,11 @@
       }
     }
 
-    .input-check:checked+.form__label-title::before {
+    .input-check:checked + .form__label-title::before {
       border-color: #bababa;
     }
 
-    .input-check:checked+.form__label-title::after {
+    .input-check:checked + .form__label-title::after {
       position: absolute;
       content: url(".././img/icon-tick.svg");
       width: 18px;
@@ -395,7 +386,6 @@
   }
 }
 
-
 .cat-data {
   padding-bottom: 9px;
 
@@ -431,7 +421,6 @@
 }
 
 .fieldset {
-
   // .fieldset__header
 
   &__header {
@@ -453,10 +442,8 @@
     line-height: 1.17;
     color: @color-black;
 
-
     @media (min-width: @tablet-width) {
       position: relative;
-      left: -40px;
       padding-left: 40px;
       max-width: none;
       font-size: @font-size*3.6;
@@ -499,8 +486,6 @@
     @media (min-width: @tablet-width) {
       max-width: none;
     }
-
-    @media (min-width: @desktop-width) {}
   }
 
   //.owner__wrapper
@@ -554,7 +539,6 @@
 }
 
 .input {
-
   // .input__icon
 
   &__icon {
