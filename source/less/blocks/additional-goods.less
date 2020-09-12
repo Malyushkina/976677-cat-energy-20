@@ -1,10 +1,10 @@
 .additional-goods {
   @media (min-width: @tablet-width) {
-    padding-bottom: 77px;
+    padding-bottom: 75px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 15px;
+    padding-bottom: 85px;
   }
 
   // .additional-goods__header
@@ -31,12 +31,17 @@
 
     @media (min-width: @tablet-width) {
       font-size: @font-size*3.6;
-      padding-left: 37px;
     }
 
     @media (min-width: @desktop-width) {
-      padding-left: 40px;
       position: relative;
+    }
+
+  }
+
+  .additional-goods__title.decor-title::after {
+    @media (min-width: @tablet-width) {
+      top: 31px;
     }
   }
 

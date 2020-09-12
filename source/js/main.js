@@ -8,7 +8,9 @@ let buttonShowAll = document.querySelector('.button--more-products');
 let catalog = document.querySelector('.catalog');
 let buttonRollUp = document.querySelector('.roll-up');
 let card = document.querySelectorAll('.card-product');
-let moreProducts = document.querySelector('.more-products')
+let moreProducts = document.querySelector('.more-products');
+let radioButtons = document.querySelectorAll('.form__label--radio');
+let checkButtons = document.querySelectorAll('.form__label--additional')
 
 navMain.classList.remove('main-nav--nojs');
 

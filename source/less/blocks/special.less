@@ -138,7 +138,14 @@
 .decor-title {
   position: relative;
   padding-right: 24px;
+  padding-left: 20px;
+  left: -20px;
   background-color: @color-white;
+
+  @media (min-width: @tablet-width) {
+    left:0;
+    padding-left: 40px;
+      }
 
   @media (min-width: @desktop-width) {
     left: -40px;
