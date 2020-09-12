@@ -61,6 +61,12 @@
   // .social__link
 
   &__link {
+
+  &:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
     &:focus .icon-social {
       fill: @color-basic-green;
     }
@@ -165,9 +171,12 @@
 
     &:focus {
       opacity: 0.8;
+      outline: none;
+      border: none;
+      box-shadow: none;
     }
 
-    &:focus + .copyright__logo {
+    &:focus+.copyright__logo {
       fill: @color-basic-green;
     }
 
