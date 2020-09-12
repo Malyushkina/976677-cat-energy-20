@@ -69,16 +69,6 @@
     &:focus {
       opacity: 0.6;
     }
-
-    @media (min-width: @tablet-width) {
-      .header-logo {
-        display: block;
-      }
-
-      .header-logo--mobile {
-        display: none;
-      }
-    }
   }
 
   // .logo__link--header
@@ -145,6 +135,18 @@
   }
 }
 
-.header-logo {
+.header-logo--mobile {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.header-logo--tablet {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }

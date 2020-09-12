@@ -142,7 +142,7 @@
       border-color: @color-special_dark-grey;
     }
 
-    &:focus+.input__icon {
+    &:focus + .input-icon {
       fill: @color-basic-green;
     }
 
@@ -546,24 +546,21 @@
   }
 }
 
-.input {
-  // .input__icon
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 88%;
+  transform: translateY(-50%);
 
-  &__icon {
-    position: absolute;
-    top: 50%;
-    left: 88%;
-    transform: translateY(-50%);
+  @media (min-width: @tablet-width) {
+    left: 94.5%;
+  }
 
-    @media (min-width: @tablet-width) {
-      left: 94.5%;
-    }
-
-    @media (min-width: @desktop-width) {
-      left: 93.5%;
-    }
+  @media (min-width: @desktop-width) {
+    left: 93.5%;
   }
 }
+
 
 .comments {
   padding-bottom: 0;
