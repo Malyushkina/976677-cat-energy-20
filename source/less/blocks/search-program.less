@@ -147,7 +147,7 @@
       border-color: @color-special_dark-grey;
     }
 
-    &:focus+.input-icon {
+    &:focus + .input-icon {
       fill: @color-basic-green;
     }
 
@@ -157,7 +157,6 @@
       font-size: @font-size*1.6;
       line-height: 1.125;
       color: @color-special_dark-grey;
-      line-height: 1.4;
       opacity: 1;
     }
 
@@ -259,7 +258,7 @@
       }
     }
 
-    .input-check:checked+.form__label-title::before {
+    .input-check:checked + .form__label-title::before {
       background-color: @color-basic-green;
     }
   }
@@ -351,11 +350,11 @@
       }
     }
 
-    .input-check:checked+.form__label-title::before {
+    .input-check:checked + .form__label-title::before {
       border-color: #bababa;
     }
 
-    .input-check:checked+.form__label-title::after {
+    .input-check:checked + .form__label-title::after {
       position: absolute;
       content: url(".././img/icon-tick.svg");
       width: 18px;
