@@ -398,6 +398,7 @@
       box-shadow: 0 0 2px 0 @color-special_gray;
       background-color: @color-basic-green;
       filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+      box-sizing: border-box;
 
       &:hover {
         filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
@@ -409,11 +410,12 @@
     }
 
     &::-moz-range-thumb {
-      width: 34px;
-      height: 34px;
+      width: 32px;
+      height: 32px;
 
       border-radius: 50%;
       border: 13px solid @color-white;
+      box-sizing: border-box;
       box-shadow: inset 0 0 1px 0 @color-special_gray;
       background-color: @color-basic-green;
       filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));

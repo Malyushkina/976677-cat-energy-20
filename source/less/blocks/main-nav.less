@@ -119,6 +119,7 @@
     &:active {
       opacity: 0.3;
     }
+
     &:focus {
       opacity: 0.6;
       border: none;
@@ -149,6 +150,7 @@
     }
   }
 }
+
 @media (max-width: @mobile-width-only) {
   .main-nav--closed .main-nav__toggle::before {
     content: "";
@@ -157,18 +159,21 @@
     right: 0;
     width: 24px;
     height: 2px;
+    z-index: 10;
     background-color: @color-black;
     box-shadow: 0 8px 0 0 @color-black, 0 16px 0 0 @color-black;
   }
 
   .main-nav--closed .main-nav__toggle:active::before {
     background-color: fade(@color-black, 30%);
+    z-index: 10;
     box-shadow:
       0 8px 0 0 fade(@color-black, 30%),
       0 16px 0 0 fade(@color-black, 30%);
   }
 
   .main-nav--opened .main-nav__toggle {
+
     &::before,
     &::after {
       content: "";

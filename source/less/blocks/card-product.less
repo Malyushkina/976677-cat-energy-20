@@ -10,6 +10,7 @@
     "button button";
   // grid-row-gap: 13px;
   align-items: center;
+  box-sizing: content-box;
 
   &::after {
     position: absolute;
@@ -150,7 +151,7 @@
   // .card-product__img
 
   &__img {
-    width: auto;
+    width: 100%;
 
     // width: 100%;
     // height: auto;
@@ -331,6 +332,7 @@
     @media (min-width: @tablet-width) {
       margin-bottom: 70px;
     }
+
     @media (min-width: @desktop-width) {
       margin-bottom: 0;
     }
